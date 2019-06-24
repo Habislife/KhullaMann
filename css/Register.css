@@ -1,0 +1,40 @@
+* {box-sizing: border-box}
+
+form{
+	margin-left: 400px;
+	margin-top: 50px;
+	position: relative;
+}
+
+.box{
+	border : 2px solid black;
+	color: black;
+	padding: 20px;
+	width: 500px;
+	height: 600px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px  0 20px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #b30000;
+}
+
