@@ -1,9 +1,8 @@
 * {box-sizing: border-box}
 
 form{
-	margin-left: 400px;
-	margin-top: 50px;
-	position: relative;
+	margin-left: 30%;
+	margin-top: 2%;
 }
 
 .box{
@@ -11,15 +10,13 @@ form{
 	color: black;
 	padding: 20px;
 	width: 500px;
-	height: 600px;
+	height: 800px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=email] ,input[type=password] {
   width: 100%;
   padding: 10px;
   margin: 5px  0 20px 0;
-  display: inline-block;
-  border: none;
   background: #f1f1f1;
 }
 
