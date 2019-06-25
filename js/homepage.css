@@ -64,7 +64,6 @@ ul li a{
     padding-bottom: -80px;
 }
 ul li a:hover{
-    color: palegreen;
     border-bottom: 2px solid white;
     transition: border bottom 0.3s;
 }
