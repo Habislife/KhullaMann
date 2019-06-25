@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Khulla mann homepage</title>
-	<link rel="stylesheet" type="text/css" href="css\homepage.css">
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
 </head>
 <body>
 	<div class="container">
