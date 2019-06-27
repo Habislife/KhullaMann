@@ -6,7 +6,7 @@
 	</head>
 
 	<body>
-		<form>
+		<form onclick="return formValidator()">
 			<div class="box">
 				<h1 align="center">Register</h1>
 				<br>
@@ -34,12 +34,14 @@
    				 <br><br>
 
    				 <label>Contact No.:</label>
-   				 <input type="text" placeholder="Enter Contact No." name="contact" required>
+   				 <input type="tel" placeholder="Enter Contact No." name="contact" required>
    				 <br><br>
 
    				 <input type="submit" class="register" value="Register">
+   				 <input type="submit" class="login" value="Login">
 				
 			</div>
 		</form>
+		 <script type="text/javascript" src="../js/RegisterForm.js"></script>
 	</body>
 </html>

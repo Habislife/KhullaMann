@@ -6,7 +6,7 @@
 	</head>
 
 	<body>
-		<form>
+		<form onsubmit="return checkform()">
 			<div class="box">
 				<h1 align="center">Login</h1>
 				<br>
@@ -24,11 +24,15 @@
 				<a href="" class="forgot">Forgot password?</a>
 				<br><br> 
 
-				<input type="submit" name="submit" value="Login">
-				<input type="submit" name="submit" value="Register">
-				
+				<label><input type="submit" name="submit" value="Login"></label>
 				
 			</div>
 		</form>
+
+		<form action="RegisterForm.html">
+     	       <label><input type="submit" name="submit" value="Register"></label>
+              </form>
+		
+		<script src='../js/LoginForm.js'></script>
 	</body>
 </html>
