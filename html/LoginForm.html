@@ -6,8 +6,9 @@
 	</head>
 
 	<body>
-		<form onsubmit="return checkform()">
-			<div class="box">
+		<div class="formbox" align="center">
+			<form action="RegisterForm.html" onsubmit="return checkform()" align="center" >
+			
 				<h1 align="center">Login</h1>
 				<br>
 
@@ -17,22 +18,21 @@
    				 <input type="password" placeholder="Enter your Password" name="password" required>
    				 <br><br>
 
-				<label>
+				<label class="remember">
 					 <input type="checkbox"> Remember Me
 				</label>
 
 				<a href="" class="forgot">Forgot password?</a>
 				<br><br> 
 
-				<label><input type="submit" name="submit" value="Login"></label>
+				<input type="submit" class="login" value="Login">
 				
-			</div>
-		</form>
-
-		<form action="RegisterForm.html">
-     	       <label><input type="submit" name="submit" value="Register"></label>
-              </form>
-		
+			</form>
+			
+			<form action="Register.js">
+				<input type="submit" class="register" value="Register">
+			</form>
+		</div>
 		<script src='../js/LoginForm.js'></script>
 	</body>
 </html>
