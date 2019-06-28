@@ -6,33 +6,34 @@
 	</head>
 
 	<body>
-		<div class="formbox" align="center">
-			<form action="RegisterForm.html" onsubmit="return checkform()" align="center" >
-			
+		<form  onsubmit="return checkForm()">
+			<div class="box">
 				<h1 align="center">Login</h1>
 				<br>
 
-				<input type="email" placeholder="Enter your Email" name="email" required>		
+				<input type="email" placeholder="Enter your Email" name="email" value="" id="email" autocomplete="on" required>
+                <span id="Message"></span>
 				<br><br>
 
-   				 <input type="password" placeholder="Enter your Password" name="password" required>
+   				 <input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" required>
    				 <br><br>
 
-				<label class="remember">
+				<label>
 					 <input type="checkbox"> Remember Me
 				</label>
 
 				<a href="" class="forgot">Forgot password?</a>
 				<br><br> 
 
-				<input type="submit" class="login" value="Login">
+				<label><input type="submit" name="submit" value="Login"></label>
 				
-			</form>
-			
-			<form action="Register.js">
-				<input type="submit" class="register" value="Register">
-			</form>
-		</div>
-		<script src='../js/LoginForm.js'></script>
+			</div>
+		</form>
+
+		<form action="RegisterForm.html">
+     	       <label><input type="submit" name="submit" value="Register"></label>
+              </form>
+		
+		<script type="text/javascript" src='../js/LoginForm.js'></script>
 	</body>
 </html>
