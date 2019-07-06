@@ -6,8 +6,9 @@
 	</head>
 
 	<body>
-		<form onclick="return formValidator()" method="POST" action="../php/register.php">
-			<div class="box">
+		<div class="box">
+			<form onclick="return formValidator()" method="POST" action="../php/register.php">
+			
 				<h1 align="center">Register</h1>
 				<br>
 
@@ -36,11 +37,17 @@
    				 <input type="tel" placeholder="Enter Contact No." name="contact" id="contact" required>
    				 <br><br>
 
-   				 <input type="submit" class="register" value="Register">
-   				 <input type="submit" class="login" value="Login">
-				
-			</div>
-		</form>
+   				 <div align="center">
+   					 <input type="submit" class="register" value="Register">
+   					 <br>
+			
+					<label>
+						Want to Login?
+						<a href="LoginForm.html">Login </a>
+					</label>
+				</div>
+			</form>
+		 </div>
 		 <script type="text/javascript" src="../js/RegisterForm.js"></script>
 	</body>
 </html>

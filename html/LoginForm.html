@@ -4,10 +4,11 @@
 		<title>Login Form</title>
 		<link rel="stylesheet" type="text/css" href="../css/Login.css">
 	</head>
+<body>
 
-	<body>
-		<form  onsubmit="return checkForm()">
-			<div class="box">
+		<div class="box">
+			<form  onsubmit="return checkForm()" align="center">
+
 				<h1 align="center">Login</h1>
 				<br>
 
@@ -18,7 +19,7 @@
    				 <input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" required>
    				 <br><br>
 
-				<label>
+				<label class="remember">
 					 <input type="checkbox"> Remember Me
 				</label>
 
@@ -26,14 +27,18 @@
 				<br><br> 
 
 				<label><input type="submit" name="submit" value="Login"></label>
-				
-			</div>
-		</form>
+				<br>
 
-		<form action="RegisterForm.html">
-     	       <label><input type="submit" name="submit" value="Register"></label>
-              </form>
-		
+				<label>
+					To create new account
+				</label>
+				<br>
+				<a href="RegisterForm.html">Register </a>
+
+			</form>
+		</div>
+
 		<script type="text/javascript" src='../js/LoginForm.js'></script>
+
 	</body>
 </html>
