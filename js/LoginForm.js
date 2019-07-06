@@ -1,11 +1,11 @@
 function checkform(){
-    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
     var errorMessage = document.getElementById('errorMessage');
 
 
-    if(username==""){
-        errorMessage.textContent = "Username can't be empty";
+    if(email==""){
+        errorMessage.textContent = "Email can't be empty";
     return false;
 }
 
