@@ -9,9 +9,9 @@
       <div class="logo"></div> 
         <div class="header">
             <ul>
-                <li><a href="#">Become a donor</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Sign up</a></li>
+                <li><a href="html/RegisterForm.html">Become a donor</a></li>
+                <li><a href="html/LoginForm.html">Login</a></li>
+                <li><a href="html/DoneeReg.html">Sign up</a></li>
             </ul>
         </div>
          <div class="navbar">   
