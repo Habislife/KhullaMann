@@ -34,6 +34,6 @@ if(isset($_POST['submit']))
       // echo $password;
     }
     else{
-    header('Location: ../../khullamann');
+     header('Location: ../../khullamann');
 }
 ?>
