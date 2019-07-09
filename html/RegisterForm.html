@@ -7,7 +7,7 @@
 
 	<body>
 		<div class="box">
-			<form method="POST"  onsubmit="return validateform()">
+			<form method="POST"  onsubmit="return checkPassword()">
 			
 				<h1 align="center">Register</h1>
 				<br>
@@ -22,12 +22,14 @@
    				 <br><br>
 
     			<label>Password:</label>
-   				 <input type="password" placeholder="Enter Password" name="password" id="password">
+   				 <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='check();'>
    				 <br><br>
 
     			<label>Re-Password:</label>
-   				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword">
-   				 <br><br>
+   				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();'>
+   				 <br>
+                 <span id='message'></span>
+                <br>
 
    				 <label>Address:</label>
    				 <input type="text" placeholder="Enter Address" name="address" id="address">
