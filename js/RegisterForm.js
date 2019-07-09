@@ -42,3 +42,9 @@
         return false
     }
 }
+
+    function checkPassword(){
+        if(repassword!=password){
+            document.getElementById('repassword').style.color = 'red';
+        }
+    }
