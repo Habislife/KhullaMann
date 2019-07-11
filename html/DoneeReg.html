@@ -7,7 +7,7 @@
 
 	<body>
     <div class="box">
-		  <form name="doneeForm" onclick="return checkform()">
+		  <form name="doneeForm" onsubmit="return checkform()"method="POST"  action="../php/register1.php">
 			
 				<h1 align="center">Register</h1>
 				<br>
@@ -24,14 +24,15 @@
    				 <br><br>
 
     			<label>Password:</label>
-   				 <input type="password" placeholder="Enter Password" name="password" id="password">
+   				 <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='check();'>
                 <span id="password"></span>
    				 <br><br>
 
 
     			<label>Re-Password:</label>
-   				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword">
+   				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();'>
                 <span id="repassword"></span>
+                <span id='message'></span>
    				 <br><br>
 
    				 <label>Address:</label>
@@ -50,7 +51,7 @@
    				 <br><br>
 
    				 <div align="center">
-             <input type="submit" class="register" value="Register">
+             <button type="submit" name="submit" class="register">Register</button>
              <br>
       
             <label>
