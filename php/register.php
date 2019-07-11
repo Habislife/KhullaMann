@@ -12,7 +12,7 @@ if(isset($_POST['submit']))
     $password = $_POST['password'];
     $address =$_POST['address'];
     $contact = $_POST['contact'];
-    print();
+    print("hello");
     
 
 }
