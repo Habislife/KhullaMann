@@ -1,15 +1,15 @@
-function checkform(){
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    var errorMessage = document.getElementById('errorMessage');
+var email = document.getElementById('email').value;
+var password = document.getElementById('password').value;
+var errorMessage = document.getElementById('errorMessage');
 
-
-    if(email==""){
+function checkform() {
+    if(email==" " || email==null)
+    {
         errorMessage.textContent = "Email can't be empty";
     return false;
-}
+    }
 
-    if(password==""){
+    if(password==" " || password==null) {
         errorMessage.textContent = "Password can't be empty";
 
         return false;
