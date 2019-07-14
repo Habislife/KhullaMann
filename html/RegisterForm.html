@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Register Form</title>
+		<link rel="stylesheet" type="text/css" href="../css/Register.css">
+	</head>
+
+	<body>
+		<div class="box">
+			<form method="POST"  onsubmit="fieldCheck();" action="../php/register.php">
+			
+				<h1 align="center">Register</h1>
+				<br>
+
+			 <input type="text" placeholder="Enter Username" name="username" id="username" onkeydown='fieldCheck();'>		
+				<br><span id='message1'></span><br>
+
+			
+   				 <input type="email" placeholder="Enter Email" name="email" id="email" onclick='fieldCheck();'>
+   				 <br><span id='message2'></span><br>
+
+    		
+   				 <input type="password" placeholder="Enter Password" name="password" id="password" onclick='fieldCheck();'>
+   				 <br><span id='message3'></span><br>
+    			
+   				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onclick='fieldCheck();'>
+   				 <br><span id='message'></span><br>
+
+   				
+   				 <input type="text" placeholder="Enter Address" name="address" id="address" onclick='fieldCheck();'>
+   				 <br><span id='message4'></span><br>
+   				 
+   				 <input type="tel" placeholder="Enter Contact No." name="contact" id="contact" onclick='fieldCheck();'>
+   				  <br><span id='message5'></span><br>
+
+   				 <div align="center">
+   					 <button type="submit" name="submit" class="register">Register</button>
+   					 <br>
+			
+					<label>
+						Want to Login?
+						<a href="LoginForm.html">Login </a>
+					</label>
+				</div>
+			</form>
+		 </div>
+
+		 <script type="text/javascript" src="../js/RegisterForm.js"></script>
+		 
+	</body>
+</html>

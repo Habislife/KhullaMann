@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Form</title>
+		<link rel="stylesheet" type="text/css" href="../css/Login.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	</head>
+<body>
+
+		<div class="box">
+			<form  onsubmit="return checkForm()" align="center" method="POST"  action="../php/register1.php">
+
+				<h1 align="center">Login</h1>
+				<br>
+
+				<input type="email" placeholder="Enter your Email" name="email" value="" id="email" autocomplete="on"
+				 onclick='checkform();'>
+                <span id="message"></span>
+				<br><br>
+
+				<div id="password_field">
+   				 	<input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" onclick='checkform();'>
+   				 	<i class="fas fa-eye" id="icon" onclick="myFunction()"></i>
+   				 </div>
+   				  <span id="message1"></span>
+   				 <br><br>
+
+				<label class="remember">
+					 <input type="checkbox"> Remember Me
+				</label>
+
+				<a href="" class="forgot">Forgot password?</a>
+				<br><br> 
+
+				<label><input type="submit" name="submit" value="Login"></label>
+				<br>
+
+				<label>
+					To create new account
+				</label>
+				<br>
+				<a href="RegisterForm.html">Register </a>
+
+			</form>
+		</div>
+
+		<script type="text/javascript" src='../js/LoginForm.js'></script>
+
+	</body>
+</html>
