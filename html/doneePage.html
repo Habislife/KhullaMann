@@ -6,13 +6,17 @@
 </head>
 <body>
   <div class=header>
-    <div class="logo"></div>
+    <div class="logo"><h1 align="center">KM</h1></div>
     <div class="head">
-        <input type="text" name="text" placeholder="Search.." size="20px">
-        <br>
-        <a href="html/RegisterForm.html">Become a Donor</a>
+        <div id="search">
+          <input type="text" name="text" placeholder="Search.." size="20px">
+          <!-- <img src="icon.png" id="image1" onclick="show_hide()"> -->
+          <button id="searchButton">Search</button>
+        </div>
+
+        <!-- <a href="html/RegisterForm.html">Become a Donor</a>
         <a href="html/DoneeReg.html">Sign Up</a>
-        <a href="html/LoginForm.html">Login</a>
+        <a href="html/LoginForm.html">Login</a> -->
       </div>
   </div>
 
@@ -25,28 +29,28 @@
     </ul>
   </nav>
 
-  <div class="post_field" align="center">
-    <label>
-      <input type="file" name="image">
-      <img src="">
-    </label>
-    <br><br>
+  <form>
+    <div class="post_field" align="center">
+        <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
+        <div id="upload">
+          <img id="image2">
+        </div>
 
-    <label>
-       <textarea rows="5" placeholder="Write your bio here..."></textarea>
-    </label>
-    <br><br>
+        <label>
+           <textarea rows="5" id="bio" placeholder="Write your bio here..."></textarea>
+        </label>
+        <br><br>
 
-    <label>
-      <textarea rows="25" placeholder="Write full Description here..."></textarea>
-    </label>
-    <br><br>
+        <label>
+          <textarea rows="25" id="full" placeholder="Write full Description here..."></textarea>
+        </label>
+        <br><br>
 
-    <button type="submit" name="submit" class="register">Post</button>
-  </div>
-
+        <button type="submit" name="submit" class="register">Post</button>
+    </div>
+  </form>
   <div class="footer"></div>
 
-  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="doneePage.js"></script>
 </body>
 </html>

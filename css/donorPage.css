@@ -11,12 +11,24 @@ html{
 }
 
 .logo{
-  height: 80px;
+    color: white;
+    height: 80px;
     width: 80px;
     border-radius: 50%;
     background-color: green;
     margin: 10px 10px;
     float: left;
+}
+
+#search{
+  position: relative;
+}
+
+#image{
+  width: 20px;
+  top: 30%;
+  right: 5%;
+  position: absolute;
 }
 
 .header a{

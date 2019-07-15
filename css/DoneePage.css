@@ -11,12 +11,24 @@ html{
 }
 
 .logo{
-	height: 80px;
-  	width: 80px;
-  	border-radius: 50%;
-  	background-color: green;
-  	margin: 10px 10px;
-  	float: left;
+    color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: green;
+    margin: 10px 10px;
+    float: left;
+}
+
+#search{
+  position: relative;
+}
+
+#image1{
+  width: 20px;
+  top: 30%;
+  right: 5%;
+  position: absolute;
 }
 
 .header a{
@@ -37,8 +49,8 @@ html{
 }
 
 input[type=text]{
-	color: black;
-	background-color: white; 
+	 color: black;
+    background-color: white; 
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -46,6 +58,12 @@ input[type=text]{
     border : 2px solid black;
     border-radius: 1px;
     box-sizing: border-box;
+}
+
+#searchButton{
+  width: 100px;
+  position: absolute;
+  top: 0%;
 }
 
 nav{
@@ -77,17 +95,45 @@ ul#nav li{
     color:green;
 }
 
+input[type=file]{
+  width: 60%;
+  padding: 10px;
+  margin: 5px  0 20px 0;
+  background: #f0f0f0;
+  float: left;
+}
+
+#upload{
+  position: relative;
+  border: 2px solid white;
+  width: 35%;
+  height: 25%;
+  float: right;
+}
+
+#image2{
+  width: 90%;
+  height: 90%;
+  position: relative;
+  margin: 10px 10px;
+}
+
 .post_field{
 	margin: 5% 10%;
   padding: 20px 10px;
 	border : 2px solid black;
 	width: 80%;
-	height: 650px;
+	height: 600px;
 }
 
-.post_field textarea{
+#bio{
+  width: 60%;
+}
+
+#full{
   width: 100%
 }
+
 
 button{
   font-size: 20px;
