@@ -5,7 +5,7 @@ html{
 }
 
 .header{
-  border : 2px solid white;
+  border : 2px solid black;
   width: 100%;
   height: 100px;
 }
@@ -18,28 +18,6 @@ html{
     background-color: green;
     margin: 10px 10px;
     float: left;
-}
-
-#search{
-  position: relative;
-}
-
-#image{
-  width: 20px;
-  top: 30%;
-  right: 5%;
-  position: absolute;
-}
-
-.header a{
-  color: green;
-  padding: 15px 15px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.header a:hover{
-    color: #00e600
 }
 
 .head{
@@ -56,8 +34,24 @@ input[type=text]{
     margin: 8px 0;
     display: inline-block;
     border : 2px solid black;
-    border-radius: 1px;
     box-sizing: border-box;
+}
+
+#searchButton{
+  position: absolute;
+  top: 20%;
+  right: 10px;
+}
+
+.header a{
+  color: green;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header a:hover{
+    color: #00e600
 }
 
 nav{
@@ -67,8 +61,8 @@ nav{
 ul#nav li{
   display: inline-block;
   color: white; 
-    font-size: 20px;
-    padding: 10px 10px;
+  font-size: 20px;
+  padding: 10px 10px;
 }
 
 #nav li:hover{
@@ -91,7 +85,7 @@ ul#nav li{
 
 .content{
   margin: 20px 0 20px 0;
-  border : 2px solid white;
+  border : 2px solid black;
   width: 100%;
   height: 500px;
 }
@@ -111,7 +105,7 @@ img{
 
 .post{
   margin: 20px 15px 20px 0;
-  border : 2px solid white;
+  border : 2px solid black;
   width: 100%;
   height: 100px;
   position: relative;
@@ -123,7 +117,7 @@ img{
   width: 200px;
 }
 
-button{
+.post button{
   font-size: 20px;
   margin: 20px 0px;
   width: 200px; 
@@ -132,6 +126,7 @@ button{
 a{
   font-style: none;
 }
+
 .footer{
   margin: 20px 15px 20px 0;
   border : 2px solid black;

@@ -20,32 +20,15 @@ html{
     float: left;
 }
 
-#search{
-  position: relative;
-}
-
-#image1{
-  width: 20px;
-  top: 30%;
-  right: 5%;
-  position: absolute;
-}
-
-.header a{
-  color: green;
-  padding: 15px 15px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.header a:hover{
-    color: #00e600
-}
-
 .head{
 	float: right;
 	margin: 10px 10px;
 	position: relative;
+}
+
+.search{
+  position: relative;
+
 }
 
 input[type=text]{
@@ -60,6 +43,23 @@ input[type=text]{
     box-sizing: border-box;
 }
 
+#searchButton{
+  position: absolute;
+  top: 20%;
+  right: 10px;
+}
+
+.header a{
+  color: green;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.header a:hover{
+    color: #00e600
+}
+
 nav{
     background-color: green;
 }
@@ -67,8 +67,8 @@ nav{
 ul#nav li{
 	display: inline-block;
 	color: white; 
-    font-size: 20px;
-    padding: 10px 10px;
+  font-size: 20px;
+  padding: 10px 10px;
 }
 
 #nav li:hover{
