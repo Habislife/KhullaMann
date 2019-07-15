@@ -6,7 +6,7 @@
 </head>
 <body>
   <div class=header>
-    <div class="logo"></div>
+    <div class="logo"><h1 align="center">KM</h1></div>
     <div class="head">
         <input type="text" name="text" placeholder="Search.." size="20px">
         <br>
@@ -27,15 +27,15 @@
 
   <div class="slideshow-container">
       <div class="slides fade">
-         <img src="img1.jpeg">
+         <img src="images/img1.jpeg">
       </div>
 
       <div class="slides fade">
-        <img src="img2.jpg">
+        <img src="images/img2.jpg">
       </div>
 
       <div class="slides fade">
-       <img src="img3.jpeg">
+       <img src="images/img3.jpeg">
       </div>
   </div>
   <br>
@@ -52,7 +52,7 @@
     </div>
   </div>
 
-  <div class="footer"></div>
+  <div class="footer"><h1>Footer</h1></div>
 
   <script type="text/javascript" src="js/index.js"></script>
 </body>
