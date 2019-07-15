@@ -37,3 +37,13 @@ var checkform = function() {
         document.getElementById('message1').innerHTML = 'Password is not empty';
     }
 }
+
+function show_hide() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+

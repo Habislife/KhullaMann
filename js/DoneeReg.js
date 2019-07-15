@@ -11,50 +11,50 @@ function checkform()
     var errorMessage = document.getElementById('errorMessage');
 
 
-    if(username==""){
+    if (username === ""){
         errorMessage.textContent = "Username can't be empty";
     return false;
     }  
 
-    if(email==""){
+    if (email === ""){
         errorMessage.textContent = "Email can't be empty";
         return false;
     }
   
-    if(address==""){
+    if (address === ""){
         errorMessage.textContent = "Address can't be empty";
         return false;
     }
     
-    if(contact==""){
+    if (contact === ""){
         errorMessage.textContent = "Contact can't be empty";
     }
     
-    if(account==""){
+    if (account === ""){
         errorMessage.textContent = "Account can't be empty";
     }
 
-    if(password==""){
+    if (password === ""){
         errorMessage.textContent = "Password can't be empty";
 
         return false;
     }
 
-    if(repassword==""){
+    if (repassword === ""){
         errorMessage.textContent = "Password re-type can't be empty";
 
         return false;
     }
 
-    if(password!=repassword){
+    if (password!=repassword){
         errorMessage.textContent="The two password donot match";
         return false;
     }
-     if(a.indexOf('@'<=0)){
+     if (a.indexOf('@'<=0)){
         errorMessage.document.getElementById("message");
         return false;
     }
-    if((a.charAt(a.length-4)!='.') && (a.charAt(a.length-3)!='.')){
+    if ((a.charAt(a.length-4)!='.') && (a.charAt(a.length-3)!='.')){
         document.getElementById("message").innerHTML="**invalid . position of 4";
         return false;
     }
@@ -71,3 +71,8 @@ var check = function() {
     document.getElementById('message').innerHTML = 'not matching';
   }
 }
+
+var loadFile = function(event) {
+    var image = document.getElementById('pic');
+    image.src = URL.createObjectURL(event.target.files[0]);
+};
