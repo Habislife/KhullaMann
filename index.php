@@ -10,9 +10,9 @@
     <div class="head">
         <input type="text" name="text" placeholder="Search.." size="20px">
         <br>
-        <a href="html/RegisterForm.html">Become a Donor</a>
-        <a href="html/DoneeReg.html">Sign Up</a>
-        <a href="html/LoginForm.html">Login</a>
+        <a href="src/RegisterForm.php">Become a Donor</a>
+        <a href="src/DoneeReg.php">Sign Up</a>
+        <a href="src/LoginForm.php">Login</a>
       </div>
   </div>
 
