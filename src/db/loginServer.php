@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
     {
     	  if($cpassword == $row['password'])
     	  {
-    	  	header("Location: ../html/DoneeHomepage.html");
+    	  	header("Location: ../../DoneeMainPage.php");
     	  }
 
     }
@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
     {
     	  if($cpassword == $row['password'])
     	  {
-    	  	header("Location: ../html/DonorHomepage.html");
+    	  	header("Location: ../../DonorHomePage.php");
     	  }
 
     }
