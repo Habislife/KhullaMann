@@ -15,7 +15,7 @@ if(isset($_POST['submit']))
     $cpassword=md5($password);
      $sql = "INSERT INTO doneeprofile (username,email,password,address,contact_no,account_no) VALUES ('$username','$email','$cpassword','$address','$contact','$account')";
  $result = mysqli_query($conn,$sql);
-header('Location:../html/LoginForm.html');
+header('Location:../../LoginForm.php');
 $conn->close();
    
     

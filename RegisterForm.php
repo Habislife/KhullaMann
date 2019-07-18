@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<title>Register Form</title>
-		<link rel="stylesheet" type="text/css" href="../css/Register.css">
+		<link rel="stylesheet" type="text/css" href="src/css/Register.css">
 	</head>
 
 	<body>
 		<div class="box">
-			<form method="POST"  onsubmit="fieldCheck();" action="../php/register.php">
+			<form method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php">
 			
 				<h1 align="center">Register</h1>
 			
@@ -46,13 +46,13 @@
 			
 					<label>
 						Want to Login?
-						<a href="LoginForm.html">Login </a>
+						<a href="LoginForm.php">Login </a>
 					</label>
 				</div>
 			</form>
 		 </div>
 
-		 <script type="text/javascript" src="../js/RegisterForm.js"></script>
+		 <script type="text/javascript" src="src/js/RegisterForm.js"></script>
 
 		 <script>
     var loadFile = function(event) {

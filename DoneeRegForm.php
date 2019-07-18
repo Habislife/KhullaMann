@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<title>Donee Register Form</title>
-		<link rel="stylesheet" type="text/css" href="../css/Donee.css">
+		<link rel="stylesheet" type="text/css" href="src/css/Donee.css">
 	</head>
 
 	<body>
     <div class="box">
-		  <form name="doneeForm" onsubmit="return checkform()"method="POST"  action="../php/register1.php">
+		  <form name="doneeForm" onsubmit="return checkform()"method="POST"  action="src/db/doneeRegister.php">
 			
 				<h1 align="center">Register</h1>
 
@@ -56,7 +56,7 @@
 			</form>
     </div>
 
-        <script type="text/javascript" src="../js/DoneeReg.js"></script>
+        <script type="text/javascript" src="src/js/DoneeReg.js"></script>
 <script>
     var loadFile = function(event) {
       var image = document.getElementById('image');

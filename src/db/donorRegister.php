@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
     $cpassword=md5($password);
      $sql = "INSERT INTO donorprofile (username,email,password,address,contact_no) VALUES ('$username','$email','$cpassword','$address','$contact')";
  $result = mysqli_query($conn,$sql);
-header('Location:../html/LoginForm.html');
+header('Location:../../LoginForm.php');
 $conn->close();
    
     

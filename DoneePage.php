@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Donee Page</title>
-	<link rel="stylesheet" type="text/css" href="../css/DoneePage.css">
+	<link rel="stylesheet" type="text/css" href="src/css/DoneePage.css">
 </head>
 <body>
    <div class=header>

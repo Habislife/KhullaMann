@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<title>Login Form</title>
-		<link rel="stylesheet" type="text/css" href="../css/Login.css">
+		<link rel="stylesheet" type="text/css" href="src/css/Login.css">
 	</head>
 <body>
 
 		<div class="box">
-			<form  onsubmit="return checkForm()" align="center" method="POST"  action="../php/Login.php">
+			<form  onsubmit="return checkForm()" align="center" method="POST"  action="src/db/loginServer.php">
 
 				<h1 align="center">Login</h1>
 				<br>
@@ -19,7 +19,7 @@
 
 				<div id="field">
    				 	<input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" onclick='checkform();'>
-   				 	<img src="../images/show.png" id="image" onclick="show_hide()">
+   				 	<img src="src/images/show.png" id="image" onclick="show_hide()">
    				 </div>
    				  <span id="message1"></span>
    				 <br><br>
@@ -38,12 +38,12 @@
 					To create new account
 				</label>
 				<br>
-				<a href="RegisterForm.html">Register </a>
+				<a href="RegisterForm.php">Register </a>
 
 			</form>
 		</div>
 
-		<script type="text/javascript" src='../js/LoginForm.js'></script>
+		<script type="text/javascript" src='src/js/LoginForm.js'></script>
 
 	</body>
 </html>

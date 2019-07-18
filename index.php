@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Khulla mann homepage</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="src/css/index.css">
 </head>
 <body>
   <div class=header>
@@ -10,9 +10,9 @@
     <div class="head">
         <input type="text" name="text" placeholder="Search.." size="20px">
         <br>
-        <a href="src/RegisterForm.php">Become a Donor</a>
-        <a href="src/DoneeReg.php">Sign Up</a>
-        <a href="src/LoginForm.php">Login</a>
+        <a href="./RegisterForm.php">Become a Donor</a>
+        <a href="./DoneeRegForm.php">Sign Up</a>
+        <a href="./LoginForm.php">Login</a>
       </div>
   </div>
 
@@ -27,15 +27,15 @@
 
   <div class="slideshow-container">
       <div class="slides fade">
-         <img src="images/img1.jpeg">
+         <img src="src/images/img1.jpeg">
       </div>
 
       <div class="slides fade">
-        <img src="images/img2.jpg">
+        <img src="src/images/img2.jpg">
       </div>
 
       <div class="slides fade">
-       <img src="images/img3.jpeg">
+       <img src="src/images/img3.jpeg">
       </div>
   </div>
   <br>
@@ -54,6 +54,6 @@
 
   <div class="footer"><h1>Footer</h1></div>
 
-  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="src/js/index.js"></script>
 </body>
 </html>
