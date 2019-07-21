@@ -4,6 +4,7 @@ $target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/images/post/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+date_default_timezone_set('Asia/Kathmandu'); 
 if(isset($_POST['submit']))
 {
 	$check = getimagesize($_FILES["image"]["tmp_name"]);
@@ -46,7 +47,6 @@ if ($uploadOk == 0) {
 } 
      $sql = "INSERT INTO donation_post (file_path,bio,description,post_date,post_time,donee_id) VALUES ('$target_file','$bio','$description','$today','$time','1')";
  $result = mysqli_query($conn,$sql);
- echo "give some data";
-$conn->close();
+ header("Location: ../../DonorPage.php");
 }
 ?>
