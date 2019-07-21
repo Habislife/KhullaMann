@@ -13,7 +13,7 @@
         
       <button type="submit" name="submit" id="searchButton">Search</button>
           
-      <a href="#" id="name">Logout</a> 
+      <a href="src/db/logout.php" id="name">Logout</a> 
     </div>
   </div>
 
