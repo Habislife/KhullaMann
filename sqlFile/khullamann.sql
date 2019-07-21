@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2019 at 03:38 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.40
+-- Generation Time: Jul 21, 2019 at 02:33 AM
+-- Server version: 10.3.15-MariaDB
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,6 +33,8 @@ CREATE TABLE `donation_post` (
   `file_path` text NOT NULL,
   `bio` text NOT NULL,
   `description` text NOT NULL,
+  `post_date` date NOT NULL,
+  `post_time` time NOT NULL,
   `donee_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -45,9 +47,9 @@ CREATE TABLE `donation_post` (
 CREATE TABLE `doneeprofile` (
   `donee_id` int(11) NOT NULL,
   `username` varchar(10) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `password` text NOT NULL,
-  `address` varchar(5) NOT NULL,
+  `address` varchar(30) NOT NULL,
   `contact_no` bigint(20) NOT NULL,
   `account_no` bigint(20) NOT NULL,
   `document` longblob NOT NULL
@@ -62,9 +64,9 @@ CREATE TABLE `doneeprofile` (
 CREATE TABLE `donorprofile` (
   `donor_id` int(11) NOT NULL,
   `username` varchar(10) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `password` text NOT NULL,
-  `address` varchar(5) NOT NULL,
+  `address` varchar(30) NOT NULL,
   `contact_no` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
