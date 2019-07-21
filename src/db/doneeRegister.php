@@ -1,6 +1,6 @@
 <?php
 include 'connection.php';
-$target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/images/post/";
+$target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/images/profile/donee/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
