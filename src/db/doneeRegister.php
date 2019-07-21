@@ -51,7 +51,7 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 } 
-     $sql = "INSERT INTO doneeprofile (username,email,password,address,contact_no,account_no) VALUES ('$username','$email','$cpassword','$address','$contact','$account')";
+     $sql = "INSERT INTO doneeprofile (profile_pic,username,email,password,address,contact_no,account_no) VALUES ('$target_file','$username','$email','$cpassword','$address','$contact','$account')";
  $result = mysqli_query($conn,$sql);
 header('Location:../../LoginForm.php');
 $conn->close();

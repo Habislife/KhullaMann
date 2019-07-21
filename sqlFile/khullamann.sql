@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2019 at 02:33 AM
+-- Generation Time: Jul 21, 2019 at 01:35 PM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.3.6
 
@@ -46,7 +46,8 @@ CREATE TABLE `donation_post` (
 
 CREATE TABLE `doneeprofile` (
   `donee_id` int(11) NOT NULL,
-  `username` varchar(10) NOT NULL,
+  `profile_pic` text NOT NULL,
+  `username` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` text NOT NULL,
   `address` varchar(30) NOT NULL,
@@ -63,7 +64,8 @@ CREATE TABLE `doneeprofile` (
 
 CREATE TABLE `donorprofile` (
   `donor_id` int(11) NOT NULL,
-  `username` varchar(10) NOT NULL,
+  `profile_pic` text NOT NULL,
+  `username` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` text NOT NULL,
   `address` varchar(30) NOT NULL,

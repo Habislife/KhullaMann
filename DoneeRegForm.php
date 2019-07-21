@@ -7,7 +7,7 @@
 
 	<body>
     <div class="box">
-		  <form name="doneeForm" onsubmit="return checkform()"method="POST"  action="src/db/doneeRegister.php">
+		  <form name="doneeForm" onsubmit="return checkform()"method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
 			
 				<h1 align="center">Register</h1>
 

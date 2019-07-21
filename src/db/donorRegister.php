@@ -50,7 +50,7 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 } 
-     $sql = "INSERT INTO donorprofile (username,email,password,address,contact_no) VALUES ('$username','$email','$cpassword','$address','$contact')";
+     $sql = "INSERT INTO donorprofile (profile_pic,username,email,password,address,contact_no) VALUES ('$target_dir','$username','$email','$cpassword','$address','$contact')";
  $result = mysqli_query($conn,$sql);
 header('Location:../../LoginForm.php');
 $conn->close();

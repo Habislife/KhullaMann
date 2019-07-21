@@ -7,7 +7,7 @@
 
 	<body>
 		<div class="box">
-			<form method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php">
+			<form method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php" enctype="multipart/form-data">
 			
 				<h1 align="center">Register</h1>
 			
