@@ -1,6 +1,6 @@
 <?php
 include 'connection.php';
-$target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/";
+$target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/images/post/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -17,7 +17,33 @@ if(isset($_POST['submit']))
     $bio = $_POST['bio'];
     $description = $_POST['description'];
     $today = date("Y/m/d");
-    $time=date("h:m:s"); 
+    $time=date("h:m:s");
+    if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
+// Check file size
+if ($_FILES["image"]["size"] >2000000) {
+    echo "Sorry, your file is too large.";
+    $uploadOk = 0;
+}
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+        echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+} 
      $sql = "INSERT INTO donation_post (file_path,bio,description,post_date,post_time,donee_id) VALUES ('$target_file','$bio','$description','$today','$time','1')";
  $result = mysqli_query($conn,$sql);
  echo "give some data";
