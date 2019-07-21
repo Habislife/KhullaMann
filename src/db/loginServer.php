@@ -1,10 +1,10 @@
 <?php
+include 'connection.php';
 session_start();
 if(isset($_POST['submit']))
 {
  $email = $_POST['email'];
  $password = $_POST['password'];
- $conn = mysqli_connect("localhost","root","","khullamann");
  $email = mysqli_real_escape_string($conn,$email);
  $password = mysqli_real_escape_string($conn,$password);
  $cpassword=md5($password);

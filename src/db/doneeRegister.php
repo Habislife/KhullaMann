@@ -1,9 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "khullamann";
-$conn = new mysqli($servername,$username,$password,$dbname);
+include 'connection.php';
 if(isset($_POST['submit']))
 {
     $email = $_POST['email'];
