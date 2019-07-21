@@ -26,7 +26,7 @@
     </ul>
   </nav>
 
-  <form>
+  <form method="POST" action="src/db/postUpload.php"  enctype="multipart/form-data">
     <div class="post_field" align="center">
         <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
         <div id="upload">
@@ -34,12 +34,12 @@
         </div>
 
         <label>
-           <textarea rows="5" id="bio" placeholder="Write your bio here..."></textarea>
+           <textarea rows="5" id="bio" placeholder="Write your bio here..." name="bio"></textarea>
         </label>
         <br><br>
 
         <label>
-          <textarea rows="25" id="full" placeholder="Write full Description here..."></textarea>
+          <textarea rows="25" id="full" placeholder="Write full Description here..." name="description"></textarea>
         </label>
         <br><br>
 
