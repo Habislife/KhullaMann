@@ -5,7 +5,7 @@ if(isset($_POST['submit']))
 {
  $email = $_POST['email'];
   $email = mysqli_real_escape_string($conn,$email);
-  $query = "SELECT * FROM donorprofile WHERE email = '{$email}'";
+  $query = "SELECT * FROM doneeprofile WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn,$query);
     if(!$select_user_query)
     {
@@ -16,7 +16,7 @@ if(isset($_POST['submit']))
     if( $email == $row['email'] )
     {
      $subject="Forget Password";
-     $message="Hi".$row['username'].","."<br>".
+     $message="Hi ".$row['username'].","."<br>".
 "Reset your password"."<br>".", and we'll get you on your way"."<br>".
 "To change your KhullaMann password, click the link below."."<br>"."<a href='localhost/KhullaMann'>.
 Reset my password</a>"."<br>".
