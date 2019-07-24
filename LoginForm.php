@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="src/css/Login.css">
 	</head>
 <body>
+	<?php include 'Nav.html' ?>
 
 		<div class="box">
 			<form  onsubmit="return checkForm()" align="center" method="POST"  action="src/db/loginServer.php">

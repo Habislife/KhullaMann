@@ -5,26 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="src/css/DoneePage.css">
 </head>
 <body>
-   <div class=header>
-      <div class="logo"><h1 align="center">KM</h1></div>
-    
-      <div class="head">
-        <input type="text" name="text" placeholder="Search..">
-        
-        <button type="submit" name="submit" id="searchButton">Search</button>
-          
-        <a href="#" id="name">Logout</a> 
-       </div>
-    </div>
-
-  <nav id="navbar">
-    <ul id="nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Discussion</a></li>    
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </nav>
+   <?php include 'Nav.html' ?>
 
   <form method="POST" action="src/db/postUpload.php"  enctype="multipart/form-data">
     <div class="post_field" align="center">

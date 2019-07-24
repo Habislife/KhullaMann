@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="src/css/Register.css">
 </head>
 <body>
-    <?php include 'NavBar.php' ?>
+   <?php include 'Nav.html' ?>
 
     <div class="box">
 			<form method="POST" action="" >

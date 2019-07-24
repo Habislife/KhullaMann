@@ -6,6 +6,8 @@
 	</head>
 
 	<body>
+		<?php include 'Nav.html' ?>
+		
 		<div class="box">
 			<form method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php" enctype="multipart/form-data">
 			

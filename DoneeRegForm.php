@@ -6,6 +6,8 @@
 	</head>
 
 	<body>
+    <?php include 'Nav.html' ?>
+    
     <div class="box">
 		  <form name="doneeForm" onsubmit="return checkform()"method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
 			
