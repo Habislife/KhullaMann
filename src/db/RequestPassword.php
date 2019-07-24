@@ -5,7 +5,7 @@ if(isset($_POST['submit']))
 {
  $email = $_POST['email'];
   $email = mysqli_real_escape_string($conn,$email);
-  $query = "SELECT * FROM doneeprofile WHERE email = '{$email}'";
+  $query = "SELECT * FROM donorprofile WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn,$query);
     if(!$select_user_query)
     {
