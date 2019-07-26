@@ -20,10 +20,7 @@ if(isset($_POST['submit']))
         echo "File is not an image.";
         $uploadOk = 0;
     }
-    $bio = $_POST['bio'];
-    $description = $_POST['description'];
-    $today = date("Y/m/d");
-    $time=date("h:m:s");
+
     if (file_exists($target_file)) {
     echo "Sorry, file already exists.";
     $uploadOk = 0;
