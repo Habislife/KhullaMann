@@ -1,0 +1,35 @@
+<?php
+include 'Connection.php'
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> LogedIn Give feedback</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="subject" placeholder="Subject">
+		<br><br>
+		<textarea rows="5" name="givefeedback" placeholder="Give feedback..."></textarea>
+		<br><br>
+		<button type="submit" name="submit">Send</button>
+	</form>
+</body>
+
+<?php     
+class Mail
+{
+public $to_email;
+public $subject;
+public $message;
+public $headers = 'From: noreply @ gmail . com';
+public function __construct($to_email,$subject,$message)
+{ 
+
+mail($to_email,$subject,$message,$this->headers);
+ } 
+
+}
+?>
+</html>

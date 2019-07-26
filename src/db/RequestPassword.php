@@ -23,7 +23,8 @@ Reset my password</a>"."<br>".
 "This link will expire in 24 hours, so be sure to use it right away."."<br>"."<br>".
 "Thank you for using KhullaMann!
 "."<br>"."The KhullaMann Team";
-    	$mail= new Mail($email,$subject,$message);
+$headers = 'From: noreply @ gmail . com';
+    	$mail= new Mail($email,$subject,$message,$headers);
       echo "Hi "; 
     }
     else{
