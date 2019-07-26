@@ -1,14 +1,30 @@
 <?php 
-//include '../connection.php';
+include '../connection.php';
 include 'mail.php';
 if (isset($_POST['submit'])) {
+	$feedback_email = $_POST['email'];
+    $
+    $email = mysqli_real_escape_string($conn,$email);
+    $query = "INSERT * INTO feedback";
+    $select_user_query = mysqli_query($conn,$query);
+    if(!$select_user_query)
+    {
+        die("QUERY FAILED".mysqli_error($conn));
+    }
+
+    $row = mysqli_fetch_array($select_user_query);
+
+
+
+
+
+
 	$header=$_POST['email'];
 	$subject=$_POST['subject'];
 	$message=$_POST['givefeedback'];
 	$email="khullamann5660@gmail.com";
 $mail= new Mail($email,$subject,$message,$header);	
 }
-
 
 ?>
 
