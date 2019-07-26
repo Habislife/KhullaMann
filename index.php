@@ -2,13 +2,19 @@
 <html>
 <head>
 	<title>Khulla mann homepage</title>
-	<link rel="stylesheet" type="text/css" href="src/css/index.css">
+	<link rel="stylesheet" type="text/css" href="src/css/homepage.css">
 </head>
 <body>
   <?php include'NavBar.php' ?>
 
-  <div style="margin-top: 50px;">
+  <!-- <div style="margin-top: 50px;">
       <img  src="src/images/photo.png" style="width: 100%;">
+    </div> -->
+    <div class="photo">
+      <div class="text">
+        <h1>Hello World</h1>
+        <p><h2>dcnjewncjknc cjncjen ncjen e ne  enenen </h2></p>
+      </div>
     </div>
     <br>
 
@@ -42,6 +48,10 @@
     </div>
 
   <?php include'Footer.php' ?>
+  <?php include'Footer.php' ?>
+  <?php include'Footer.php' ?>
+  <?php include'Footer.php' ?>
+
 
     <script type="text/javascript" src="src/js/index.js"></script>
 </body>
