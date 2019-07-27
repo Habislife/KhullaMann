@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2019 at 08:23 AM
+-- Generation Time: Jul 27, 2019 at 09:39 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -82,7 +82,7 @@ CREATE TABLE `feedback` (
   `feedback_id` int(11) NOT NULL,
   `feedback_email` text NOT NULL,
   `subject` text NOT NULL,
-  `feeback_content` text NOT NULL,
+  `feedback_content` text NOT NULL,
   `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -142,7 +142,7 @@ ALTER TABLE `donorprofile`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
