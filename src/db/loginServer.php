@@ -18,12 +18,12 @@ if(isset($_POST['submit']))
     }
 
     $row = mysqli_fetch_array($select_user_query);
-    $_SESSION['userid']=$row['userid'];
     if( $email == $row['email']  )
     {
     	  if($cpassword == $row['password'])
     	  {
             session_start();
+            $_SESSION['userid']=$row['donee_id'];
     	  	header("Location: ../../DoneeMain.php");
     	  }
 
@@ -38,7 +38,7 @@ if(isset($_POST['submit']))
     }
 
     $row = mysqli_fetch_array($select_user_query);
-    $_SESSION['userid']=$row['userid'];
+    $_SESSION['userid']=$row['donor_id'];
     if( $email == $row['email']  )
     {
           if($cpassword == $row['password'])
