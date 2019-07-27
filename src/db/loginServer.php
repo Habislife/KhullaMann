@@ -38,13 +38,14 @@ if(isset($_POST['submit']))
     }
 
     $row = mysqli_fetch_array($select_user_query);
-    $_SESSION['userid']=$row['donor_id'];
     if( $email == $row['email']  )
     {
           if($cpassword == $row['password'])
           {
             session_start();
-            header("Location: ../../DonorPage.php");
+             $_SESSION['userid']=$row['donor_id'];
+            echo $_SESSION['userid'];
+            //header("Location: ../../DonorPage.php");
           }
 
     }
