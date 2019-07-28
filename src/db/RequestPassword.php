@@ -1,6 +1,6 @@
 <?php 
 include 'connection.php';
-include '../../mail.php';
+include 'mail.php';
 if(isset($_POST['submit']))
 {
  $email = $_POST['email'];
