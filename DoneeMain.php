@@ -4,8 +4,6 @@ if($_SESSION['userid']==0)
 {
   header("Location: index.php");
 }
-
-
   ?>
 <!DOCTYPE html>
 <html>

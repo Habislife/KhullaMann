@@ -1,5 +1,6 @@
 <?php
 include 'connection.php';
+session_start();
 $target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/images/post/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $uploadOk = 1;
@@ -45,7 +46,7 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 } 
-     $sql = "INSERT INTO donation_post (file_path,bio,description,post_date,post_time,donee_id) VALUES ('$target_file','$bio','$description','$today','$time','1')";
+     $sql = "INSERT INTO donation_post (file_path,bio,description,post_date,post_time,donee_id) VALUES ('$target_file','$bio','$description','$today','$time','$_SESSION['userid']')";
  $result = mysqli_query($conn,$sql);
  header("Location: ../../DonorPage.php");
 }
