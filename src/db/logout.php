@@ -1,7 +1,7 @@
 <?php  
-session_unset();
+session_start();
+unset($_SESSION['userid']);
 session_destroy();
-$conn->close();
 header('Location: ../../index.php');
 exit();
 ?>

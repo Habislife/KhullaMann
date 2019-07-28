@@ -45,7 +45,7 @@ if(isset($_POST['submit']))
             session_start();
              $_SESSION['userid']=$row['donor_id'];
             echo $_SESSION['userid'];
-            //header("Location: ../../DonorPage.php");
+            header("Location: ../../DonorPage.php");
           }
 
     }

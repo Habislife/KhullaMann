@@ -1,4 +1,9 @@
-<?php 
+<?php
+session_start();
+if($_SESSION['userid']==0)
+{
+  header("Location: index.php");
+}
 include 'src/db/connection.php';
 include 'mail.php';
 if (isset($_POST['submit'])) {
@@ -7,7 +12,7 @@ if (isset($_POST['submit'])) {
 	$message=$_POST['givefeedback'];
 	$to_email="khullamann5660@gmail.com";
     $mail= new Mail($to_email,$subject,$message,$header);	
-    $query = "INSERT INTO feedback(feedback_email,subject,feedback_content) VALUES('$header','$subject','$message')";
+    $query = "INSERT INTO feedback(feedback_email,subject,feedback_content,user_id) VALUES('$header','$subject','$message',$_SESSION['userid'])";
     
     $result = mysqli_query($conn,$query);
 }
