@@ -1,40 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Register Form</title> 
-	  <link rel="stylesheet" type="text/css" href="src/css/Register.css">
+		<title>Register Form</title>
+		<link rel="stylesheet" type="text/css" href="src/css/RegisterForm.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">   
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <style>
   * {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding : 0;
   }
-   * {box-sizing: border-box}
-
-.container{
-  width: 100%;
-  height: 900px;
-  margin: 0px;
-}
-.box{
-  margin: 100% 20% 0% 20%;
-  border : 2px solid black;
-  color: black;
-  padding: 20px;
-  height: 700px;
-  margin-top: 80px;
-  margin-bottom: 100px;
-  position: relative;
-}
 
 nav {
   position: fixed; 
   top: 0; 
   width: 100%; 
-  padding-bottom: 50px;
-  z-index: 1;
 }
 
 ul {
@@ -42,7 +23,6 @@ ul {
   overflow: hidden;
   border: 1px solid #e7e7e7;
   background-color: #f3f3f3;
-  margin: 0px;
 }
 
 li {
@@ -148,27 +128,27 @@ li a.active {
 	<body>
 		<nav>
     <ul>
-      <li><a class="active" href="#logo">KhullaMann</a></li>
-      <li><a  href="#">Home</a></li>
+      <li><a class="active" href="index.php">KhullaMann</a></li>
+      <li><a  href="index.php">Home</a></li>
       <li><a  href="#">About</a></li>
       <li><a  href="#">Contact</a></li> 
     </ul>
   </nav>
 		
 		
-		<div class="container">
-      <div class="box">
-			<form method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php" enctype="multipart/form-data"> 
+		<div class="box">
+			<form method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php" enctype="multipart/form-data">
 			
 				<h1 align="center">Register</h1>
 			
-				<div class="image_container">
-			        <div id="upload">
-			            <img id="image">
-			        </div>
-			        <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
+				 <div class="image_container">
+          <div id="upload">
+            <img id="image">
+          </div>
+          <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
           
-       			 </div>
+        </div>
+        
 
 			 <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='fieldCheck();'>		
 				<br><span id='message1'></span><br>
@@ -201,7 +181,6 @@ li a.active {
 					</label>
 				</div>
 			</form>
-      </div>
 		 </div>
 
 		 <script type="text/javascript" src="src/js/RegisterForm.js"></script>
@@ -213,5 +192,6 @@ li a.active {
     };
   </script>
 		 
+
 	</body>
 </html>

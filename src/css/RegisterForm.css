@@ -1,0 +1,40 @@
+* {box-sizing: border-box}
+
+.box{
+  margin: 10% 20% 0 20%;
+  border : 2px solid black;
+  color: black;
+  padding: 20px;
+  height: 900px;
+  position: relative;
+}
+
+img{
+  max-width: 25%;
+  float: right;
+}
+
+input[type=file]{
+  padding: 10px;
+  margin: 5px  0 20px 0;
+  background: #f1f1f1;
+  max-width: 70%;
+}
+
+input[type=text], input[type=email], 
+input[type=password], input[type=tel] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px  0 20px 0;
+  background: #f1f1f1;
+}
+
+button{
+  font-size: 20px;
+  margin: 20px 0px;
+  width: 200px;
+}
+
+
+
+

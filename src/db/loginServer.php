@@ -8,7 +8,16 @@ if(isset($_POST['submit']))
  $password = mysqli_real_escape_string($conn,$password);
  $cpassword=md5($password);
     
-
+    if(!empty($_POST["remember"])) {
+    setcookie ("email",$_POST["email"],time()+ 3600);
+    setcookie ("password",$_POST["password"],time()+ 3600);
+    echo "Cookies Set Successfuly";
+} else {
+    setcookie("email","");
+    setcookie("password","");
+    echo "Cookies Not Set";
+}
+ 
     $query = "SELECT * FROM doneeprofile WHERE email = '{$email}' AND password ='{$cpassword}' ";
 
     $select_user_query = mysqli_query($conn,$query);
@@ -53,4 +62,8 @@ if(isset($_POST['submit']))
     }
 
 }
+
 ?>
+ 
+<p><a href="LoginForm.php"> Go to Login Page </a> </p>
+

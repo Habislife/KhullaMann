@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Login Form</title>
-		<link rel="stylesheet" type="text/css" href="src/css/Login.css">
+		<link rel="stylesheet" type="text/css" href="src/css/LoginForm.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <style>
@@ -140,15 +140,16 @@ li a.active {
 				<h1 align="center">Login</h1>
 				<br>
 
-				<input type="email" placeholder="Enter your Email" name="email" value="" id="email" autocomplete="on"
-				 onclick='checkform();'>
+				<input type="email" placeholder="Enter your Email" name="email" id="email" autocomplete="on"
+				 onclick='checkform();' value=" <?php if(isset($_COOKIE["email"])) { echo $_COOKIE["email"]; } ?>" class="input-field">
                 <span id="message"></span>
 				<br><br>
 
 				<div id="field">
-   				 	<input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" onclick='checkform();'>
+   				 	<input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" onclick='checkform();' value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>" class="input-field">
    				 	<img src="src/images/show.png" id="image" onclick="show_hide()">
    				 </div>
+          
    				  <span id="message1"></span>
    				 <br><br>
 
@@ -175,3 +176,5 @@ li a.active {
 
 	</body>
 </html>
+
+
