@@ -24,6 +24,7 @@ if(isset($_POST['submit']))
     	  {
             session_start();
             $_SESSION['userid']=$row['donee_id'];
+            $_SESSION['email']=$row['email'];
     	  	header("Location: ../../DoneeMain.php");
     	  }
 
@@ -44,7 +45,7 @@ if(isset($_POST['submit']))
           {
             session_start();
              $_SESSION['userid']=$row['donor_id'];
-             $SESSION['email']=$row['email'];
+             $_SESSION['email']=$row['email'];
             echo $_SESSION['userid'];
             header("Location: ../../DonorPage.php");
           }

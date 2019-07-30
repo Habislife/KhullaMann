@@ -1,10 +1,10 @@
-<?php
-session_start();
-if($_SESSION['userid']==0)
+<!-- <?php
+//session_start();
+//if($_SESSION['userid']==0)
 {
-  header("Location: index.php");
+  //header("Location: index.php");
 }
-  ?>
+  ?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@ if($_SESSION['userid']==0)
    <?php include 'Nav.html' ?>
 
   <form method="POST" action="src/db/postUpload.php"  enctype="multipart/form-data">
-    <div class="post_field" align="center">
+    <div class="post_field" align="center" style="margin-top: 70px; height: 600px;">
         <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
         <div id="upload">
           <img id="image2">

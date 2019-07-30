@@ -19,6 +19,7 @@ nav {
 }
 
 ul {
+  height: 50px;
   list-style-type: none;
   overflow: hidden;
   border: 1px solid #e7e7e7;

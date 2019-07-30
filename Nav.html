@@ -14,10 +14,12 @@
 nav {
   position: fixed; 
   top: 0; 
-  width: 100%; 
+  width: 100%;
+  z-index: 1; 
 }
 
 ul {
+  height: 50px;
   list-style-type: none;
   overflow: hidden;
   border: 1px solid #e7e7e7;
@@ -54,13 +56,14 @@ li a.active {
   margin-top: 8px;
   font-size: 17px;
   border: none;
+  width: 120px;
 }
 
  #search-container button {
   float: right;
   padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
+  margin-top: 10px;
+  margin-right: 10px;
   background: #ddd;
   font-size: 17px;
   border: none;

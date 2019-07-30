@@ -1,10 +1,11 @@
-<?php
-session_start();
-if($_SESSION['userid']==0)
+<!-- <?php
+//session_start();
+//if($_SESSION['userid']==0)
 {
-  header("Location: index.php");
+  //header("Location: index.php");
 }
-  ?>
+?> -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +13,9 @@ if($_SESSION['userid']==0)
   <link rel="stylesheet" type="text/css" href="src/css/doneeMain.css">
 </head>
 <body>
- <?php include 'Nav.html' ?>
-
-  <div class="content" align="center">
-    <h1 align="center"><u>Previous Projects</u></h1>
+  <?php include 'Nav.html' ?>
+  <div class="content" align="center" style="margin-top: 80px; border: 2px solid white;">
+    <h1 align="center" style="padding-top: 10px;"><u>Previous Projects</u></h1>
     <div class="article">
       <h1>ARTICLE 1</h1><br><img src="src/images/img2.jpg"><span>vbebjknrknerv</span>
     </div>
