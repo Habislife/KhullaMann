@@ -9,6 +9,12 @@ if(isset($_POST['submit']))
     $address =$_POST['address'];
     $contact = $_POST['contact'];
     $account=$_POST['account'];
+    $email = mysqli_real_escape_string($conn,$email);
+    $username = mysqli_real_escape_string($conn,$username);
+    $password = mysqli_real_escape_string($conn,$password);
+    $address = mysqli_real_escape_string($conn,$address);
+    $contact = mysqli_real_escape_string($conn,$contact);
+    $account = mysqli_real_escape_string($conn,$account);
     $cpassword=md5($password);
     $today = date("Y/m/d");
     $time=date("h:m:s");

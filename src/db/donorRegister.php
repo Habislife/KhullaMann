@@ -11,6 +11,11 @@ if(isset($_POST['submit']))
     $password = $_POST['password'];
     $address =$_POST['address'];
     $contact = $_POST['contact'];
+    $email = mysqli_real_escape_string($conn,$email);
+    $username = mysqli_real_escape_string($conn,$username);
+    $password = mysqli_real_escape_string($conn,$password);
+    $address = mysqli_real_escape_string($conn,$address);
+    $contact = mysqli_real_escape_string($conn,$contact);
     $cpassword=md5($password);
     $today = date("Y/m/d");
     $time=date("h:m:s");
