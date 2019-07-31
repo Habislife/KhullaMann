@@ -1,5 +1,21 @@
 <?php
+session_start();
+if(isset($_SESSION['userid']))
+{
+  if($_SESSION['role']="donor")
+ {
+   header("Location:DonorPage.php");
+ }
+ elseif ($_SESSION['role']="donee")
+  {
+  header("Location:DoneeMain.php"); 
+ }
+else
+{
+  header("Location:AdminPanel.php"); 
+}
 
+}
 ?>
 
   <main>
