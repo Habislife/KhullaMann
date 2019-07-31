@@ -11,11 +11,6 @@ if(isset($_POST['submit']))
     $password = $_POST['password'];
     $address =$_POST['address'];
     $contact = $_POST['contact'];
-    $email = mysqli_real_escape_string($conn,$email);
-    $username = mysqli_real_escape_string($conn,$username);
-    $password = mysqli_real_escape_string($conn,$password);
-    $address = mysqli_real_escape_string($conn,$address);
-    $contact = mysqli_real_escape_string($conn,$contact);
     $cpassword=md5($password);
     $today = date("Y/m/d");
     $time=date("h:m:s");
@@ -67,6 +62,7 @@ if ($uploadOk == 0) {
  $result = mysqli_query($conn,$sql);
 header('Location:../../LoginForm.php');
     }
+    
     else{
      $sql = "INSERT INTO donorprofile (profile_pic,username,email,password,address,contact_no,create_date,create_time) VALUES ('$target_dir','$username','$email','$cpassword','$address','$contact','$today','$time')";
     

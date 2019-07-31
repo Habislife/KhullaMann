@@ -1,7 +1,7 @@
 <?php
 session_start();
 echo $_SESSION['role'];
-/*if(isset($_SESSION['userid']))
+if(isset($_SESSION['userid']))
 {
   if($_SESSION['role']="donor")
  {
@@ -16,9 +16,9 @@ else
   header("Location:AdminPanel.php"); 
 }
 
-}*/
+}
 ?>
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Login Form</title>
@@ -195,6 +195,6 @@ li a.active {
 		<script type="text/javascript" src='src/js/LoginForm.js'></script>
 
 	</body>
-</html> -->
+</html>
 
 

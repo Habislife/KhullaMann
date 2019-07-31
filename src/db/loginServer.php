@@ -8,38 +8,13 @@ if(isset($_POST['submit']))
  $password = mysqli_real_escape_string($conn,$password);
  $cpassword=md5($password);
     
-    if(!empty($_POST["remember"])) {
-    setcookie ("email",$_POST["email"],time()+ 3600);
-    setcookie ("password",$_POST["password"],time()+ 3600);
-    echo "Cookies Set Successfuly";
-} else {
-    setcookie("email","");
-    setcookie("password","");
-    echo "Cookies Not Set";
-}
- 
-    $query = "SELECT * FROM doneeprofile WHERE email = '{$email}' AND password ='{$cpassword}' ";
-
-    $select_user_query = mysqli_query($conn,$query);
-     if(!$select_user_query)
-    {
-        die("QUERY FAILED".mysqli_error($con));
-    }
-
-    $row = mysqli_fetch_array($select_user_query);
-    if( $email == $row['email']  )
-    {
-    	  if($cpassword == $row['password'])
-    	  {
-            session_start();
-            $_SESSION['userid']=$row['donee_id'];
-            $_SESSION['email']=$row['email'];
-             $_SESSION['role']="donee";
-    	  	header("Location: ../../DoneeMain.php");
-    	  }
-
-    }
-
+//     if(!empty($_POST["remember"])) {
+//     setcookie ("email",$_POST["email"],time()+ 3600);
+//     setcookie ("password",$_POST["password"],time()+ 3600);
+// } else {
+//     setcookie("email","");
+//     setcookie("password","");
+// }
     $query = "SELECT * FROM donorprofile WHERE email = '{$email}' AND password ='{$cpassword}' ";
 
     $select_user_query = mysqli_query($conn,$query);
@@ -56,15 +31,39 @@ if(isset($_POST['submit']))
             session_start();
              $_SESSION['userid']=$row['donor_id'];
              $_SESSION['email']=$row['email'];
-               $_SESSION['role']="donor";
+              $_SESSION['role']="donor";
             header("Location: ../../DonorPage.php");
           }
 
     }
+    else
+    {
+    	$query = "SELECT * FROM doneeprofile WHERE email = '{$email}' AND password ='{$cpassword}' ";
+
+    $select_user_query = mysqli_query($conn,$query);
+     if(!$select_user_query)
+    {
+        die("QUERY FAILED".mysqli_error($con));
+    }
+
+    $row = mysqli_fetch_array($select_user_query);
+    if( $email == $row['email']  )
+    {
+    	  if($cpassword == $row['password'])
+    	  {
+            session_start();
+            $_SESSION['userid']=$row['donee_id'];
+            $_SESSION['email']=$row['email'];
+            $_SESSION['role']="donee";
+    	  	header("Location: ../../DoneeMain.php");
+    	  }
+
+    }
+    }
+
 
 }
 
 ?>
- 
-<p><a href="LoginForm.php"> Go to Login Page </a> </p>
+
 
