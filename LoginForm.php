@@ -1,6 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION['userid']))
+echo $_SESSION['role'];
+/*if(isset($_SESSION['userid']))
 {
   if($_SESSION['role']="donor")
  {
@@ -15,9 +16,9 @@ else
   header("Location:AdminPanel.php"); 
 }
 
-}
+}*/
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	<head>
 		<title>Login Form</title>
@@ -160,12 +161,12 @@ li a.active {
 				<br>
 
 				<input type="email" placeholder="Enter your Email" name="email" id="email" autocomplete="on"
-				 onclick='checkform();' value=" <?php if(isset($_COOKIE["email"])) { echo $_COOKIE["email"]; } ?>" class="input-field">
+				 onclick='checkform();' value=" <?php //if(isset($_COOKIE["email"])) { echo $_COOKIE["email"]; } ?>" class="input-field">
                 <span id="message"></span>
 				<br><br>
 
 				<div id="field">
-   				 	<input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" onclick='checkform();' value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>" class="input-field">
+   				 	<input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" onclick='checkform();' value="<?php //if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>" class="input-field">
    				 	<img src="src/images/show.png" id="image" onclick="show_hide()">
    				 </div>
           
@@ -194,6 +195,6 @@ li a.active {
 		<script type="text/javascript" src='src/js/LoginForm.js'></script>
 
 	</body>
-</html>
+</html> -->
 
 
