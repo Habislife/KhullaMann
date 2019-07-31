@@ -4,6 +4,6 @@ unset($_SESSION['userid']);
 unset($_SESSION['email']);
 unset($_SESSION['role']);
 session_destroy();
-header('index.php');
+header('Location:index.php');
 exit();
 ?>
