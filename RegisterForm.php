@@ -167,7 +167,7 @@ li a.active {
 		
 		
 		<div class="box">
-			<form>
+			<form  method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php" enctype="multipart/form-data">
 			
 				<h1 align="center">Register</h1>
 			
@@ -222,6 +222,6 @@ li a.active {
     };
   </script>
 		 
-<!-- method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php" enctype="multipart/form-data"
- -->	</body>
+
+ 	</body>
 </html>
