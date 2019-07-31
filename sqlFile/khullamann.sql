@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 27, 2019 at 09:39 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Generation Time: Jul 31, 2019 at 10:16 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 5.6.40
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -46,14 +46,16 @@ CREATE TABLE `donation_post` (
 
 CREATE TABLE `doneeprofile` (
   `donee_id` int(11) NOT NULL,
-  `profile_pic` text NOT NULL,
+  `profile_pic` text,
   `username` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` text NOT NULL,
   `address` varchar(30) NOT NULL,
   `contact_no` bigint(20) NOT NULL,
   `account_no` bigint(20) NOT NULL,
-  `document` longblob NOT NULL
+  `document` text NOT NULL,
+  `create_date` date NOT NULL,
+  `create_time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -69,7 +71,9 @@ CREATE TABLE `donorprofile` (
   `email` varchar(50) NOT NULL,
   `password` text NOT NULL,
   `address` varchar(30) NOT NULL,
-  `contact_no` bigint(20) NOT NULL
+  `contact_no` bigint(20) NOT NULL,
+  `create_date` date NOT NULL,
+  `create_time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -136,13 +140,13 @@ ALTER TABLE `doneeprofile`
 -- AUTO_INCREMENT for table `donorprofile`
 --
 ALTER TABLE `donorprofile`
-  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
