@@ -12,10 +12,22 @@
     padding : 0;
   }
 
+* {box-sizing: border-box}
+
+.box{
+  margin: 8% 20% 10% 20%;
+  border : 2px solid black;
+  color: black;
+  padding: 20px;
+  height: 850px;
+  position: relative;
+}
+
 nav {
   position: fixed; 
   top: 0; 
-  width: 100%; 
+  width: 100%;
+  z-index: 1; 
 }
 
 ul {
