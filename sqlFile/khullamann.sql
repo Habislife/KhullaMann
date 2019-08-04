@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2019 at 10:16 AM
+-- Generation Time: Aug 04, 2019 at 06:37 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -41,39 +41,13 @@ CREATE TABLE `donation_post` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doneeprofile`
+-- Table structure for table `doneeinfo`
 --
 
-CREATE TABLE `doneeprofile` (
+CREATE TABLE `doneeinfo` (
   `donee_id` int(11) NOT NULL,
-  `profile_pic` text,
-  `username` varchar(20) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` text NOT NULL,
-  `address` varchar(30) NOT NULL,
-  `contact_no` bigint(20) NOT NULL,
   `account_no` bigint(20) NOT NULL,
-  `document` text NOT NULL,
-  `create_date` date NOT NULL,
-  `create_time` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `donorprofile`
---
-
-CREATE TABLE `donorprofile` (
-  `donor_id` int(11) NOT NULL,
-  `profile_pic` text NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` text NOT NULL,
-  `address` varchar(30) NOT NULL,
-  `contact_no` bigint(20) NOT NULL,
-  `create_date` date NOT NULL,
-  `create_time` time NOT NULL
+  `document` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -90,6 +64,25 @@ CREATE TABLE `feedback` (
   `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userprofile`
+--
+
+CREATE TABLE `userprofile` (
+  `user_id` int(11) NOT NULL,
+  `profile_pic` text NOT NULL,
+  `username` text NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  `address` text NOT NULL,
+  `contact_no` bigint(20) NOT NULL,
+  `create_date` date NOT NULL,
+  `create_time` time NOT NULL,
+  `role` char(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -102,16 +95,10 @@ ALTER TABLE `donation_post`
   ADD KEY `donee_id` (`donee_id`);
 
 --
--- Indexes for table `doneeprofile`
+-- Indexes for table `doneeinfo`
 --
-ALTER TABLE `doneeprofile`
-  ADD PRIMARY KEY (`donee_id`);
-
---
--- Indexes for table `donorprofile`
---
-ALTER TABLE `donorprofile`
-  ADD PRIMARY KEY (`donor_id`);
+ALTER TABLE `doneeinfo`
+  ADD KEY `donee_id` (`donee_id`);
 
 --
 -- Indexes for table `feedback`
@@ -119,6 +106,12 @@ ALTER TABLE `donorprofile`
 ALTER TABLE `feedback`
   ADD PRIMARY KEY (`feedback_id`),
   ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `userprofile`
+--
+ALTER TABLE `userprofile`
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -131,22 +124,16 @@ ALTER TABLE `donation_post`
   MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `doneeprofile`
---
-ALTER TABLE `doneeprofile`
-  MODIFY `donee_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `donorprofile`
---
-ALTER TABLE `donorprofile`
-  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
   MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `userprofile`
+--
+ALTER TABLE `userprofile`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -156,7 +143,13 @@ ALTER TABLE `feedback`
 -- Constraints for table `donation_post`
 --
 ALTER TABLE `donation_post`
-  ADD CONSTRAINT `donation_post_ibfk_1` FOREIGN KEY (`donee_id`) REFERENCES `doneeprofile` (`donee_id`);
+  ADD CONSTRAINT `donation_post_ibfk_1` FOREIGN KEY (`donee_id`) REFERENCES `userprofile` (`user_id`);
+
+--
+-- Constraints for table `doneeinfo`
+--
+ALTER TABLE `doneeinfo`
+  ADD CONSTRAINT `doneeinfo_ibfk_1` FOREIGN KEY (`donee_id`) REFERENCES `userprofile` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

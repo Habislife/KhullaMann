@@ -62,16 +62,22 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
- $sql = "INSERT INTO doneeprofile (profile_pic,username,email,password,address,contact_no,account_no,create_date,create_time) VALUES ('$target_file','$username','$email','$cpassword','$address','$contact','$account','$today','$time')";
+ $sql = "INSERT INTO userprofile (profile_pic,username,email,password,address,contact_no,account_no,create_date,create_time) VALUES ('$target_file','$username','$email','$cpassword','$address','$contact','$account','$today','$time')";
  $result = mysqli_query($conn,$sql);
-header('Location:../../LoginForm.php');
     }
     else{
 
-     $sql = "INSERT INTO doneeprofile (username,email,password,address,contact_no,account_no,create_date,create_time) VALUES ('$username','$email','$cpassword','$address','$contact','$account','$today','$time')";
+     $sql = "INSERT INTO userprofile (username,email,password,address,contact_no,create_date,create_time,role) VALUES ('$username','$email','$cpassword','$address','$contact','$today','$time','donee')";
  $result = mysqli_query($conn,$sql);
-header('Location:../../LoginForm.php');
+ 
 }
+$sql ="SELECT * FROM userprofile WHERE email = '{$email}'";
+ $select_user_query = mysqli_query($conn,$sql);
+ $row = mysqli_fetch_array($select_user_query);
+ $userid=$row['user_id'];
+ $sql="INSERT INTO doneeinfo (donee_id,account_no) VALUES ('$userid', '$account')";
+ $result = mysqli_query($conn,$sql);
+ header('Location:../../LoginForm.php');
 $conn->close();
 }
 ?>
