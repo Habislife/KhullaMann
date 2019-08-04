@@ -1,22 +1,22 @@
-<?php
-session_start();
-if(isset($_SESSION['userid']))
+<!-- <?php
+//session_start();
+//if(isset($_SESSION['userid']))
 {
-  if($_SESSION['role']="donor")
+  //if($_SESSION['role']="donor")
  {
-   header("Location:DonorPage.php");
+   //header("Location:DonorPage.php");
  }
- elseif ($_SESSION['role']="donee")
+ //elseif ($_SESSION['role']="donee")
   {
-  header("Location:DoneeMain.php"); 
+  //header("Location:DoneeMain.php"); 
  }
-else
+//else
 {
-  header("Location:AdminPanel.php"); 
+  //header("Location:AdminPanel.php"); 
 }
 
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -167,7 +167,7 @@ li a.active {
 		
 		
 		<div class="box">
-			<form  method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php" enctype="multipart/form-data">
+			<form name=registerForm method="POST"  onsubmit="fieldCheck();" action="src/db/donorRegister.php" enctype="multipart/form-data">
 			
 				<h1 align="center">Register</h1>
 			
@@ -180,29 +180,29 @@ li a.active {
         </div>
         
 
-			 <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='fieldCheck();'>		
+			 <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='usernamefieldCheck();'>		
 				<br><span id='message1'></span><br>
 
 			
-   				 <input type="email" placeholder="Enter Email" name="email" id="email" onkeyup='fieldCheck();'>
+   				 <input type="email" placeholder="Enter Email" name="email" id="email" onkeyup='emailfieldCheck();'>
    				 <br><span id='message2'></span><br>
 
     		
-   				 <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='fieldCheck();'>
+   				 <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='passwordfieldCheck();'>
    				 <br><span id='message3'></span><br>
     			
-   				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='fieldCheck();'>
+   				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='repasswordfieldCheck();'>
    				 <br><span id='message'></span><br>
 
    				
-   				 <input type="text" placeholder="Enter Address" name="address" id="address" onkeyup='fieldCheck();'>
+   				 <input type="text" placeholder="Enter Address" name="address" id="address" onkeyup='addressfieldCheck();'>
    				 <br><span id='message4'></span><br>
    				 
-   				 <input type="tel" placeholder="Enter Contact No." name="contact" id="contact" onkeyup='fieldCheck();'>
+   				 <input type="tel" placeholder="Enter Contact No." name="contact" id="contact" onkeyup='contactfieldCheck();'>
    				  <br><span id='message5'></span><br>
 
    				 <div align="center">
-   					 <button type="submit" name="submit" class="register">Register</button>
+   					 <button type="submit" name="submit" class="register" value="submit" id="register">Register</button>
    					 <br>
 			
 					<label>
@@ -214,7 +214,6 @@ li a.active {
 		 </div>
 
 		 <script type="text/javascript" src="src/js/RegisterForm.js"></script>
-
 		 <script>
     var loadFile = function(event) {
       var image = document.getElementById('image');
