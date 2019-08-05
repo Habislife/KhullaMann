@@ -17,8 +17,7 @@ if(isset($_POST['submit']))
     $account = mysqli_real_escape_string($conn,$account);
     $cpassword=md5($password);
     $today = date("Y/m/d");
-    $time=date("h:m:s");
-    date_default_timezone_set('Asia/Kathmandu'); 
+    $time=date("h:i:sa"); 
  if (!empty($_FILES["image"]["name"]))
     {
      $target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/images/profile/donee/";

@@ -1,10 +1,10 @@
-<?php
-session_start();
-if(!isset($_SESSION['userid']))
+<!-- <?php
+//session_start();
+//if(!isset($_SESSION['userid']))
 {
-  header("Location: index.php");
+  //header("Location: index.php");
 }
-  ?>
+  ?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +14,7 @@ if(!isset($_SESSION['userid']))
 <body>
   <?php include 'Nav.html' ?>
 
-  <div class="content" align="center">
+  <div class="content" align="center" style="margin-top: 80px;">
     <h1>Previous donations</h1>
     <div class="article">
       <h1>ARTICLE 1</h1><br><img src="src/images/img2.jpg"><span>vbebjknrknerv</span>

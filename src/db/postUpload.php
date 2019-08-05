@@ -5,7 +5,6 @@ $target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/images/post/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-date_default_timezone_set('Asia/Kathmandu'); 
 if(isset($_POST['submit']))
 {
 	$check = getimagesize($_FILES["image"]["tmp_name"]);
