@@ -11,9 +11,9 @@ $data=mysqli_fetch_assoc($result);
 $Donor= $data['total'];
 
 //count Donee
-$sql = "SELECT count(*) as total from userlogin WHERE role ='donee'";
+$sql = "SELECT count(*) as total from userprofile WHERE role ='donee'";
 $result = $conn->query($sql);
-$data=mysqli_fetch_assoc($result);
+$data= mysqli_fetch_assoc($result);
 $Donee = $data['total'];
 
 //count Donation Post
