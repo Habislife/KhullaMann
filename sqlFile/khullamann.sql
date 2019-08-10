@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2019 at 05:45 AM
+-- Generation Time: Aug 10, 2019 at 12:59 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -74,6 +74,27 @@ INSERT INTO `doneeinfo` (`donee_id`, `account_no`, `document`) VALUES
 (34, 5010120504803910, ''),
 (35, 4017954672753481, ''),
 (37, 3584541598282110, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doneeverify`
+--
+
+CREATE TABLE `doneeverify` (
+  `user_id` int(11) NOT NULL,
+  `profile_pic` text NOT NULL,
+  `username` text NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  `address` text NOT NULL,
+  `contact_no` bigint(20) NOT NULL,
+  `create_date` date NOT NULL,
+  `create_time` time NOT NULL,
+  `role` char(5) NOT NULL,
+  `account_no` bigint(20) NOT NULL,
+  `document` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
