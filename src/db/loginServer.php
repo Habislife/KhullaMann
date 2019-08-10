@@ -17,7 +17,7 @@ else
 }
  if($email="superuser@khullamann.com" && $password="superuser")
  {
-  header('Location:../../adminPanel.php');
+  header('Location:../../admin/AdminPanel.php');
  }
  else{
   $query = "SELECT * FROM userprofile WHERE email = '{$email}' AND password ='{$cpassword}' ";
