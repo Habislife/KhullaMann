@@ -30,11 +30,7 @@ $uploadOk = 1;
         echo "File is not an image.";
         $uploadOk = 0;
     }
-    if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-}
-// Check file size
+    // Check file size
 if ($_FILES["image"]["size"] >2000000) {
     echo "Sorry, your file is too large.";
     $uploadOk = 0;

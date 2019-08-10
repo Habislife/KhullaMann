@@ -2,11 +2,11 @@
 <html>
     <head>
         
-        <title>Donation Info</title>
+        <title>Donee Verification</title>
     </head>
     <body>
 
-	<?php include "Donationinfo.php"; ?>
+	<?php include "DoneeVerification.php"; ?>
 	
 	</body>
 </html>

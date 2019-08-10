@@ -12,7 +12,7 @@
 <a href="DoneeData.php" value="Donees">Donee:</a><?php echo $Donee?>
 <br>
 <a href="DonationPost.php" value="Donation Post">Total Donation Post:</a><?php echo $Donation ?>
-
-
+<br>
+<a href="DoneeVerifying.php" value="Verifying"> To Be Verify:</a><?php echo $Verification?>
 </body>
 </html>
