@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 $data=mysqli_fetch_assoc($result);
 $Donation = $data['total'];
 
-$sql = "SELECT count(*) as total from doneeverify WHERE role ='donor'";
+$sql = "SELECT count(*) as total from doneeverify WHERE role ='donee'";
 $result = $conn->query($sql);
 $data=mysqli_fetch_assoc($result);
 $Verification= $data['total'];

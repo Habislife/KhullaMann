@@ -53,7 +53,7 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
- $sql = "INSERT INTO userprofile (profile_pic,username,email,password,address,contact_no,create_date,create_time) VALUES ('$target_dir','$username','$email','$cpassword','$address','$contact')";
+ $sql = "INSERT INTO userprofile (profile_pic,username,email,password,address,contact_no,create_date,create_time,role) VALUES ('$target_dir','$username','$email','$cpassword','$address','$contact','$today','$time','donor')";
  $result = mysqli_query($conn,$sql);
 header('Location:../../LoginForm.php');
     }
