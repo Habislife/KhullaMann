@@ -80,48 +80,60 @@ var fieldCheck = function() {
     if (document.getElementById('username').value == "") {
         document.getElementById('message1').style.color = 'red';
         document.getElementById('message1').innerHTML = 'Username cannot be empty';
+        return false;
     } else {
         document.getElementById('message1').style.color = 'green';
         document.getElementById('message1').innerHTML = 'Username is not empty';
+        
     }
     
     if (document.getElementById('email').value == "") {
         document.getElementById('message2').style.color = 'red';
         document.getElementById('message2').innerHTML = 'Email cannot be empty';
+        return false;
     } else {
         document.getElementById('message2').style.color = 'green';
         document.getElementById('message2').innerHTML = 'Email is not empty';
+        
     }
     
     if(document.getElementById('password').value == "") {
         document.getElementById('message3').style.color = 'red';
         document.getElementById('message3').innerHTML = 'Password cannot be empty';
+        return false;
 
     } else {
         document.getElementById('message3').style.color = 'green';
         document.getElementById('message3').innerHTML = 'Password is not empty';
+        
     }
     if (document.getElementById('repassword').value == "") {
         document.getElementById('message').style.color = 'red';
         document.getElementById('message').innerHTML = 'Repassword cannot be empty';
+        return false;
     
     } else {
         document.getElementById('message').style.color = 'green';
         document.getElementById('message').innerHTML = 'Repassword is not empty';
+        
     }
     if (document.getElementById('address').value == "") {
         document.getElementById('message4').style.color = 'red';
         document.getElementById('message4').innerHTML = 'Address cannot be empty';
+        return false;
     } else {
         document.getElementById('message4').style.color = 'green';
         document.getElementById('message4').innerHTML = 'Address is not empty';
+        
     }
     if (document.getElementById('contact').value == "") {
         document.getElementById('message5').style.color = 'red';
         document.getElementById('message5').innerHTML = 'Contact cannot be empty';
+        return false;
     } else {
         document.getElementById('message5').style.color = 'green';
         document.getElementById('message5').innerHTML = 'Contact is not empty';
+        
     }
     return true;
 }
