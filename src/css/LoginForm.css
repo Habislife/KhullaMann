@@ -1,19 +1,70 @@
-* {box-sizing: border-box}
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../images/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
 
-.box{
-  margin: 10% 20% 0 20%;
-	border : 2px solid black;
-	color: black;
-	padding: 10px;
-	height: 450px;
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(211, 249, 232, 0.3);
+  border-radius: 0.625rem;
+}
+
+.box h1 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color:  #5D4F9A;
+  text-align: center;
+}
+
+.box .inputBox {
   position: relative;
 }
 
-input[type=email], input[type=password] ,input[type=text]{
+.box .inputBox input {
   width: 100%;
-  padding: 10px;
-  margin: 5px  0 20px 0;
-  background: #f1f1f1;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #5D4F9A;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem;
+}
+
+::placeholder {
+  color: #6A6C95;
 }
 
 #field{
@@ -33,12 +84,21 @@ input[type=email], input[type=password] ,input[type=text]{
 }
 
 .forgot{
-	float: right;
-	position: relative;
+  float: right;
+  position: relative;
 }
 
-button{
-  font-size: 20px;
-  margin: 20px 0px;
-  width: 200px;
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color:   #5D4F9A;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #6A6C95;
 }
