@@ -1,6 +1,6 @@
 <?php
 include '../src/db/connection.php';
-$sql = "SELECT document,username,user_id FROM doneeverify";
+$sql = "SELECT username,user_id FROM userprofile where flag='0'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	echo "<table border='1'>"."<tr>"."<td>"."Username"."</td>"."</tr>";

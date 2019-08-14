@@ -53,13 +53,13 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
- $sql = "INSERT INTO userprofile (profile_pic,username,email,password,address,contact_no,create_date,create_time,role) VALUES ('$target_dir','$username','$email','$cpassword','$address','$contact','$today','$time','donor')";
+ $sql = "INSERT INTO userprofile (profile_pic,username,email,password,address,contact_no,create_date,create_time,role,flag) VALUES ('$target_dir','$username','$email','$cpassword','$address','$contact','$today','$time','donor','1')";
  $result = mysqli_query($conn,$sql);
 header('Location:../../LoginForm.php');
     }
     
     else{
-     $sql = "INSERT INTO userprofile (profile_pic,username,email,password,address,contact_no,create_date,create_time,role) VALUES ('$target_dir','$username','$email','$cpassword','$address','$contact','$today','$time','donor')";
+     $sql = "INSERT INTO userprofile (profile_pic,username,email,password,address,contact_no,create_date,create_time,role,flag) VALUES ('$target_dir','$username','$email','$cpassword','$address','$contact','$today','$time','donor','1')";
     
  $result = mysqli_query($conn,$sql);
 header('Location:../../LoginForm.php');

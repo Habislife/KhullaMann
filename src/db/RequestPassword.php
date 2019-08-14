@@ -15,7 +15,6 @@ if(isset($_POST['submit']))
     $row = mysqli_fetch_array($select_user_query);
     if( $email == $row['email'] )
      {
-$email="devkotahancy@gmail.com";
 $subject="Forget Password";
 $from = 'noreply@gmail.com';
 $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -28,7 +27,7 @@ $message = "<html><body bgcolor='#48B5B1'>";
 $message.="<p>Hi".$row['username'].",</p>";
 $message.="<p>Reset your password</p>";
 $message.="<p>To change your KhullaMann password, click the link below.</p>";
-$message.="<p><a href='localhost/KhullaMann'>Reset my password</a></p>";
+$message.="<p><a href='http://localhost/khullamann/resetpassword.php'>Reset my password</a></p>";
 $message.="<p>This link will expire in 24 hours, so be sure to use it right away.</p>";
 $message.="<p> Thank you for using KhullaMann!</p>";
 $message.="<p> The KhullaMann Team</p>";

@@ -76,21 +76,35 @@ echo "Sorry, your file was not uploaded.";
         echo "Sorry, there was an error uploading your file.";
     }
 }
- $sql = "INSERT INTO doneeverify (profile_pic,username,email,password,address,contact_no,account_no,document,create_date,create_time) VALUES ('$target_file','$username','$email','$cpassword','$address','$contact', '$account','$document','$today','$time')";
+ $sql = "INSERT INTO userprofile (profile_pic,username,email,password,address,contact_no,create_date,create_time,role,flag) VALUES ('$target_file','$username','$email','$cpassword','$address','$contact', '$account','$document','$today','$time','donee','0')";
  $result = mysqli_query($conn,$sql);
     }
     else{
 
-     $sql = "INSERT INTO doneeverify (username,email,password,address,contact_no,account_no,document,create_date,create_time,role) VALUES ('$username','$email','$cpassword','$address','$contact', '$account','$document','$today','$time','donee')";
+     $sql = "INSERT INTO userprofile (username,email,password,address,contact_no,account_no,document,create_date,create_time,role,flag) VALUES ('$username','$email','$cpassword','$address','$contact', '$account','$document','$today','$time','donee','0')";}
 
  $result = mysqli_query($conn,$sql);
+ $sql="SELECT user_id from userprofile where email = '{$email}'";
+$result = mysqli_query($conn,$sql);
+$row =mysqli_fetch_array($result);
+$user_id=$row["user_id"];
+$sql = "INSERT INTO doneeinfo (donee_id,account_no,document) VALUES ('$user_id','$account','$document')";
+$result = mysqli_query($conn,$sql);
 }
-
+$from = 'noreply@gmail.com';
+$headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+// Create email headers
+$headers .= 'From: '.$from."\r\n".
+    'Reply-To: '.$from."\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 $subject="Approval Pending";
-     $message="Hi ".$username.","."<br>"."We are holding your account for verification"."<br>"."Please Wait for 24 hrs".
-"Thank you for using KhullaMann!
-"."<br>"."The KhullaMann Team";
-$headers = 'From: noreply @ gmail . com';
+$message = "<html><body bgcolor='#48B5B1'>";
+$message.="<p>Hi ".$username.",.</p>";
+$message.="<p>We are holding your account for verification</p>";
+$message.="<p>Please Wait for 24 hrs</p>";
+$message.="<p>Thank you for using KhullaMann!</p>";
+$message.="<p>The KhullaMann Team</p>";
 $mail= new Mail($email,$subject,$message,$headers);
 $conn->close();
 }
