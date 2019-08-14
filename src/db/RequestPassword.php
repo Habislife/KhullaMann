@@ -5,7 +5,7 @@ if(isset($_POST['submit']))
 {
  $email = $_POST['email'];
   $email = mysqli_real_escape_string($conn,$email);
-  $query = "SELECT * FROM userprofile WHERE email = '{$email}'";
+  $query = "SELECT email,user_id FROM userprofile WHERE email = '{$email}'";
     $select_user_query = mysqli_query($conn,$query);
     if(!$select_user_query)
     {
@@ -27,7 +27,7 @@ $message = "<html><body bgcolor='#48B5B1'>";
 $message.="<p>Hi".$row['username'].",</p>";
 $message.="<p>Reset your password</p>";
 $message.="<p>To change your KhullaMann password, click the link below.</p>";
-$message.="<p><a href='http://localhost/khullamann/resetpassword.php'>Reset my password</a></p>";
+$message.="<p><a href='http://localhost/khullamann/resetpassword.php?value_key=".$row['user_id']."'>Reset my password</a></p>";
 $message.="<p>This link will expire in 24 hours, so be sure to use it right away.</p>";
 $message.="<p> Thank you for using KhullaMann!</p>";
 $message.="<p> The KhullaMann Team</p>";
