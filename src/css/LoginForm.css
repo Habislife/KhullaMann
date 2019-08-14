@@ -1,9 +1,11 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: url(../images/bg.png);
+html { 
+   margin: 0;
+    padding: 0;
+    background: url(../images/bg.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
   font-family: sans-serif;
 }
 
@@ -22,7 +24,7 @@ body {
 .box h1 {
   margin: 0 0 1.875rem;
   padding: 0;
-  color:  #5D4F9A;
+  color:  #07558F;
   text-align: center;
 }
 
@@ -34,11 +36,11 @@ body {
   width: 100%;
   padding: 0.625rem 0;
   font-size: 1rem;
-  color: #5D4F9A;
+  color:  #07558F;
   letter-spacing: 0.062rem;
   margin-bottom: 1.875rem;
   border: none;
-  border-bottom: 0.065rem solid #fff;
+  border-bottom: 0.065rem solid #07558F;
   outline: none;
   background: transparent;
 }
@@ -49,7 +51,7 @@ body {
   left: 0;
   padding: 0.625rem 0;
   font-size: 1rem;
-  color: #fff;
+  color: #07558F;
   pointer-events: none;
   transition: 0.5s;
 }
@@ -59,12 +61,12 @@ body {
 .box .inputBox input:not([value=""]) ~ label {
   top: -1.125rem;
   left: 0;
-  color: #03a9f4;
+  color: #07558F;
   font-size: 0.75rem;
 }
 
 ::placeholder {
-  color: #6A6C95;
+  color:  #07558F;
 }
 
 #field{
@@ -86,13 +88,14 @@ body {
 .forgot{
   float: right;
   position: relative;
+  color: #07558F;
 }
 
 .box input[type="submit"] {
   border: none;
   outline: none;
   color: #fff;
-  background-color:   #5D4F9A;
+  background-color:   #1889B5;
   padding: 0.625rem 1.25rem;
   cursor: pointer;
   border-radius: 0.312rem;
@@ -100,5 +103,10 @@ body {
 }
 
 .box input[type="submit"]:hover {
-  background-color: #6A6C95;
+  background-color: #07558F;
+}
+
+a{
+  text-decoration: none;
+  color: #07558F;
 }

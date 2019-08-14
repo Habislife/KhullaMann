@@ -1,4 +1,4 @@
-<?php
+<?php/*
 session_start();
 echo $_SESSION['role'];
 if(isset($_SESSION['userid']))
@@ -16,7 +16,7 @@ else
   header("Location:AdminPanel.php"); 
 }
 
-}
+}*/
 ?> 
 <!DOCTYPE html>
 <html>
@@ -28,8 +28,8 @@ else
 <body>
 
   <?php include 'FormNav.html';?>
-  
-  <span id="errorMessage" style="color: red;"></span>
+
+    
     <div class="box" align="center">
   <h1>Login</h1>
   <br>
@@ -63,7 +63,7 @@ else
           To create new account
         </label>
         <br>
-        <a href="RegisterForm.php">Register </a>
+        <a href="RegisterForm.php" id="link">Register </a>
 
   </form>
 </div>
