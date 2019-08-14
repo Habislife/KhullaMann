@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 <head>
-  <title> LogedIn Give feedback</title>
+  <title> LoggedIn Give feedback</title>
   <style>
     * {box-sizing: border-box}
 
@@ -68,7 +68,8 @@ button{
   </style>
 </head>
 <body>
-  <div class="box">
+  <div class="box" align="center">
+    <h1>User Feedback</h1>
     <form method="POST" align="center">
     <input type="text" name="subject" placeholder="Subject">
     <br><br>
