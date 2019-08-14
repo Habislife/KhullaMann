@@ -18,12 +18,11 @@ else
 }
 ?> 
 
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Register Form</title>
-    <link rel="stylesheet" type="text/css" href="src/css/RegisterForm.css">
+    <link rel="stylesheet" type="text/css" href="src/css/Donee.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <style>
@@ -168,8 +167,8 @@ li a.active {
       <li><a  href="#">Contact</a></li> 
     </ul>
   </nav>
-          <?php include 'FormNav.html';?>
-
+    
+    
          <span id="errorMessage" style="color: red;"></span>
     <div class="box">
       <form name=registerForm method="POST"  onsubmit="return validateForm()" action="src/db/doneeRegister.php" enctype="multipart/form-data">
@@ -178,9 +177,9 @@ li a.active {
       
          <div class="image_container">
           <div id="upload">
-            <img id="image">
+            <img id="profilepic">
           </div>
-          <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
+          <input type="file" name="image" accept="image/*" id="file" onchange="loadImage(event)">
           
         </div>
         

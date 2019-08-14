@@ -42,12 +42,6 @@ function formValidate(){
     return false;
   }
     
-    var abc = /^[A-Z][a-z]+\s[A-Z][a-z]+$/;
-    if(!abc.test(fullName)){
-        errorMessage.textContent="Enter valid Full name."
-        return false;
-        
-    }
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!re.test(email)){
        errorMessage.textContent="Enter valid Email."
@@ -66,8 +60,8 @@ var checkform = function() {
         document.getElementById('message').innerHTML = 'Email cannot be empty';
         return false;
     } else {
-        document.getElementById('message').style.color = 'green';
-        document.getElementById('message').innerHTML = 'Email is not empty';
+        document.getElementById('message').style.color = '';
+        document.getElementById('message').innerHTML = '';
     }
     
     if(document.getElementById('password').value == "") {
@@ -75,8 +69,8 @@ var checkform = function() {
         document.getElementById('message1').innerHTML = 'Password cannot be empty';
         return false;
     } else {
-        document.getElementById('message1').style.color = 'green';
-        document.getElementById('message1').innerHTML = 'Password is not empty';
+        document.getElementById('message1').style.color = '';
+        document.getElementById('message1').innerHTML = '';
     }
 }
 

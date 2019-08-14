@@ -70,8 +70,8 @@ function validateForm(){
 var check = function() {
   if (document.getElementById('password').value == 
       document.getElementById('repassword').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = 'matching';
+    document.getElementById('message').style.color = '';
+    document.getElementById('message').innerHTML = '';
       return false;
   } else {
     document.getElementById('message').style.color = 'red';
@@ -87,8 +87,8 @@ var fieldCheck = function() {
         document.getElementById('message1').innerHTML = 'Username cannot be empty';
         return false;
     } else {
-        document.getElementById('message1').style.color = 'green';
-        document.getElementById('message1').innerHTML = 'Username is not empty';
+        document.getElementById('message1').style.color = '';
+        document.getElementById('message1').innerHTML = '';
     }
     
     if (document.getElementById('email').value == "") {
@@ -96,8 +96,8 @@ var fieldCheck = function() {
         document.getElementById('message2').innerHTML = 'Email cannot be empty';
         return false;
     } else {
-        document.getElementById('message2').style.color = 'green';
-        document.getElementById('message2').innerHTML = 'Email is not empty';
+        document.getElementById('message2').style.color = '';
+        document.getElementById('message2').innerHTML = '';
     }
     
     if(document.getElementById('password').value == "") {
@@ -106,8 +106,8 @@ var fieldCheck = function() {
         return false;
 
     } else {
-        document.getElementById('message3').style.color = 'green';
-        document.getElementById('message3').innerHTML = 'Password is not empty';
+        document.getElementById('message3').style.color = '';
+        document.getElementById('message3').innerHTML = '';
     }
     if (document.getElementById('repassword').value == "") {
         document.getElementById('message').style.color = 'red';
@@ -115,32 +115,32 @@ var fieldCheck = function() {
         return false;
     
     } else {
-        document.getElementById('message').style.color = 'green';
-        document.getElementById('message').innerHTML = 'Repassword is not empty';
+        document.getElementById('message').style.color = '';
+        document.getElementById('message').innerHTML = '';
     }
     if (document.getElementById('address').value == "") {
         document.getElementById('message4').style.color = 'red';
         document.getElementById('message4').innerHTML = 'Address cannot be empty';
         return false;
     } else {
-        document.getElementById('message4').style.color = 'green';
-        document.getElementById('message4').innerHTML = 'Address is not empty';
+        document.getElementById('message4').style.color = '';
+        document.getElementById('message4').innerHTML = '';
     }
     if (document.getElementById('contact').value == "") {
         document.getElementById('message5').style.color = 'red';
         document.getElementById('message5').innerHTML = 'Contact cannot be empty';
         return false;
     } else {
-        document.getElementById('message5').style.color = 'green';
-        document.getElementById('message5').innerHTML = 'Contact is not empty';
+        document.getElementById('message5').style.color = '';
+        document.getElementById('message5').innerHTML = '';
     }
     if (document.getElementById('account').value == "") {
         document.getElementById('message6').style.color = 'red';
         document.getElementById('message6').innerHTML = 'Account cannot be empty';
         return false;
     } else {
-        document.getElementById('message6').style.color = 'green';
-        document.getElementById('message6').innerHTML = 'Account is not empty';
+        document.getElementById('message6').style.color = '';
+        document.getElementById('message6').innerHTML = '';
     }
     return true;
 }
@@ -154,82 +154,3 @@ var loadImage = function(event) {
       var image = document.getElementById('document');
       image.src = URL.createObjectURL(event.target.files[0]);
     };
-
-/*function checkform()
-{
-    var username = document.getElementById('username').value;
-    var email = document.getElementById('email').value;
-    var a = document.myForm.Email.value;
-    var address = document.getElementById('address').value;
-    var contact = document.getElementById('contact').value;
-    var account = document.getElementById('account').value;
-    var password = document.getElementById('password').value;
-    var repassword = document.getElementById('repassword').value;
-    var errorMessage = document.getElementById('errorMessage');
-
-
-    if (username === ""){
-        errorMessage.textContent = "Username can't be empty";
-    return false;
-    }  
-
-    if (email === ""){
-        errorMessage.textContent = "Email can't be empty";
-        return false;
-    }
-  
-    if (address === ""){
-        errorMessage.textContent = "Address can't be empty";
-        return false;
-    }
-    
-    if (contact === ""){
-        errorMessage.textContent = "Contact can't be empty";
-    }
-    
-    if (account === ""){
-        errorMessage.textContent = "Account can't be empty";
-    }
-
-    if (password === ""){
-        errorMessage.textContent = "Password can't be empty";
-
-        return false;
-    }
-
-    if (repassword === ""){
-        errorMessage.textContent = "Password re-type can't be empty";
-
-        return false;
-    }
-
-    if (password!=repassword){
-        errorMessage.textContent="The two password donot match";
-        return false;
-    }
-     if (a.indexOf('@'<=0)){
-        errorMessage.document.getElementById("message");
-        return false;
-    }
-    if ((a.charAt(a.length-4)!='.') && (a.charAt(a.length-3)!='.')){
-        document.getElementById("message").innerHTML="**invalid . position of 4";
-        return false;
-    }
-
-    return true;
-}
-var check = function() {
-  if (document.getElementById('password').value ==
-    document.getElementById('repassword').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = 'matching';
-  } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'not matching';
-  }
-}
-
-var loadFile = function(event) {
-    var image = document.getElementById('pic');
-    image.src = URL.createObjectURL(event.target.files[0]);
-};*/

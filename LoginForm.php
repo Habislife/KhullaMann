@@ -28,8 +28,8 @@ else
 <body>
 
   <?php include 'FormNav.html';?>
-
-    
+  
+  <span id="errorMessage" style="color: red;"></span>
     <div class="box" align="center">
   <h1>Login</h1>
   <br>
