@@ -65,12 +65,12 @@ function validateForm(){
 var check = function() {
   if (document.getElementById('password').value == 
       document.getElementById('repassword').value) {
-    document.getElementById('message').style.color = '';
-    document.getElementById('message').innerHTML = '';
+    document.getElementById('repassword').style.color = 'green';
+    document.getElementById('repassword').innerHTML = '';
       return false;
   } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'not matching';
+    document.getElementById('repassword').style.color = 'red';
+    document.getElementById('repassword').innerHTML = 'not matching';
       return false;
   }
     return true;
@@ -84,7 +84,7 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message1').style.color = '';
         document.getElementById('message1').innerHTML = '';
-        
+        return false;      
     }
     
     if (document.getElementById('email').value == "") {
@@ -94,6 +94,7 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message2').style.color = '';
         document.getElementById('message2').innerHTML = '';
+        return false;
         
     }
     
@@ -105,6 +106,7 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message3').style.color = '';
         document.getElementById('message3').innerHTML = '';
+        return false;
         
     }
     if (document.getElementById('repassword').value == "") {
@@ -115,6 +117,7 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message').style.color = '';
         document.getElementById('message').innerHTML = '';
+        return false;
         
     }
     if (document.getElementById('address').value == "") {
@@ -124,6 +127,7 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message4').style.color = '';
         document.getElementById('message4').innerHTML = '';
+        return false;
         
     }
     if (document.getElementById('contact').value == "") {
@@ -133,7 +137,7 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message5').style.color = '';
         document.getElementById('message5').innerHTML = '';
-        
+        return false;
     }
     return true;
 }

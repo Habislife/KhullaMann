@@ -62,6 +62,7 @@ var checkform = function() {
     } else {
         document.getElementById('message').style.color = '';
         document.getElementById('message').innerHTML = '';
+        return false;
     }
     
     if(document.getElementById('password').value == "") {
@@ -71,7 +72,9 @@ var checkform = function() {
     } else {
         document.getElementById('message1').style.color = '';
         document.getElementById('message1').innerHTML = '';
+        return false;
     }
+    return true;
 }
 
 function show_hide() {
