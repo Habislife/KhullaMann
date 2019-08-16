@@ -157,7 +157,7 @@ var loadImage = function(event) {
       image.src = URL.createObjectURL(event.target.files[0]);
     };
 
-     var loadFile = function(event) {
+var loadFile = function(event) {
       var image = document.getElementById('document');
       image.src = URL.createObjectURL(event.target.files[0]);
     };

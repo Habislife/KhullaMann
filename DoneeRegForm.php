@@ -40,7 +40,7 @@
           <div id="upload">
             <img id="profilepic">
           </div>
-            <input type="file" name="image" accept="image/*" id="file" onchange="loadImage(event)">
+            <input type="file" name="image" accept="image/*" id="profilepic" onchange="loadImage(event)">
         </div>
       </div>
         
@@ -85,7 +85,7 @@
           <div id="upload">
             <img id="document">
           </div>
-          <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
+          <input type="file" name="document" accept="image/*" id="document" onchange="loadFile(event)">
           
         </div>
       </div>
@@ -104,16 +104,6 @@
     </div>
 
         <script type="text/javascript" src="src/js/DoneeReg.js"></script>
-<script>
-    var loadImage = function(event) {
-      var image = document.getElementById('profilepic');
-      image.src = URL.createObjectURL(event.target.files[0]);
-    };
 
-     var loadFile = function(event) {
-      var image = document.getElementById('document');
-      image.src = URL.createObjectURL(event.target.files[0]);
-    };
-  </script>
   </body>
 </html>
