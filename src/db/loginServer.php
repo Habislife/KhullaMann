@@ -1,6 +1,7 @@
-<<?php 
+<?php 
 include 'connection.php';
-if (isset($_POST['submit'])) {
+if (isset($_POST['log-in']))
+ {
  $email = $_POST['email'];
  $password = $_POST['password'];
  $email = mysqli_real_escape_string($conn,$email);
@@ -15,11 +16,6 @@ else
     setcookie("email","");
     setcookie("password","");
 }
- if($email="superuser@khullamann.com" && $password="superuser")
- {
-  header('Location:../../admin/AdminPanel.php');
- }
- else{
   $query = "SELECT * FROM userprofile WHERE email = '{$email}' AND password ='{$cpassword}' ";
 
     $select_user_query = mysqli_query($conn,$query);
@@ -31,7 +27,7 @@ else
     $row = mysqli_fetch_array($select_user_query);
     if( $email == $row['email'])
     {
-      if($password == $row['password'])
+      if($cpassword == $row['password'])
     {
       session_start();
        $_SESSION['userid']=$row['user_id'];
@@ -43,18 +39,25 @@ else
 
 
         }
-        else{
+        elseif($row['role']=="donee"){
           $_SESSION['role']=$row['role'];
           header("Location: ../../DoneeMain.php");
         }
+        else{
+         $_SESSION['role']=$row['role'];
+          header("Location: ../../admin/AdminPanel.php"); 
+        }
 
     }
+    else
+      {
+        echo"Email or Password Not Match";
+      }
 
     }
     else{
       echo"Email or Password Not Match";
     }
- }
 
 }
  ?>

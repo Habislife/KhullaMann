@@ -5,13 +5,13 @@ $Donation=0;
 $Donee=0;
 
 //count Donor
-$sql = "SELECT count(*) as total from userprofile WHERE role ='donor'";
+$sql = "SELECT count(*) as total from userprofile WHERE role ='donor' and flag='1'";
 $result = $conn->query($sql);
 $data=mysqli_fetch_assoc($result);
 $Donor= $data['total'];
 
 //count Donee
-$sql = "SELECT count(*) as total from userprofile WHERE role ='donee'";
+$sql = "SELECT count(*) as total from userprofile WHERE role ='donee' and flag='1'";
 $result = $conn->query($sql);
 $data= mysqli_fetch_assoc($result);
 $Donee = $data['total'];
@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 $data=mysqli_fetch_assoc($result);
 $Donation = $data['total'];
 
-$sql = "SELECT count(*) as total from doneeverify WHERE role ='donee'";
+$sql = "SELECT count(*) as total from userprofile WHERE role ='donee' and flag='0'";
 $result = $conn->query($sql);
 $data=mysqli_fetch_assoc($result);
 $Verification= $data['total'];
