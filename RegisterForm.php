@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 if(isset($_SESSION['userid']))
 {
@@ -16,7 +16,7 @@ else
 }
 
 }
-?>  
+?>  --> 
 
 <!DOCTYPE html>
 <html>
