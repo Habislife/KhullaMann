@@ -16,7 +16,7 @@
 <body>
   <?php include 'Nav.html' ?>
   <div class="container">
-    <h3 align="left" style="padding-top: 80px; font-size: 20px;"><u>Previous Projects</u></h3>
+    <h3 align="left" style="padding-top: 80px; font-size: 20px; font-family: sans-serif;"><u>Previous Projects</u></h3>
   <div class="content" align="center" style="margin-top: 30px; border: 2px solid black;">
     <div class="article">
       <h2>ARTICLE 1</h2><br><img src="src/images/img2.jpg"><span>vbebjknrknerv</span>
@@ -34,7 +34,7 @@
     <button type="submit" name="submit" class="create"><a href="./doneePage.php"> Create New Post</a></button>
   </div>
 
-  <div class="footer"><h2>Footer</h2></div>
+  <div class="footer"><h4>Footer</h4></div>
   </div>
   <script type="text/javascript" src="../js/index.js"></script>
 </body>
