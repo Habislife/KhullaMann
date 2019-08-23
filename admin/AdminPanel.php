@@ -27,16 +27,16 @@
 		}
 
 		h1{
-			color: #07558F;
+			color: #1889B5;
 			text-decoration: underline;
 		}
 		a{
 			text-decoration: none;
-			color: #1889B5;
+			color: #07558F;
 		}
 
 		label{
-			color: #1889B5;
+			color: #07558F;
 			font-size: 32px;
 		}
 	</style>

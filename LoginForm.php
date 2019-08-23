@@ -7,7 +7,7 @@
   </head>
 <body>
 
-  <?php include 'FormNav.html';?>
+  <?php include 'indexNav.html';?>
 
     
     <span id="errorMessage" style="color: red;"></span>

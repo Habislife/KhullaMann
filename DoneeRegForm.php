@@ -27,7 +27,7 @@
 
   <body>
     
-    <?php include 'FormNav.html';?>
+    <?php include 'indexNav.html';?>
 
     <div class="box" align="center">
        <h1 align="center">Register</h1>
