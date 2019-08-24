@@ -5,38 +5,48 @@
   //header("Location: index.php");
 }
   ?> -->
-  
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Donee Page</title>
-	<link rel="stylesheet" type="text/css" href="src/css/DoneePage.css">
+  <title>Donee Page</title>
+  <link rel="stylesheet" type="text/css" href="src/css/Doneepage.css">
 </head>
 <body>
    <?php include 'Nav.html' ?>
 
-  <form method="POST" action="src/db/postUpload.php"  enctype="multipart/form-data">
-    <div class="post_field" align="center" style="margin-top: 70px; height: 600px;">
-        <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
-        <div id="upload">
-          <img id="image2">
-        </div>
+   <div class="box">
+    
+     <h1>Write your Post</h1>
 
-        <label>
-           <textarea rows="5" id="bio" placeholder="Write your bio here..." name="bio"></textarea>
-        </label>
-        <br><br>
+        <form method="POST" action="src/db/postUpload.php"  enctype="multipart/form-data">
 
-        <label>
-          <textarea rows="25" id="full" placeholder="Write full Description here..." name="description"></textarea>
-        </label>
-        <br><br>
+          <div class="post_field" align="center" style="margin-top: 70px; height: 600px;">
+            <div class="inputBox">
+              <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
+            </div>
+              <div id="upload">
+                <img id="image2">
+              </div>
 
-        <button type="submit" name="submit" class="register">Post</button>
-    </div>
-  </form>
-  <div class="footer" align="center"><h1>Footer</h1></div>
+              <label>
+                <div class="inputBox">
+                 <textarea rows="5" id="bio" placeholder="Write your bio here..." name="bio"></textarea>
+               </div>
+              </label>
+              <br><br>
 
+              <label>
+                <div class="inputBox">
+                <textarea rows="25" id="full" placeholder="Write full Description here..." name="description"></textarea>
+              </div>
+              </label>
+              <br><br>
+
+              <input type="submit" name="submit" class="register" vallue="Post">
+          </div>
+        </form>
+      </div>
+  
   <script>
     var loadFile = function(event) {
       var image = document.getElementById('image2');
