@@ -1,6 +1,6 @@
 <?php
 include '../src/db/connection.php';
-$sql = "SELECT  user_id, username,email,address,contact_no,account_no FROM userprofile,doneeinfo Where role='Donee' AND userprofile.user_id=doneeinfo.donee_id AND flag='1'";
+$sql = "SELECT  user_id, username,email,address,contact_no,account_no FROM userprofile,doneeinfo Where role='Donee' AND userprofile.user_id=doneeinfo.donee_id AND flag='1' order by userprofile.username";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

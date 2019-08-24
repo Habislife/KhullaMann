@@ -59,10 +59,6 @@ body {
     <label>$100</label>
     <button>Donate</button>
     <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
   </div>
   </div>
 </div>

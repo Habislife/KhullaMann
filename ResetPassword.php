@@ -6,6 +6,7 @@ if (isset($_POST['submit'])&&isset($_GET['value_key'])) {
 	$cpassword=md5($password);
 	$sql="UPDATE userprofile SET `password` ='$cpassword' WHERE `user_id`='$userid'";
 	$result = mysqli_query($conn,$sql);
+header('Location:LoginForm.php');
 }
 
  ?>

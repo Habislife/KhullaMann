@@ -2,9 +2,10 @@
 include '../src/db/connection.php';
 if(isset($_GET['value_key'])){
   $var = $_GET['value_key']; //some_value
-$sql = "SELECT document,username FROM userprofile where user_id = '{$var}'";
+$sql = "SELECT document,username FROM doneeinfo,userprofile where doneeinfo.donee_id = '{$var}' and userprofile.user_id= '{$var}' ";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
+echo $row['username'];
 echo "<img src='".$row["document"]."' height='500' width='500'>";
 echo"<br>";
 echo "<a href='transfer.php?value_key=".$var."'>"."Approve</a>";
