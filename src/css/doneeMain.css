@@ -98,13 +98,13 @@ h1{
 .container{
   margin: 0px;
   background-attachment: fixed;
-  background-image: url("pic10.jpg");
+  
 }
 
 .content{
   margin: 80px 0 20px 0;
   width: 100%;
-  height: 420px;
+  height: 350px;
   background-color: gray;
 }
 
@@ -113,7 +113,7 @@ h1{
   margin: 20px 1.5%;
   width: 30%;
   border : 2px solid green;
-  height: 350px;
+  height: 280px;
   position: relative;
 }
 
@@ -144,13 +144,20 @@ a{
   font-style: none;
 }
 
+
+h4{
+  font-size: 30px;
+  font-family: ariel;
+  color: white;
+}
+
 .footer{
   margin: 20px 15px 10px 0;
   border : 2px solid black;
   width: 100%;
-  height: 200px;
+  height: 300px;
   position: relative;
-  background-color: #3c3838;
+  background-color: black;
 }
 
 

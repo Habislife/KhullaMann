@@ -3,13 +3,14 @@
   <head>
     <title>Login Form</title>
     <link rel="stylesheet" type="text/css" href="src/css/LoginForm.css">
-  
+    <script type="text/javascript" src='src/js/LoginForm.js'></script>
   </head>
 <body>
 
-  <?php include 'FormNav.html';?>
+  <?php include 'indexNav.html';?>
 
     
+    <span id="errorMessage" style="color: red;"></span>
     <div class="box" align="center">
   <h1>Login</h1>
   <br>
@@ -48,7 +49,7 @@
   </form>
 </div>
 
-    <script type="text/javascript" src='src/js/LoginForm.js'></script>
+    
 
   </body>
 </html>

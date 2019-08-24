@@ -1,116 +1,80 @@
-* {box-sizing:border-box}
-
-html{
-  position: relative;
+html { 
+   margin: 0;
+    padding: 0;
+    background: url(../images/bg.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: sans-serif;
+   position: relative;
 }
 
-.header{
-  border : 2px solid black;
-  width: 100%;
-  height: 100px;
-}
-
-.logo{
-    color: white;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background-color: green;
-    margin: 10px 10px;
-    float: left;
-}
-
-/*#image1{
-  width: 20px;
-  top: 30%;
-  right: 5%;
+.box {
   position: absolute;
-}
-*/
-
-
-.head{
-  float: right;
-  margin: 10px 10px;
-  position: relative;
-}
-
-.search{
-  position: relative;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  width: 50rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(211, 249, 232, 0.3)2
+  border-radius: 0.625rem;
 }
 
-input[type=text]{
-  color: black;
-  background-color: white; 
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border : 2px solid black;
-    border-radius: 1px;
-    box-sizing: border-box;
-}
-
-#searchButton{
-  position: absolute;
-  top: 20%;
-  right: 10px;
-}
-
-.header a{
-  color: green;
-  padding: 15px 15px;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.header a:hover{
-    color: #00e600
-}
-
-nav{
-    background-color: green;
-}
-
-ul#nav li{
-  display: inline-block;
-  color: white; 
-  font-size: 20px;
-  padding: 10px 10px;
-}
-
-#nav li:hover{
-  color: green;
-  background-color: white;
-}
-
-#nav a{
-  display: block;
-  color: white;
+.box h1 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color:  #07558F;
   text-align: center;
-  padding: 5px 5px;
-  text-decoration: none;
-  font-size: 20px;
 }
 
-#nav a:hover{
-    color:green;
+.box .inputBox {
+  position: relative;
 }
 
-input[type=file]{
-  width: 60%;
-  padding: 10px;
-  margin: 5px  0 20px 0;
-  background: #f0f0f0;
-  float: left;
+.box .inputBox input, textarea {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #07558F;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid  #1889B5;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #07558F;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #07558F;
+  font-size: 0.75rem;
+}
+
+::placeholder {
+  color: #07558F;
 }
 
 #upload{
   position: relative;
-  border: 2px solid white;
+  border: 1px solid white;
   width: 35%;
-  height: 25%;
+  height: 35%;
   float: right;
 }
 
@@ -119,14 +83,6 @@ input[type=file]{
   height: 90%;
   position: relative;
   margin: 10px 10px;
-}
-
-.post_field{
-	margin: 5% 10%;
-  padding: 20px 10px;
-	border : 2px solid black;
-	width: 80%;
-	height: 600px;
 }
 
 #bio{
@@ -138,19 +94,6 @@ input[type=file]{
 }
 
 
-.register{
-  font-size: 20px;
-  margin: 20px 0px;
-  width: 200px; 
-}
-
-.footer{
-	margin: 20px 15px 20px 0;
-	border : 2px solid black;
-	width: 100%;
-	height: 100px;
-	position: relative;
-}
 
 
 

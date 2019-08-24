@@ -35,48 +35,108 @@ if (isset($_POST['submit'])) {
 <head>
   <title> LoggedIn Give feedback</title>
   <style>
+    html { 
+   margin: 0;
+    padding: 0;
+    background: url(src/images/bg.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
     * {box-sizing: border-box}
 
-.box{
-  margin: 10% 20% 0 20%;
-  border : 2px solid black;
-  color: black;
-  padding: 10px;
-  height: auto;
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(211, 249, 232, 0.3);
+  border-radius: 0.625rem;
+}
+
+.box h1 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color:  #07558F;
+  text-align: center;
+}
+
+.box .inputBox {
   position: relative;
 }
 
-input[type=email] ,input[type=text]{
+.box .inputBox input ,textarea {
   width: 100%;
-  padding: 10px;
-  margin: 5px  0 20px 0;
-  background: #f1f1f1;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color:  #07558F;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #07558F;
+  outline: none;
+  background: transparent;
 }
 
-#text{
-  width: 100%;
-  padding: 10px;
-  margin: 5px  0 20px 0;
-  background: #f1f1f1;
-}
-button{
-  font-size: 20px;
-  margin: 20px 0px;
-  width: 200px;
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #07558F;
+  pointer-events: none;
+  transition: 0.5s;
 }
 
+
+
+::placeholder {
+  color:  #07558F;
+}
+
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color:   #1889B5;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #07558F;
+}
   </style>
 </head>
 <body>
+
+  <?php include 'indexNav.html' ?>
+  
   <div class="box" align="center">
     <h1>User Feedback</h1>
-    <form method="POST" align="center">
-    <input type="text" name="subject" placeholder="Subject">
-    <br><br>
-    <textarea rows="5" id="text" name="givefeedback" placeholder="Give feedback..."></textarea>
-    <br><br>
-    <button type="submit" name="submit">Send</button>
-  </form>
+
+        <form method="POST" align="center">
+          <div class="inputBox">
+              <input type="text" name="subject" placeholder="Subject">
+          </div>
+          <br><br>
+
+          <div class="inputBox">
+            <textarea rows="5" id="text" name="givefeedback" placeholder="Give feedback..."></textarea>
+          </div>
+          <br><br>
+
+          <input type="submit" name="submit" value="Send">
+        </form>
   </div>
   
 </body>

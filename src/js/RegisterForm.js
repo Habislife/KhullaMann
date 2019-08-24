@@ -84,7 +84,8 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message1').style.color = '';
         document.getElementById('message1').innerHTML = '';
-        return false;      
+        return false;
+              
     }
     
     if (document.getElementById('email').value == "") {
@@ -95,7 +96,6 @@ var fieldCheck = function() {
         document.getElementById('message2').style.color = '';
         document.getElementById('message2').innerHTML = '';
         return false;
-        
     }
     
     if(document.getElementById('password').value == "") {
@@ -106,19 +106,16 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message3').style.color = '';
         document.getElementById('message3').innerHTML = '';
-        
-        
+        return false;   
     }
     if (document.getElementById('repassword').value == "") {
         document.getElementById('message').style.color = 'red';
         document.getElementById('message').innerHTML = 'Repassword cannot be empty';
         return false;
-    
     } else {
         document.getElementById('message').style.color = '';
         document.getElementById('message').innerHTML = '';
-        
-        
+        return false;      
     }
     if (document.getElementById('address').value == "") {
         document.getElementById('message4').style.color = 'red';
@@ -127,8 +124,7 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message4').style.color = '';
         document.getElementById('message4').innerHTML = '';
-        
-        
+        return false;       
     }
     if (document.getElementById('contact').value == "") {
         document.getElementById('message5').style.color = 'red';
@@ -137,7 +133,7 @@ var fieldCheck = function() {
     } else {
         document.getElementById('message5').style.color = '';
         document.getElementById('message5').innerHTML = '';
-        
+        return false;
     }
     return true;
 }

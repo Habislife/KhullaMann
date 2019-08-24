@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 if(isset($_SESSION['userid']))
 {
@@ -16,7 +16,7 @@ else
 }
 
 }
-?>  
+?>  --> 
 
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,7 @@ else
 
   <body>
     
-     <?php include 'FormNav.html';?>
+     <?php include 'indexNav.html';?>
 
          <span id="errorMessage" style="color: red;"></span>
     <div class="box" align="center">
