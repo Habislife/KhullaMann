@@ -32,7 +32,7 @@
     <div class="box" align="center">
        <h1 align="center">Register</h1>
        <br>
-      <form name="doneeForm" onsubmit="return checkform()"method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
+      <form name="doneeForm" onsubmit="return checkForm()"method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
       
        
       <div class="inputBox">
@@ -45,40 +45,41 @@
       </div>
         
       <div class="inputBox">
-        <input type="text" placeholder="Enter Username" name="username" autocomplete="on" id="username">
+        <input type="text" placeholder="Enter Username" name="username" autocomplete="on" id="username" onkeyup='return checkForm()'>
       </div>
-        
+        <span id='message1'></span>
 
       <div class="inputBox">
-        <input type="email" placeholder="Enter Email" name="email" autocomplete="on" id="email">
+        <input type="email" placeholder="Enter Email" name="email" autocomplete="on" id="email" onkeyup='return checkForm()'>
       </div>
-        
+      <span id='message2'></span>  
 
       <div class="inputBox"> 
-        <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='check();'>
+        <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='return checkForm()'>
       </div>
+      <span id='message3'></span>
         
 
       <div class="inputBox">
-        <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();'>
+        <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='return checkForm()'>
       </div>
           <span id='message'></span>
           
 
       <div class="inputBox">
-        <input type="text" placeholder="Enter Address" name="address" autocomplete="on" id="address">
+        <input type="text" placeholder="Enter Address" name="address" autocomplete="on" id="address" onkeyup='return checkForm()'>
       </div>
-        
+       <span id='message4'></span> 
 
       <div class="inputBox">
-        <input type="tel" placeholder="Enter Contact No." name="contact" autocomplete="on" id="contact">
+        <input type="tel" placeholder="Enter Contact No." name="contact" autocomplete="on" id="contact" onkeyup='return checkForm()'>
       </div>
-        
+        <span id='message5'></span>
 
       <div class="inputBox">
-        <input type="text" placeholder="Enter Account No." name="account" autocomplete="on" id="account">
+        <input type="text" placeholder="Enter Account No." name="account" autocomplete="on" id="account" onkeyup='return checkForm()'>
       </div>
-        
+        <span id='message6'></span>
 
       <div class="inputBox">
         <div class="image_container">
