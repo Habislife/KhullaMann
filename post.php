@@ -21,7 +21,6 @@ body {
 
 .left {
 	left: 0;
-  background-image: url(src/images/postpic.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   
@@ -46,29 +45,32 @@ body {
 </head>
 <body>
 
-<?php include 'Nav.html' ?> 
-
-<div class="split right">
-  <div class="centered" >
-    <h1>Music Concert</h1>
+ <?php 
+include 'Nav.html';
+include 'src/db/connection.php';
+$var = $_GET['value_key']; 
+$sql = "SELECT * FROM donation_post where donee_id = '{$var}'";
+ $result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_array($result);
+echo "<div class='split right'>
+  <div class='centered' >
+    <h1>".$row['title']."</h1>
     <br>
-    <p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
+    <p align='justify'>".$row['description']."</p>
     <br>
     <label>$100</label>
     <button>Donate</button>
-    <div style="margin: 24px 0;">
+    <div style='margin: 24px 0;'>
   </div>
   </div>
 </div>
 
-<div class="split left">
-  <div class="centered">
-    
+<div class='split left'>
+
+  <div class='centered'>
+    <img src='".$row['file_path']."'>
   </div>
-</div>
-     
+</div>";    
+?>
 </body>
 </html> 

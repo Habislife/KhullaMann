@@ -1,6 +1,6 @@
 <?php
 include '../src/db/connection.php';
-$sql = "SELECT * FROM userprofile Where role='Donor'";
+$sql = "SELECT * FROM userprofile Where role='Donor'order by username";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

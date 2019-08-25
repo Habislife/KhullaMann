@@ -3,6 +3,7 @@ include 'connection.php';
 session_start();
 $target_dir =$_SERVER['DOCUMENT_ROOT']."/khullamann/upload/images/post/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
+$upload="upload/images/post/". basename($_FILES["image"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if(isset($_POST['submit']))
