@@ -29,7 +29,7 @@ if($start == 0){
 }
 
 echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-if($start+perpage>=$TotalRec){
+if($start+$perpage>=$TotalRec){
 	echo "Next &raquo";
 }else{
 	echo "<a href=Donorinfo.php?id=". ($start + $perpage) ." >Next &raquo</a>";

@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
 	$start = 0;
 }
  
-$count= mysqli_query($conn,"SELECT COUNT(user_id) FROM donation_post Where role='Donee' AND userprofile.user_id=doneeinfo.donee_id AND flag='1' order by userprofile.username");
+$count= mysqli_query($conn,"SELECT COUNT(user_id) FROM userprofile,doneeinfo Where role='Donee' AND userprofile.user_id=doneeinfo.donee_id AND flag='1' order by userprofile.username");
 $rows = mysqli_fetch_array($count);
 $TotalRec=$rows['COUNT(user_id)'];
 $sql = "SELECT  user_id, username,email,address,contact_no,account_no FROM userprofile,doneeinfo Where role='Donee' AND userprofile.user_id=doneeinfo.donee_id AND flag='1' order by userprofile.username  LIMIT $start, $perpage";
@@ -29,7 +29,7 @@ if($start == 0){
 }
 
 echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-if($start+perpage>=$TotalRec){
+if($start+$perpage>=$TotalRec){
 	echo "Next &raquo";
 }else{
 	echo "<a href=Doneeinfo.php?id=". ($start + $perpage) ." >Next &raquo</a>";

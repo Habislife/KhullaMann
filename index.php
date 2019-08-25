@@ -37,8 +37,6 @@ else
       <div class="content">
        <?php 
       include'show.php';
-      show();
-      show(); 
       show();?>
     </div>
 
