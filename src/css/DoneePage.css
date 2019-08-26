@@ -70,6 +70,21 @@ html {
   color: #07558F;
 }
 
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color:   #1889B5;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #07558F;
+}
+
 #upload{
   position: relative;
   border: 1px solid white;

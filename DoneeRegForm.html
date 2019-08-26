@@ -17,7 +17,7 @@
 
 }
 ?> -->
-
+ 
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,12 +27,12 @@
 
   <body>
     
-    <?php include 'indexNav.html';?>
+   <!--  <?php include 'indexNav.html';?> -->
 
     <div class="box" align="center">
        <h1 align="center">Register</h1>
        <br>
-      <form name="doneeForm" onsubmit="return checkForm()"method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
+      <form name="doneeForm" onsubmit="return checkForm()" method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
       
        
       <div class="inputBox">
@@ -61,7 +61,7 @@
         
 
       <div class="inputBox">
-        <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='return checkForm()'>
+        <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='return checkForm()'>
       </div>
           <span id='message'></span>
           

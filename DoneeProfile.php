@@ -10,6 +10,7 @@
 <head>
 	<title>Donee Profile</title>
 	<link rel="stylesheet" type="text/css" href="src/css/RegisterForm.css">
+  <script type="text/javascript" src="src/js/doneeProfile.js"></script>
    <style>
   * {
     font-family: 'Raleway', sans-serif;

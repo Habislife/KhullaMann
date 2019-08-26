@@ -17,7 +17,7 @@
 
 }
 ?> -->
-
+ 
 <!DOCTYPE html>
 <html>
   <head>
@@ -32,7 +32,7 @@
     <div class="box" align="center">
        <h1 align="center">Register</h1>
        <br>
-      <form name="doneeForm" onsubmit="return checkForm()"method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
+      <form name="doneeForm" onsubmit="return checkForm()" method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
       
        
       <div class="inputBox">
