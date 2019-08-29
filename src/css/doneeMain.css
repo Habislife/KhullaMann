@@ -102,19 +102,55 @@ h1{
 }
 
 .content{
-  margin: 80px 0 20px 0;
+  margin: 20px 0 20px 0;
   width: 100%;
-  height: 350px;
-  background-color: gray;
+  height: 500px;
 }
 
-.article{
+.card {
   float: left;
-  margin: 20px 1.5%;
-  width: 30%;
-  border : 2px solid green;
-  height: 280px;
   position: relative;
+  margin: 20px 1.5%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%;
+  text-align: center;
+  font-family: arial;
+  max-height: inherit;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.bio {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  margin: 0px 5%;
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #1889B5;
+  text-align: center;
+  cursor: pointer;
+  width: 40%;
+  font-size: 22px ;
+}
+
+.card button:hover {
+  background-color: #07558F;
+}
+
+#viewbtn{
+  float: left;
+}
+
+#donatebtn{
+  float: left;
 }
 
 img{
@@ -141,7 +177,7 @@ img{
 }
 
 a{
-  font-style: none;
+  text-decoration:  none;
 }
 
 
@@ -151,14 +187,6 @@ h4{
   color: white;
 }
 
-.footer{
-  margin: 20px 15px 10px 0;
-  border : 2px solid black;
-  width: 100%;
-  height: 300px;
-  position: relative;
-  background-color: black;
-}
 
 
 
