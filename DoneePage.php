@@ -29,6 +29,12 @@
                 <img id="image2">
               </div>
               <span id="msg1"></span>
+              <label>
+                <div class="inputBox">
+                 <textarea rows="5"  placeholder="Title" name="title" id="title" onkeyup='return validatePost()'></textarea>
+               </div>
+               <span id='msg0'></span>
+              </label>
 
               <label>
                 <div class="inputBox">

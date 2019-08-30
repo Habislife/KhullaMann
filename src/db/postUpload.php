@@ -10,12 +10,12 @@ if(isset($_POST['submit']))
 {
 	$check = getimagesize($_FILES["image"]["tmp_name"]);
     if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
         echo "File is not an image.";
         $uploadOk = 0;
-    }
+    } 
+    $title = $_POST['title']; 
     $bio = $_POST['bio'];
     $description = $_POST['description'];
     $today = date("Y/m/d");
@@ -40,14 +40,15 @@ if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
-    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
-    } else {
+    if (!move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) 
+
+   {
         echo "Sorry, there was an error uploading your file.";
     }
-} 
-     $sql = "INSERT INTO donation_post (file_path,bio,description,post_date,post_time,donee_id) VALUES ('$target_file','$bio','$description','$today','$time','$_SESSION['userid']')";
+}
+$doneeid=$_SESSION['userid'];
+$sql = "INSERT INTO `donation_post` (file_path, title, bio, description, post_date, post_time, donee_id, flag) VALUES ('$upload', '$title', '$bio', '$description', '$today', '$time','$doneeid', '1')";
  $result = mysqli_query($conn,$sql);
- header("Location: ../../DonorPage.php");
+ // header("Location: ../../DoneeMain.php");
 }
 ?>

@@ -22,7 +22,6 @@ $query = "SELECT * FROM `donation_post`order by post_date asc, post_time asc LIM
        <a href='post.php?value_key=".$row["donee_id"]."'><img src='".$row['file_path']."' style='width:100%'></a>
         <h1>".$row['title']."</h1>
         <p class='bio'>".$row['bio']."</p>
-         <p>".$row['description']."</p>
         <a href='post.php'><button id='viewbtn'>View</button></a>
         <a href='LoginForm.php'><button id='donatebtn'>Donate</button></a>
     </div>";
