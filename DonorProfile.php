@@ -9,7 +9,7 @@
 <html>
 <head>
 	<title>Donee Profile</title>
-	<link rel="stylesheet" type="text/css" href="src/css/Register.css">
+	<link rel="stylesheet" type="text/css" href="src/css/donorProfile.css">
 </head>
 <body>
    <?php include 'Nav.html' ?>
@@ -26,7 +26,7 @@
 			        <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
        			 </div>
 
-			 <input type="text" placeholder="Enter Username" name="username" id="username">		
+			 <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='fieldCheck();'>		
 				<br><span id='message1'></span><br>
 
 			
