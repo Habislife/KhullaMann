@@ -37,7 +37,7 @@ else
 
      <?php
      include'show.php';
-     show();  ?>
+     showAll();  ?>
 
     <script type="text/javascript" src="src/js/index.js"></script>
 </body>

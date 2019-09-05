@@ -1,9 +1,3 @@
-<?php
-if (isset($POST['submit'])) {
-
-
-}
-?>
 
   <!DOCTYPE html>
   <html>

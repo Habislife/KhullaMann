@@ -49,7 +49,7 @@ body {
 include 'Nav.html';
 include 'src/db/connection.php';
 $var = $_GET['value_key']; 
-$sql = "SELECT * FROM donation_post where donee_id = '{$var}'";
+$sql = "SELECT * FROM donation_post where post_id = '{$var}'";
  $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result);
 echo "<div class='split right'>

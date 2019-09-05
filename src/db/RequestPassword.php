@@ -34,7 +34,8 @@ $message.="<p> Thank you for using KhullaMann!</p>";
 $message.="<p> The KhullaMann Team</p>";
 $message .= '</body></html>';
 $mail= new Mail($email,$subject,$message,$headers);
-      echo "Hi "; 
+echo"Mail Has Been Sent. Please Check mail";
+  header("Refresh:3; url=../../LoginForm.php");; 
     }
     else{
     	echo "Email unavailable";
