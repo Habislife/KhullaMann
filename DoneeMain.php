@@ -10,14 +10,14 @@
 <html>
 <head>
   <title>Donee Main Page</title>
-  <link rel="stylesheet" type="text/css" href="src/css/DoneeMain.css">
+  <link rel="stylesheet" type="text/css" href="src/css/DonorPage.css">
   
 </head>
 <body>
 
   <?php include 'Nav.html' ?>
 
-  <div class="container">
+  <!-- <div class="container"> -->
     <h3 align="center" style="padding-top: 80px; font-size: 20px; font-family: sans-serif;"><u>Previous Projects</u></h3>
 
   <div class="content" align="center" style="margin-top: 30px; border: 2px solid black;">
@@ -28,7 +28,7 @@
 
 ?>
   </div>
-</div>
+
 
   <div class="post" align="center">
     <h1>NEED DONATION?</h1>
