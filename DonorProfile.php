@@ -8,8 +8,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Donee Profile</title>
+	<title>Donor Profile</title>
 	<link rel="stylesheet" type="text/css" href="src/css/donorProfile.css">
+  
 </head>
 <body>
    <?php include 'Nav.html' ?>

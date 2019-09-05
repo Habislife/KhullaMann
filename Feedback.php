@@ -116,6 +116,8 @@ if (isset($_POST['submit'])) {
   background-color: #07558F;
 }
 	</style>
+
+  <script type="text/javascript" src="src/js/validate.js"></script>
 </head>
 <body>
 
@@ -124,19 +126,19 @@ if (isset($_POST['submit'])) {
 	<div class="box" align="center">
 		<h1>Feedback</h1>
 
-		<form method="POST" align="center">
+		<form method="POST" onsubmit="return Validate()" align="center">
 			<div class="inputBox">
-				<input type="text" name="email" placeholder="My email">
+				<input type="text" name="email" placeholder="My email" id="email" onkeyup='return Validate()'>
 			</div>
 			<br><br>
 
 			<div class="inputBox">
-				<input type="text" name="subject" placeholder="Subject">
+				<input type="text" name="subject" placeholder="Subject" id="subject" onkeyup='return Validate()'>
 			</div>
 			<br><br>
 
 			<div class="inputBox">
-				<textarea rows="5" id="text" name="givefeedback" placeholder="Give feedback..."></textarea>
+				<textarea rows="5" id="text" name="givefeedback" placeholder="Give feedback..." onkeyup='return Validate()'></textarea>
 			</div>
 			<br><br>
 
