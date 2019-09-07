@@ -130,16 +130,19 @@ if (isset($_POST['submit'])) {
 			<div class="inputBox">
 				<input type="text" name="email" placeholder="My email" id="email" onkeyup='return Validate()'>
 			</div>
+      <span id='message'></span>
 			<br><br>
 
 			<div class="inputBox">
 				<input type="text" name="subject" placeholder="Subject" id="subject" onkeyup='return Validate()'>
 			</div>
+      <span id='message1'></span>
 			<br><br>
 
 			<div class="inputBox">
 				<textarea rows="5" id="text" name="givefeedback" placeholder="Give feedback..." onkeyup='return Validate()'></textarea>
 			</div>
+      <span id='message2'></span>
 			<br><br>
 
 			<input type="submit" name="submit" value="Send">
