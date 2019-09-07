@@ -1,7 +1,7 @@
 function validatePost(){
-	var file = document.getElementById('file');
+	var title = document.getElementById('title');
 	var bio = document.getElementById('bio');
-	var description = document.getElementById('description');
+	var full = document.getElementById('full');
 
 	if(file=="") {
 		document.getElementById('msg1').style.color = 'red';
@@ -21,7 +21,7 @@ function validatePost(){
         document.getElementById('msg2').innerHTML = '';
               
     }
-	if(description=="") {
+	if(full=="") {
 		document.getElementById('msg3').style.color = 'red';
 		document.getElementById('msg3').innerHTML = 'description cannot be empty';
 		return false;

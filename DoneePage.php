@@ -11,6 +11,7 @@
   <title>Donee Page</title>
   <link rel="stylesheet" type="text/css" href="src/css/Doneepage.css">
   
+  <script type="text/javascript" src="src/js/doneePage.js"></script>
 </head>
 <body>
    <?php include 'Nav.html' ?>
@@ -28,28 +29,28 @@
               <div id="upload">
                 <img id="image2">
               </div>
-              <span id="msg1"></span>
               <label>
+                <span id="msg0"></span>
                 <div class="inputBox">
                  <textarea rows="5"  placeholder="Title" name="title" id="title" onkeyup='return validatePost()'></textarea>
                </div>
-               <span id='msg0'></span>
               </label>
+               <span id='msg1'></span>
 
               <label>
                 <div class="inputBox">
-                 <textarea rows="5" id="bio" placeholder="Write your bio here..." name="bio" id="bio" onkeyup='return validatePost()'></textarea>
+                 <textarea rows="5" id="bio" placeholder="Write your bio here..." name="bio" onkeyup='return validatePost()'></textarea>
                </div>
-               <span id='msg2'></span>
               </label>
+               <span id='msg2'></span>
               <br><br>
 
               <label>
                 <div class="inputBox">
-                <textarea rows="20" id="full" placeholder="Write full Description here..." name="description" id="description" onkeyup='return validatePost()'></textarea>
+                <textarea rows="20" id="full" placeholder="Write full Description here..." name="description" onkeyup='return validatePost()'></textarea>
               </div>
-              <span id='msg3'></span>
               </label>
+              <span id='msg3'></span>
               <br><br>
 
               <input type="submit" name="submit" class="register" value="Post">
