@@ -21,6 +21,7 @@ function validateProfile(){
   var contact = document.getElementById('contact').value;
   
   if (username == "") {
+    if (username == "") {
         document.getElementById('message1').style.color = 'red';
         document.getElementById('message1').innerHTML = 'Username cannot be empty';
         return false;
@@ -28,8 +29,9 @@ function validateProfile(){
         document.getElementById('message1').style.color = '';
         document.getElementById('message1').innerHTML = '';     
     }
-    
-    else if (email == "") {
+  } 
+  else if (email == "") {
+      if(email == "") {
         document.getElementById('message2').style.color = 'red';
         document.getElementById('message2').innerHTML = 'Email cannot be empty';
         return false;
@@ -41,15 +43,16 @@ function validateProfile(){
     else if(!re.test(email)){
       document.getElementById('message2').style.color = 'red';
       document.getElementById('message2').innerHTML = 'Enter valid email';
-       return false;  
+       return false;
+    }  
   }
     
-    else if(password == "") {
+  else if(password == "") {
+    if (password == "") {
         document.getElementById('message3').style.color = 'red';
         document.getElementById('message3').innerHTML = 'Password cannot be empty';
         return false;
-
-    } else if(password != "") {
+    } else {
         document.getElementById('message3').style.color = '';
         document.getElementById('message3').innerHTML = '';      
     }
@@ -58,28 +61,32 @@ function validateProfile(){
         document.getElementById('message').style.color = 'red';
         document.getElementById('message').innerHTML = 'Repassword cannot be empty';
         return false;
-    } 
+    } else {
+      document.getElementById('message').style.color = '';
+      document.getElementById('message').innerHTML = ''; 
 
-    else if (password != repassword) {
-      document.getElementById('repassword').style.color = 'red';
-      document.getElementById('repassword').innerHTML = 'two password do not match';
+    if (password != repassword) {
+      document.getElementById('message').style.color = 'red';
+      document.getElementById('message').innerHTML = 'two password do not match';
     return false;
-  } else if ( password == repassword) {
-        document.getElementById('repassword').style.color = 'green';
-        document.getElementById('repassword').innerHTML = '';         
+  } else {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = '';         
     }
-    else if (password.length<=8) {
+    if (password.length<=8) {
       document.getElementById('message3').style.color = 'red';
       document.getElementById('message3').innerHTML = 'Password is too short';
     return false;
   }
-    else if (password.length>=20) {
+    if (password.length>=20) {
       document.getElementById('message3').style.color = 'red';
       document.getElementById('message3').innerHTML = 'Password is too long';
     return false;
+    }
   }
 
-    else if (address == "") {
+  else if (address == "") {
+    if (address == "") {
         document.getElementById('message4').style.color = 'red';
         document.getElementById('message4').innerHTML = 'Address cannot be empty';
         return false;
@@ -87,8 +94,10 @@ function validateProfile(){
         document.getElementById('message4').style.color = '';
         document.getElementById('message4').innerHTML = '';       
     }
+  }
 
-    else if (contact == "") {
+  else if (contact == "") {
+    if (contact == "") {
         document.getElementById('message5').style.color = 'red';
         document.getElementById('message5').innerHTML = 'Contact cannot be empty';
         return false;
@@ -96,13 +105,11 @@ function validateProfile(){
         document.getElementById('message5').style.color = '';
         document.getElementById('message5').innerHTML = '';   
     }
-
-    
-   
-    return true;
-  
+  } 
+  return true;
 } 
+
 var loadFile = function(event) {
       var image = document.getElementById('image');
       image.src = URL.createObjectURL(event.target.files[0]);
-    };
+};
