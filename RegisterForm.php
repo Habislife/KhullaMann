@@ -65,7 +65,7 @@
           <span id='message3'></span>
           
         <div class="inputBox">
-           <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='return validateForm()'>
+           <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='return validateForm()' >
         </div>
            
           <span id='message'></span>

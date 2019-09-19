@@ -1,4 +1,4 @@
-var check = function() {
+/*var check = function() {
   if (document.getElementById('password').value == 
       document.getElementById('repassword').value) {
     document.getElementById('repassword').style.color = 'green';
@@ -10,7 +10,7 @@ var check = function() {
       return false;
   }
     return true;
-}
+}*/
 
 function validateForm(){
   var username = document.getElementById('username').value;
@@ -54,11 +54,8 @@ function validateForm(){
         document.getElementById('message').style.color = 'red';
         document.getElementById('message').innerHTML = 'Repassword cannot be empty';
         return false;
-    } if (password!= repassword) {
-      document.getElementById('message').style.color = 'red';
-      document.getElementById('message').innerHTML = 'two password do not match';
-    return false;
-  } else {
+    } 
+   else {
         document.getElementById('message').style.color = '';
         document.getElementById('message').innerHTML = '';
               
@@ -87,6 +84,13 @@ function validateForm(){
       document.getElementById('message2').innerHTML = 'Enter valid email';
        return false;  
   } 
+
+    if (password!= repassword) {
+      document.getElementById('repassword').style.color = 'red';
+      document.getElementById('repassword').innerHTML = 'Two password do not match';
+    return false;
+    }
+    
     if (password.length<=8) {
       document.getElementById('message3').style.color = 'red';
       document.getElementById('message3').innerHTML = 'Password is too short';
@@ -99,7 +103,7 @@ function validateForm(){
   }
     return true;
   
-} 
+}
 var loadFile = function(event) {
       var image = document.getElementById('image');
       image.src = URL.createObjectURL(event.target.files[0]);
