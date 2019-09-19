@@ -94,22 +94,6 @@
         </form>
      </div>
 
-     <!-- <script>
-     /*function validation() {
-       var username = document.getElementById('username').value;
-
-       if(username== ""){
-        document.getElementById('message1').innerHTML = "please enter username";
-        return false;
-       }
-      } */
-
-    var loadFile = function(event) {
-      var image = document.getElementById('image');
-      image.src = URL.createObjectURL(event.target.files[0]);
-    };
-  </script>
-      -->
 
   </body>
 </html>

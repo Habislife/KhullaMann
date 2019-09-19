@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2019 at 05:41 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 5.6.40
+-- Generation Time: Sep 19, 2019 at 01:40 PM
+-- Server version: 10.3.15-MariaDB
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -115,29 +115,8 @@ INSERT INTO `doneeinfo` (`donee_id`, `account_no`, `document`) VALUES
 (33, 3570324036334702, ''),
 (34, 5010120504803910, ''),
 (35, 4017954672753481, ''),
-(37, 3584541598282110, '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `feedback`
---
-
-CREATE TABLE `feedback` (
-  `feedback_id` int(11) NOT NULL,
-  `feedback_email` text NOT NULL,
-  `subject` text NOT NULL,
-  `feedback_content` text NOT NULL,
-  `user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `feedback`
---
-
-INSERT INTO `feedback` (`feedback_id`, `feedback_email`, `subject`, `feedback_content`, `user_id`) VALUES
-(1, 'abc@abc.com', 'bscakjncskjascn', 'bckjsancklcsn', 2),
-(2, '123@123.com', '2181652qq6s1wqd', 'whdguybwdkudnwd', 6);
+(37, 3584541598282110, ''),
+(42, 111111111111111111, '/khullamann/upload/images/profile/document/hancy devkota.');
 
 -- --------------------------------------------------------
 
@@ -204,7 +183,10 @@ INSERT INTO `userprofile` (`user_id`, `profile_pic`, `username`, `email`, `passw
 (38, '', 'wisakov11', 'jfeltham11@topsy.com', '25f9e794323b453885f5181f1b624d0b', '6 Loftsgordon Hill', 16880927, '2017-06-27', '16:21:33', 'donor', 1),
 (39, '', 'wbushel12', 'pdeblasio12@t-online.de', '25f9e794323b453885f5181f1b624d0b', '69 Mitchell Circle', 16820801, '2015-05-16', '21:27:52', 'donor', 1),
 (40, '', 'vchristopher13', 'kjenkison13@imgur.com', '25f9e794323b453885f5181f1b624d0b', '05260 Oak Valley Road', 16760123, '2016-10-27', '08:40:42', 'donor', 1),
-(41, '', 'habis devkota', 'bishalf98@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'I dont know', 9816615660, '2019-09-05', '05:10:43', 'donee', 1);
+(41, '', 'habis devkota', 'bishalf98@gmail.com', '25f9e794323b453885f5181f1b624d0b', 'I dont know', 9816615660, '2019-09-05', '05:10:43', 'donee', 1),
+(42, '', 'hancy devkota', 'habislife@gmail.com', '25f9e794323b453885f5181f1b624d0b', '341 Quiet Valley Lane', 8189741647, '2019-09-19', '10:37:45', 'donor', 1),
+(43, '', 'hancy devkota', 'habislife@gmail.com', '25f9e794323b453885f5181f1b624d0b', '341 Quiet Valley Lane', 8189741647, '2019-09-19', '11:13:11', 'donor', 1),
+(45, '', 'hancy devkota', 'devkotahancy@gmail.com', '25f9e794323b453885f5181f1b624d0b', '341 Quiet Valley Lane', 8189741647, '2019-09-19', '12:31:27', 'donor', 1);
 
 --
 -- Indexes for dumped tables
@@ -224,13 +206,6 @@ ALTER TABLE `doneeinfo`
   ADD KEY `donee_id` (`donee_id`);
 
 --
--- Indexes for table `feedback`
---
-ALTER TABLE `feedback`
-  ADD PRIMARY KEY (`feedback_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
 -- Indexes for table `userprofile`
 --
 ALTER TABLE `userprofile`
@@ -247,16 +222,10 @@ ALTER TABLE `donation_post`
   MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `feedback`
---
-ALTER TABLE `feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `userprofile`
 --
 ALTER TABLE `userprofile`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- Constraints for dumped tables
@@ -273,12 +242,6 @@ ALTER TABLE `donation_post`
 --
 ALTER TABLE `doneeinfo`
   ADD CONSTRAINT `doneeinfo_ibfk_1` FOREIGN KEY (`donee_id`) REFERENCES `userprofile` (`user_id`);
-
---
--- Constraints for table `feedback`
---
-ALTER TABLE `feedback`
-  ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `userprofile` (`user_id`) ON DELETE SET NULL;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
