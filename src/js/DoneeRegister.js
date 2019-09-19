@@ -99,11 +99,7 @@ function checkForm(){
         document.getElementById('message').innerHTML = 'two password do not match';
         return false;
     }
-    else {
-        document.getElementById('message').style.color = '';
-        document.getElementById('message').innerHTML = '';
-              
-    }
+    
     if (password.length<=8) {
       document.getElementById('message3').style.color = 'red';
       document.getElementById('message3').innerHTML = 'Password is too short';

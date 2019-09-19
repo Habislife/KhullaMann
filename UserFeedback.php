@@ -23,7 +23,9 @@ if (isset($_POST['submit'])) {
   $user_id = $_SESSION['user_id'];
   $subject = $_POST['subject'];
   $message = $_POST['givefeedback']; 
-  $query = "INSERT INTO feedback(subject,feedback_content, feedback_email,user_id) VALUES('$subject','$message','$header','$user_id')";
+  $today = date("Y/m/d");
+    $time=date("h:i:sa");
+  $query = "INSERT INTO feedback(subject,feedback_content, feedback_email,user_id,feedback_date,feedback_time,flag) VALUES('$subject','$message','$header','$user_id','$today','$time','1')";
     
   $result = mysqli_query($conn,$query);
   header("location:DonorPage.php");

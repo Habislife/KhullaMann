@@ -24,8 +24,9 @@
     <title>Donee Register Form</title>
     <link rel="stylesheet" type="text/css" href="src/css/Donee.css">
     
-    <script type="text/javascript" src="src/js/DoneeReg.js"></script>
+    <script type="text/javascript" src="src/js/doneeRegister.js"></script>
   </head>
+
 
   <body>
     
@@ -34,7 +35,7 @@
     <div class="box" align="center">
        <h1 align="center">Register</h1>
        <br>
-      <form name="doneeForm" onsubmit="return checkForm()" method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
+      <form name="doneeForm" onsubmit="return checkForm();" method="POST"  action="src/db/doneeRegister.php" enctype="multipart/form-data">
       
        
       <div class="inputBox">

@@ -26,5 +26,10 @@ $sql = "SELECT count(*) as total from userprofile WHERE role ='donee' and flag='
 $result = $conn->query($sql);
 $data=mysqli_fetch_assoc($result);
 $Verification= $data['total'];
+
+$sql = "SELECT count(*) as total  from `feedback` WHERE flag='1'";
+$result = $conn->query($sql);
+$data=mysqli_fetch_assoc($result);
+$Feedback= $data['total'];
 $conn->close();
 ?>

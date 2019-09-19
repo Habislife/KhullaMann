@@ -21,9 +21,11 @@ if (isset($_POST['submit'])) {
 	$header=$_POST['email'];
 	$subject=$_POST['subject'];
 	$message=$_POST['givefeedback'];
+   $today = date("Y/m/d");
+    $time=date("h:i:sa");
 	//$to_email="khullamann5660@gmail.com";
     //$mail= new Mail($to_email,$subject,$message,$header);	
-    $query = "INSERT INTO feedback(feedback_email,subject,feedback_content) VALUES('$header','$subject','$message')";
+    $query = "INSERT INTO feedback(feedback_email,subject,feedback_content,feedback_date,feedback_time,flag) VALUES('$header','$subject','$message','$today','$time','1')";
     
     $result = mysqli_query($conn,$query);
 }

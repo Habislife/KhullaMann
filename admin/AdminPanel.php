@@ -67,7 +67,10 @@
 		<label>
 			<a href="DoneeVerifying.php" value="Verifying"> To Be Verify : </a><?php echo $Verification?>
 		</label>
-		
+		<br><br>
+		<label>
+			<a href="Feedback.php" value="Feedback"> Feedback : </a><?php echo $Feedback?>
+		</label>
 
 	</div>
 </body>
