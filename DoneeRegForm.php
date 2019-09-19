@@ -23,6 +23,8 @@
   <head>
     <title>Donee Register Form</title>
     <link rel="stylesheet" type="text/css" href="src/css/Donee.css">
+    
+    <script type="text/javascript" src="src/js/DoneeReg.js"></script>
   </head>
 
   <body>
@@ -61,7 +63,7 @@
         
 
       <div class="inputBox">
-        <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='return checkForm()'>
+        <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='return checkForm()'>
       </div>
           <span id='message'></span>
           
@@ -92,10 +94,9 @@
       </div>
         <br>
 
-        <div align="center">
-          <input type="submit" name="register" value="Register">
+        <input type="submit" name="submit" class="register" value="Register" id="register">
           <br>
-      
+  
           <label> Want to Login?
             <a href="LoginForm.php">Login </a>
           </label>
@@ -104,7 +105,7 @@
       </form>
     </div>
 
-        <script type="text/javascript" src="src/js/DoneeReg.js"></script>
+        
 
   </body>
 </html>

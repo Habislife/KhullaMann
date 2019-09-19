@@ -96,6 +96,11 @@ function validateForm(){
       document.getElementById('message3').innerHTML = 'Password is too short';
     return false;
   }
+  else {
+        document.getElementById('message').style.color = '';
+        document.getElementById('message').innerHTML = '';
+              
+    }
     if (password.length>=20) {
       document.getElementById('message3').style.color = 'red';
       document.getElementById('message3').innerHTML = 'Password is too long';
