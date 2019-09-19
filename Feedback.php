@@ -1,5 +1,5 @@
-<!-- <?php
-/*session_start();
+< <?php
+session_start();
 if(isset($_SESSION['userid']))
 {
   if($_SESSION['role']="donor")
@@ -27,8 +27,8 @@ if (isset($_POST['submit'])) {
     
     $result = mysqli_query($conn,$query);
 }
-*/
-?> -->
+
+?>
 
 <!DOCTYPE html>
 <html>

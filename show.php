@@ -81,16 +81,18 @@ if($start >= $TotalRec-3){
 }
 function showAllData(){
 include'src/db/connection.php';
+session_start();
+$userid=$_SESSION['userid'];
 $perpage = 3;
 if(isset($_GET['id'])){
     $start = $_GET['id'];
 }else{
     $start = 0;
 }
-$count = mysqli_query($conn,"SELECT COUNT(post_id) FROM donation_post Where post_id NOT IN(SELECT post_id FROM donation) ");
+$count = mysqli_query($conn,"SELECT COUNT(post_id) FROM donation_post Where post_id NOT IN(SELECT post_id FROM donation Where donation.donor_id=$userid) ");
 $rows = mysqli_fetch_array($count);
 $TotalRec=$rows['COUNT(post_id)']; 
-$query = "SELECT * FROM `donation_post` Where post_id NOT IN(SELECT post_id FROM donation) order by post_date asc, post_time asc LIMIT $start, $perpage";
+$query = "SELECT * FROM `donation_post` Where post_id NOT IN(SELECT post_id FROM donation Where donation.donor_id=$userid) order by post_date asc, post_time asc LIMIT $start, $perpage";
 
     $result = mysqli_query($conn,$query);
      if(!$result)
