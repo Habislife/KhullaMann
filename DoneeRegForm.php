@@ -22,7 +22,8 @@
 <html>
   <head>
     <title>Donee Register Form</title>
-    <link rel="stylesheet" type="text/css" href="src/css/Donee.css">
+    <link rel="stylesheet" type="text/css" href="src/css/index.css">
+    <link rel="stylesheet" type="text/css" href="src/css/DoneeForm.css">
     
     <script type="text/javascript" src="src/js/doneeRegister.js"></script>
   </head>
@@ -30,7 +31,24 @@
 
   <body>
     
-    <?php include 'indexNav.html';?>
+   <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="Feedback.php">Contact Us</a></li>
+          <li><a href="RegisterForm.php">Become a donor</a></li>
+          <li class="current"><a href="DoneeRegForm.php">Sign Up</a></li>
+          <li><a href="LoginForm.php">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
 
     <div class="box" align="center">
        <h1 align="center">Register</h1>

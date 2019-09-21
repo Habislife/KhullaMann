@@ -22,14 +22,32 @@
 <html>
   <head>
     <title>Register Form</title>
-    <link rel="stylesheet" type="text/css" href="src/css/RegisterForm.css">
+    <link rel="stylesheet" type="text/css" href="src/css/index.css">
+    <link rel="stylesheet" type="text/css" href="src/css/Register.css">
     
      <script type="text/javascript" src="src/js/RegisterForm.js"></script>
   </head>
 
   <body>
     
-     <?php include 'indexNav.html';?>
+     <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="Feedback.php">Contact Us</a></li>
+          <li class="current"><a href="RegisterForm.php">Become a donor</a></li>
+          <li><a href="DoneeRegForm.php">Sign Up</a></li>
+          <li><a href="LoginForm.php">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
 
         
     <div class="box" align="center">

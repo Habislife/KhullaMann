@@ -2,12 +2,29 @@
 <html>
   <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="src/css/LoginForm.css">
+    <link rel="stylesheet" type="text/css" href="src/css/index.css">
+    <link rel="stylesheet" type="text/css" href="src/css/Login.css">
     <script type="text/javascript" src='src/js/LoginForm.js'></script>
   </head>
 <body>
 
-  <?php include 'indexNav.html';?>
+ <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="Feedback.php">Contact Us</a></li>
+          <li><a href="RegisterForm.php">Become a donor</a></li>
+          <li><a href="DoneeRegForm.php">Sign Up</a></li>
+          <li class="current"><a href="LoginForm.php">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
     
     
