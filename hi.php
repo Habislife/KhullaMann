@@ -8,8 +8,9 @@
 <body>
     <?php 
 include 'Nav.html';
+echo"<br><br>";
 include 'src/db/connection.php';
-$perpage = 3;
+$perpage = 6;
 
 if(isset($_GET['id'])){
     $start = $_GET['id'];
@@ -25,7 +26,7 @@ $result = mysqli_query($conn,$sql);
 if ($TotalRec > 0) {
 while($row = $result->fetch_assoc()) {
 ?>
-<br><br>
+
     <div class="front-side" style="float: left; margin-left: 10px;">
         <div class="color-grid">
             <div class="black"></div> 
@@ -111,14 +112,14 @@ while($row = $result->fetch_assoc()) {
 if($start == 0){
     echo "&laquo Previous";
 }else{
-    echo "<a href=hi.php?id=" . ($start - 3) . ">&laquo Previous</a>";
+    echo "<a href=hi.php?id=" . ($start - 6) . ">&laquo Previous</a>";
 }
 
 echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-if($start+3>=$TotalRec){
+if($start+6>=$TotalRec){
     echo "Next &raquo";
 }else{
-    echo "<a href=hi.php?id=". ($start + 3) ." >Next &raquo</a>";
+    echo "<a href=hi.php?id=". ($start + 6) ." >Next &raquo</a>";
 }
 
   ?>
