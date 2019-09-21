@@ -69,9 +69,15 @@
 
    				 <div align="center">
    					 <input type="submit" name="submit" class="register" value="save changes">
-   					</div>
-            
+   					</div>]]
 			</form>
 		 </div>
+
+     <script type="text/javascript">
+      var loadFile = function(event) {
+      var image = document.getElementById('image');
+      image.src = URL.createObjectURL(event.target.files[0]);
+    };
+     </script>
 </body>
 </htmls
