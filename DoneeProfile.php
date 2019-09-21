@@ -69,7 +69,7 @@
 
    				 <div align="center">
    					 <input type="submit" name="submit" class="register" value="save changes">
-   					</div>]]
+   					</div>
 			</form>
 		 </div>
 
