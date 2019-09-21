@@ -15,9 +15,9 @@ $sql = "SELECT * FROM donation_post where post_id = '{$var}'";
 $row = mysqli_fetch_array($result);
 
 ?>
-    <div class="front-side">
+    <div class="front-side" style="float: left; margin-left: 10px;">
         <div class="color-grid">
-            <div class="black"></div>
+            <div class="black"></div> 
             <div class="red1"></div>
             <div class="red2"></div>
             <div class="green"></div>
@@ -89,20 +89,7 @@ $row = mysqli_fetch_array($result);
 
         </div>
     </div>
-    <div class="back-side">
-        <div class="color-grid">
-            <div class="black"></div>
-            <div class="red1"></div>
-            <div class="red2"></div>
-            <div class="green"></div>
-        </div>
-        <div class="name-tag">
-            <h1>
-                <strong>YOUR NAME</strong>
-            </h1>
-            <h3>CREATIVE GRAPHIC DESIGNER</h3>
-        </div>
-    </div>
+    
 
     </div> 
 </body>
