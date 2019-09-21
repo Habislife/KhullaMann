@@ -9,7 +9,7 @@
 <html>
 <head>
   <title>Donor Page</title>
-  <link rel="stylesheet" type="text/css" href="src/css/DonorPage.css">
+  <link rel="stylesheet" type="text/css" href="src/css/donorPage.css">
 </head>
 <body>
   <?php include 'Nav.html' ?>
@@ -20,7 +20,7 @@
     include'show.php';
    showAllData();
 
-      ?>
+    ?>
   </div>
 
   <script type="text/javascript" src="js/index.js"></script>
