@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Donee card</title>
-    <link rel="stylesheet" type="text/css" href="src/css/card.css">
+    <link rel="stylesheet" type="text/css" href="src/css/Card.css">
 </head>
 
 <body>
@@ -28,12 +28,7 @@ while($row = $result->fetch_assoc()) {
 ?>
 
     <div class="front-side" style="float: left; margin-left: 10px;">
-        <div class="color-grid">
-            <div class="black"></div> 
-            <div class="red1"></div>
-            <div class="red2"></div>
-            <div class="green"></div>
-        </div>
+        
         <div class="info-grid">
             <div class="name">
                 <h2>YOUR NAME</h2>
@@ -80,7 +75,7 @@ while($row = $result->fetch_assoc()) {
                     </g>
                 </svg>
                 <p> phone no. +000
-                    <strong>1234</strong> 4567 7896</p> <br><br>
+                    <strong>1234</strong> 4567 7896</p> 
                 <p> account no. 
                     <strong>1234</strong> 5678 9012</p>
             </div>

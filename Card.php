@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Donee card</title>
-    <link rel="stylesheet" type="text/css" href="src/css/card.css">
+    <link rel="stylesheet" type="text/css" href="src/css/Card.css">
 </head>
 
 <body>
@@ -16,17 +16,13 @@ $row = mysqli_fetch_array($result);
 
 ?>
     <div class="front-side" style="float: left; margin-left: 10px;">
-        <div class="color-grid">
-            <div class="black"></div> 
-            <div class="red1"></div>
-            <div class="red2"></div>
-            <div class="green"></div>
-        </div>
+        
         <div class="info-grid">
             <div class="name">
                 <h2>YOUR NAME</h2>
                 <h5>CREATIVE GRAPHIC DESIGNER</h5>
             </div>
+
             <div class="addr">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px"
                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="30px" height="30px">
@@ -68,7 +64,7 @@ $row = mysqli_fetch_array($result);
                     </g>
                 </svg>
                 <p> phone no. +000
-                    <strong>1234</strong> 4567 7896</p> <br><br>
+                    <strong>1234</strong> 4567 7896</p> 
                 <p> account no. 
                     <strong>1234</strong> 5678 9012</p>
             </div>
