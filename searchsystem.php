@@ -18,7 +18,7 @@ if(isset($_POST['search'])){
         }
         else{
             while($row = mysqli_fetch_assoc($result)){
-               echo $row['ethnicity'];
+               echo $row['title'];
             }
         }
     }
