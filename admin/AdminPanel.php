@@ -50,17 +50,17 @@
 	  	<br><br>
 
 	  	<label>
-	  		<a href="DonorData.php" value="Donors">Donor : </a><?php echo $Donor ?>
+	  		<a href="Donorinfo.php" value="Donors">Donor : </a><?php echo $Donor ?>
 	  	</label>
 		<br><br>
 
 		<label>
-			<a href="DoneeData.php" value="Donees">Donee : </a><?php echo $Donee?>
+			<a href="Doneeinfo.php" value="Donees">Donee : </a><?php echo $Donee?>
 		</label>
 		<br><br>
 
 		<label>
-			<a href="DonationPost.php" value="Donation Post">Total Donation Post : </a><?php echo $Donation ?>
+			<a href="DonationPostinfo.php" value="Donation Post">Total Donation Post : </a><?php echo $Donation ?>
 		</label>
 		<br><br>
 
