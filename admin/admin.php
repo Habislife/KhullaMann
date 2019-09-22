@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 $data=mysqli_fetch_assoc($result);
 $Verification= $data['total'];
 
-$sql = "SELECT count(*) as total  from `feedback` WHERE flag='1'";
+$sql = "SELECT count(*) as total from Feedback WHERE flag='1'";
 $result = $conn->query($sql);
 $data=mysqli_fetch_assoc($result);
 $Feedback= $data['total'];
