@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Donee Information</title>
-    <link rel="stylesheet" type="text/css" href="../src/css/Card.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/Cards.css">
 </head>
 
 <body>
@@ -72,7 +72,7 @@ while($row = $result->fetch_assoc()) {
                             fill="#FFFFFF" />
                     </g>
                 </svg>
-                <p> phone no. <?php echo $row['contact_no']; ?></p> <br><br>
+                <p> phone no. <?php echo $row['contact_no']; ?></p> 
                 <p> account no. <?php echo $row['account_no']; ?></p>
             </div>
             <div class="emailId">
@@ -99,18 +99,18 @@ while($row = $result->fetch_assoc()) {
 } else {
     echo "0 results";
 }
-// if($start == 0){
-//     echo "&laquo Previous";
-// }else{
-//     echo "<a href=hi.php?id=" . ($start - 6) . ">&laquo Previous</a>";
-// }
-
-// echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-// if($start+6>=$TotalRec){
-//     echo "Next &raquo";
-// }else{
-//     echo "<a href=hi.php?id=". ($start + 6) ." >Next &raquo</a>";
-// }
+echo "<div class='change'>";
+ if($start != 0){
+     echo "Previous";
+ }else{
+     echo "<a href=Doneeinfo.php?id=" . ($start - 6) . "id='previous'> Previous</a>";
+ }
+ if($start+6<$TotalRec){
+     echo "Next";
+ }else{
+     echo "<a href=Doneeinfo.php?id=". ($start + 6) ."id='next' >Next</a>";
+ }
+ echo "</div";
 ?>
 </body>
 

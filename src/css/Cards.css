@@ -16,7 +16,7 @@ html {
   margin: 20px auto;
   overflow: hidden;
   box-shadow: 2px 5px 15px 0px #17161694;
-  background-color: #122529;
+  background-color: green;
 }
 
 .info-grid {
@@ -75,4 +75,24 @@ html {
 .info-grid .emailId p{
   font-weight: unset;
   margin-top: 10px;
+}
+
+.change{
+    margin:0px 30%;
+    width: 40%;
+    border: 2px solid blue;
+    font-size: 14px;
+    align-self :center;
+}
+
+.change a{
+  text-decoration: none;
+}
+
+.change #prevoius{
+  float: left;
+}
+
+.change #next{
+  float: right;
 }

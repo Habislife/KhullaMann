@@ -14,3 +14,13 @@ echo "<a href='delete.php?value_key=".$var."'>"."Delete</a>";
 }
 
  ?>
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Profile</title>
+ </head>
+ <body>
+   
+ </body>
+ </html>
