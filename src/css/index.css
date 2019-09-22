@@ -309,6 +309,31 @@ footer{
 }
 
 @media only screen and (max-width: 600px) {
+  #showcase{
+    background: url('img3.jpeg') no-repeat;
+  }
+
+  #showcase h1{
+    margin-top: 150px;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+
+  #showcase p{
+    font-size: 18px;
+  }
+
+  .button_2{
+    height: 50px;
+    border-radius: 20px;
+  }
+
+  .button_2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+
   .post-container{
     display: flex;
     flex-flow: column wrap;
@@ -319,6 +344,14 @@ footer{
     width: 90%;
     flex: 1;
   }
+
+  .change{
+    margin:0px 30%;
+    width: 40%;
+    border: 2px solid blue;
+    font-size: 14px;
+    align-self :center;
+}
 
 }
 
@@ -333,5 +366,38 @@ footer{
 
 }
 
+@media only screen and (max-height: 834px) {
+  #showcase{
+    min-height: 500px;
+    background: url('img3.jpeg') no-repeat 0 -300px;
+  }
+}
 
+@media only screen and (min-height: 834px) {
+  #showcase{
+    min-height: 700px;
+    background: url('img3.jpeg') no-repeat 0 -150px;
+  }
+
+  #showcase h1{
+    margin-top: 200px;
+    font-size: 75px;
+    margin-bottom: 10px;
+  }
+
+  #showcase p{
+    font-size: 32px;
+  }
+
+  .button_2{
+    height: 70px;
+    border-radius: 30px;
+  }
+
+  .button_2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+  }
+}
 
