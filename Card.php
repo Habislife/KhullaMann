@@ -46,8 +46,8 @@ $row = mysqli_fetch_array($result);
                     </g>
                 </svg>
                 <p>1/2 Street,
-                    <strong> City</strong>, State,
-                    <strong> Country</strong>
+                    City, State,
+                    Country
                 </p>
             </div>
             <div class="phoneNo">
@@ -64,9 +64,9 @@ $row = mysqli_fetch_array($result);
                     </g>
                 </svg>
                 <p> phone no. +000
-                    <strong>1234</strong> 4567 7896</p> 
+                    1234 4567 7896</p> 
                 <p> account no. 
-                    <strong>1234</strong> 5678 9012</p>
+                    1234 5678 9012</p>
             </div>
             <div class="emailId">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 467.211 467.211"
