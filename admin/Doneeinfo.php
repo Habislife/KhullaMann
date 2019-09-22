@@ -3,6 +3,28 @@
 <head>
     <title>Donee Information</title>
     <link rel="stylesheet" type="text/css" href="../src/css/Cards.css">
+    <style type="text/css">
+    .change{
+    margin:0px 30%;
+    width: 40%;
+    border: 2px solid blue;
+    font-size: 14px;
+    align-self :center;
+}
+
+.change a{
+  text-decoration: none;
+}
+
+.change #prevoius{
+  float: left;
+}
+
+.change #next{
+  float: right;
+}
+
+    </style>
 </head>
 
 <body>
@@ -103,14 +125,14 @@ echo "<div class='change'>";
  if($start != 0){
      echo "Previous";
  }else{
-     echo "<a href=Doneeinfo.php?id=" . ($start - 6) . "id='previous'> Previous</a>";
+     echo "<a href=Doneeinfo.php?id=" . ($start - 6) . "id='previous'> <<Previous </a>";
  }
  if($start+6<$TotalRec){
      echo "Next";
  }else{
-     echo "<a href=Doneeinfo.php?id=". ($start + 6) ."id='next' >Next</a>";
+     echo "<a href=Doneeinfo.php?id=". ($start + 6) ."id='next'> Next>> </a>";
  }
- echo "</div";
+ echo "</div>";
 ?>
 </body>
 

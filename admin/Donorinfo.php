@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Donee Information</title>
-    <link rel="stylesheet" type="text/css" href="../src/css/card.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/Cards.css">
 </head>
 
 <body>
