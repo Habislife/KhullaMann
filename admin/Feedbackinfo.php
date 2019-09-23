@@ -2,60 +2,9 @@
 <html>
 <head>
 	<title>feedback info</title>
-
-		<style type="text/css">
-		/*.container{
-			width: 70%;
-			height: 300px;
-			border: 1px solid black;
-			margin: 70px 30px 20px 150px;
-		}
-		.content{
-			width: 90%;
-			height: 80px;
-			border: 1px solid black;
-			margin: 10px 20px 10px 30px;
-			float: left;
-		}
-	    .content h1{
-			margin: 0px;
-			padding: 5px;
-			font-family: sans-serif;;
-			font-size: 20px;
-			padding-bottom: 20px;
-			float: left;
-		}
-		.content h3{
-			margin: 0px;
-			padding: 5px;
-			font-family: sans-serif;;
-			font-size: 20px;
-			padding-bottom: 20px;
-			padding-left: 5px;
-			float: left;
-		}
-		.msgBox{
-			width: 90%;
-			height: 150px;
-			border: 1px solid black;
-			margin: 10px 20px 10px 30px;
-			float: left;
-		}
-		h2{
-			padding-top: 10px;
-			padding: 30px;
-			font-family: sans-serif;;
-			font-size: 20px;
-			padding-bottom: 20px;
-			float: left;
-		}
-		.msgBox a{
-			text-decoration: none;
-			padding-top: 20px;
-			padding: 30px;
-			float: right;
-		}*/
-        .container {
+	<link rel="stylesheet" type="text/css" href="../src/css/NavBar.css">
+	  <style>
+        .box {
           width: 600px;
           height: 400px;
           border: 2px solid black;
@@ -73,6 +22,7 @@
           border: 1px solid black;
           margin: 5px 20px 10px 30px;
           float: left;
+          background-color: white;
         }
         .content h1{
 			margin: 0px;
@@ -99,6 +49,7 @@
           border: 1px solid black;
           margin: 30px 20px 40px 30px;
           float: left;
+          background-color: white;
         }
         .msgBox h2{
         	margin: 0px; 
@@ -128,6 +79,23 @@
 	</style>
 </head>
 <body>
+	 <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="index.php">Home</a></li>
+          <li><a href="about.php">About</a></li>
+          <li><a href="Feedback.php">Contact Us</a></li>
+          <li><a href="RegisterForm.php">Become a donor</a></li>
+          <li><a href="DoneeRegForm.php">Sign Up</a></li>
+          <li><a href="LoginForm.php">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 	<?php
 include '../src/db/connection.php';
 $perpage = 10;
@@ -149,13 +117,13 @@ if ($TotalRec > 0) {
  while($row = $result->fetch_assoc()) {
         //echo "<tr>"."<td>".$row["feedback_email"]."</td>"."<td>".$row["subject"]."</td>" ."<td>".$row["feedback_content"]."</td><td><a href='deletion.php'>Delete</a></td>" ."</tr>";
 ?>
-    <div class="container" align="center">
+    <div class="box" align="center">
 		<div class="content">
 			<?php echo "<br>"."<h1>".'Email: '.$row["feedback_email"]."</h1>"."<h3>".'Subject: '.$row["subject"]."</h3>"."<br>"; ?>
 		</div>
 		<br><br>
 		<div class="msgBox">
-			<?php echo "<h2>".$row["feedback_content"]."</h2>"."<br>"."<br>"."<button><a href='deletion.php'>Delete</a></button>"; ?>
+			<?php echo "<h2>".$row["feedback_content"]."</h2>"."<br>"."<br>"."<button><a href='deletion.php'>Delete</a></button>"; ?> 
 		</div>
 	</div>
 
