@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>feedback info</title>
-	<style type="text/css">
-		.container{
+
+		<style type="text/css">
+		/*.container{
 			width: 70%;
 			height: 300px;
 			border: 1px solid black;
@@ -53,7 +54,77 @@
 			padding-top: 20px;
 			padding: 30px;
 			float: right;
+		}*/
+        .container {
+          width: 600px;
+          height: 400px;
+          border: 2px solid black;
+          font-size: 20px;
+          font-family: sans-serif;
+          padding-left: 20px;
+          padding-top: 50px;
+          margin: 100px 5px 5px 250px; 
+          background:rgba(211, 249, 232, 0.6); 
+        }
+
+        .content{
+          width: 500px;
+          height: 100px;
+          border: 1px solid black;
+          margin: 5px 20px 10px 30px;
+          float: left;
+        }
+        .content h1{
+			margin: 0px;
+			padding-top: 1px ;
+			padding-left: 10px;
+			font-family: sans-serif;;
+			font-size: 20px;
+			padding-bottom: 20px;
+			float: left;
 		}
+		.content h3{
+			margin: 0px 80px 30px 10px;
+			padding-top: 1px;
+
+			font-family: sans-serif;;
+			font-size: 20px;
+			padding-bottom: 20px;
+			padding-left: 5px;
+			float: left;
+		}
+        .msgBox{
+          width: 500px;
+          height: 200px;
+          border: 1px solid black;
+          margin: 30px 20px 40px 30px;
+          float: left;
+        }
+        .msgBox h2{
+        	margin: 0px; 
+			padding-top: 1px;
+			padding: 10px;
+			font-family: sans-serif;;
+			font-size: 20px;
+			padding-bottom: 20px;
+			float: left;
+		}
+		.msgBox button{
+			width: 60px;
+			height: 30px;
+			float: right;
+			margin: 110px 10px 5px 50px;
+			font-size: 15px;
+			font-family: sans-serif;
+			background-color: lightgreen;
+
+		}
+		.msgBox button a{
+			text-decoration: none;
+			color: green;
+			
+		}
+     </style>
 	</style>
 </head>
 <body>
@@ -80,10 +151,11 @@ if ($TotalRec > 0) {
 ?>
     <div class="container" align="center">
 		<div class="content">
-			<?php echo "<tr>"."<br>"."<td>"."<h1>".'Email: '.$row["feedback_email"]."</h1>"."</td>"."<br>"."<td>"."<h3>".'Subject: '.$row["subject"]."</h3>"."</td>"."<br>"."</tr>"; ?>
+			<?php echo "<br>"."<h1>".'Email: '.$row["feedback_email"]."</h1>"."<h3>".'Subject: '.$row["subject"]."</h3>"."<br>"; ?>
 		</div>
+		<br><br>
 		<div class="msgBox">
-			<?php echo "<td>"."<h2>".$row["feedback_content"]."</h2>"."</td>"."<br>"."<br>"."<td><a href='deletion.php'>Delete</a></td>"; ?>
+			<?php echo "<h2>".$row["feedback_content"]."</h2>"."<br>"."<br>"."<button><a href='deletion.php'>Delete</a></button>"; ?>
 		</div>
 	</div>
 
