@@ -49,9 +49,29 @@
 	<section id="main">
 		<div class="container">
 			<article id="main-col">
-				<h1 class="page-title">About Us</h1>
-				<div>
-					<img src="img3.jpeg" >
+				<h1>About Us</h1>
+				<div class="member">
+					<img src="src/images/img3.jpeg" class="pic">
+					<h1>Bishal Devkota</h1>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+				</div>
+
+				<div class="member">
+					<img src="src/images/img3.jpeg" class="pic">
+					<h1>Ena Gurung</h1>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+				</div>
+
+				<div class="member">
+					<img src="src/images/img3.jpeg" class="pic">
+					<h1>Pabita Pun</h1>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
 				</div>
 			</article>
 

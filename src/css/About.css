@@ -56,7 +56,28 @@ body{
 article#main-col{
   float: left;
   width: 65%;
+  display: flex;
+  flex-flow: column;
 }
+
+.member{
+  padding: 20px;
+  background-color: #E0E0E0;
+  flex:1;
+  margin-bottom: 30px;
+}
+
+img{
+  float: left;
+  max-width: 150px;
+  margin: 20px;
+}
+
+.member p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 /* Sidebar */
 aside#sidebar{
   float: right;
@@ -72,15 +93,23 @@ aside#sidebar .quote input, aside#sidebar .quote textarea{
 .dark{
   padding:15px;
   /*background-color: #3F5E73; */
-  background-color:#cccccc;
-  color: #ffffff;
-  margin-top: 10px;
+  background-color:#E0E0E0;
+  color: black;
+  margin-top: 60px;
   margin-bottom: 10px;
 }
 
 
 
 /* Media Queries */
+@media(max-width: 846px){
+  article#main-col, aside#sidebar{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 @media(max-width: 768px){
   #banner h1, #banner form, #boxes .box,
   article#main-col, aside#sidebar{
@@ -93,9 +122,45 @@ aside#sidebar .quote input, aside#sidebar .quote textarea{
     width: 100%;
     margin-bottom: 5px;
   }
+
+  .button_1{
+    width: 100%;
+  }
 }
 
+@media(max-width: 768px){
+  #banner h1, #banner form, #boxes .box,
+  article#main-col, aside#sidebar{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
 
+  #banner form input[type="text"]{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .button_1{
+    width: 100%;
+  }
+}
+@media(max-width: 556px){
+.member{
+  align-items: center;
+}
+
+img{
+  float: none;
+  max-width: 150px;
+  margin: 20px;
+}
+
+.member p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+}
 
 
 

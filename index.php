@@ -24,6 +24,7 @@ else
   <title>Khulla Mann | Welcome </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
   <link rel="stylesheet" type="text/css" href="src/css/indexpage.css">
   <style type="text/css">
     .content{
