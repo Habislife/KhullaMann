@@ -20,7 +20,7 @@
           width: 500px;
           height: 100px;
           border: 1px solid black;
-          margin: 5px 20px 10px 30px;
+          margin: 0px 20px 10px 30px;
           float: left;
           background-color: white;
         }
@@ -47,7 +47,7 @@
           width: 500px;
           height: 200px;
           border: 1px solid black;
-          margin: 30px 20px 40px 30px;
+          margin: 10px 20px 40px 30px;
           float: left;
           background-color: white;
         }
@@ -64,7 +64,7 @@
 			width: 60px;
 			height: 30px;
 			float: right;
-			margin: 110px 10px 5px 50px;
+			margin: 100px 10px 5px 50px;
 			font-size: 15px;
 			font-family: sans-serif;
 			background-color: lightgreen;
@@ -79,7 +79,33 @@
 	</style>
 </head>
 <body>
-	 <header>
+
+  <header>
+   <div class="container">
+      <div id="branding">
+          <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+
+      <div class="togglearea">
+       <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+       </label>
+      </div>
+    
+      <input type="checkbox" id="toggle">
+      <div class="navbar">
+          <a href="index.php">Home</a>
+          <a href="about.php">About</a>
+          <a href="Feedback.php" class="current">Contact Us</a>
+          <a href="RegisterForm.php">Become a donor</a>
+          <a href="DoneeRegForm.php">Sign Up</a>
+          <a href="LoginForm.php">Login</a>
+      </div>
+     </div>
+  </header>
+	 <!-- <header>
     <div class="container">
       <div id="branding">
         <h1><span class="highlight">Khulla</span> Mann</h1>
@@ -95,7 +121,7 @@
         </ul>
       </nav>
     </div>
-  </header>
+  </header> -->
 	<?php
 include '../src/db/connection.php';
 $perpage = 10;
@@ -147,7 +173,13 @@ if($start+$perpage>=$TotalRec){
 
 $conn->close();
 ?> 
-
+ <footer>
+      <h3>Share this on </h3>
+   <a href="https://www.facebook.com/"><img src="facebook1.png"></a> <a href="https://www.instagram.com/"><img src="instagram6.png"></a> <a href="https://twitter.com/"><img src="twitter3.png"></a> <br><br>   
+   <button class="button_2"><a href="RegisterForm.php">Join Us</a></button>
+    <br><br>
+    <p>Khulla Mann, Copyright &copy; 2019</p>
+  </footer>
 </body>
 </html>
     

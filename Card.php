@@ -3,11 +3,12 @@
 <head>
     <title>Donee card</title>
     <link rel="stylesheet" type="text/css" href="src/css/Cards.css">
+    <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
 </head>
 
 <body>
     <?php 
-include 'Nav.html';
+
 include 'src/db/connection.php';
 $var = $_GET['value_key']; 
 $sql = "SELECT * FROM donation_post where post_id = '{$var}'";
@@ -87,7 +88,14 @@ $row = mysqli_fetch_array($result);
     </div>
     
 
-    </div> 
+    </div>
+     <footer>
+      <h3>Share this on </h3>
+   <a href="https://www.facebook.com/"><img src="facebook1.png"></a> <a href="https://www.instagram.com/"><img src="instagram6.png"></a> <a href="https://twitter.com/"><img src="twitter3.png"></a> <br><br>   
+   <button class="button_2"><a href="RegisterForm.php">Join Us</a></button>
+    <br><br>
+    <p>Khulla Mann, Copyright &copy; 2019</p>
+  </footer> 
 </body>
 
 </html>

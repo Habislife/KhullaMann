@@ -109,6 +109,33 @@ else
 </head>
 <body>
   <header>
+   <div class="container">
+      <div id="branding">
+          <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+
+      <div class="togglearea">
+       <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+       </label>
+      </div>
+    
+      <input type="checkbox" id="toggle">
+      <div class="navbar">
+          <a href="index.php" class="current">Home</a>
+          <a href="about.php">About</a>
+          <a href="Feedback.php">Contact Us</a>
+          <a href="RegisterForm.php">Become a donor</a>
+          <a href="DoneeRegForm.php">Sign Up</a>
+          <a href="LoginForm.php">Login</a>
+      </div>
+     </div>
+  </header>
+
+<!-- 
+  <header>
     <div class="container">
       <div id="branding">
         <h1><span class="highlight">Khulla</span> Mann</h1>
@@ -124,7 +151,7 @@ else
         </ul>
       </nav>
     </div>
-  </header>
+  </header> -->
 
   <section id="showcase">
     <div class="container">
@@ -156,6 +183,10 @@ else
 
 
   <footer>
+    <h3>Share this on </h3>
+   <a href="https://www.facebook.com/"><img src="facebook1.png"></a> <a href="https://www.instagram.com/"><img src="instagram6.png"></a> <a href="https://twitter.com/"><img src="twitter3.png"></a> <br><br>   
+   <button class="button_2"><a href="RegisterForm.php">Join Us</a></button>
+    <br><br>
     <p>Khulla Mann, Copyright &copy; 2019</p>
   </footer>
 </body>
