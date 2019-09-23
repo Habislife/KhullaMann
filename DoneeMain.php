@@ -13,9 +13,16 @@
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
   <link rel="stylesheet" type="text/css" href="src/css/DoneeMain.css">
   <style type="text/css">
-      .content{
+    .container{
+  height: 70px;
+  width: 100%;
+  padding: 10px 30px 0px 50px;
+  border: 2px solid white;
+}
+
+  .content{
  position: relative;
-  margin: 30px 5%;
+  margin: 30px 5px;
   width: 90%;
   height: auto;
   display: flex;

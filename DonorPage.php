@@ -5,9 +5,17 @@
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
   <link rel="stylesheet" type="text/css" href="src/css/donorPage.css">
   <style type="text/css">
-      .content{
- position: relative;
-  margin: 30px 5%;
+  .container{
+  height: 70px;
+  width: 100%;
+  padding: 10px 30px 0px 50px;
+  border: 2px solid white;
+}
+
+  .content{
+  position: relative;
+  margin: 30px 5px;
+  padding: 20px 10px 0px 10px; 
   width: 90%;
   height: auto;
   display: flex;
@@ -81,6 +89,19 @@
 #donatebtn{
   float: left;
 }
+footer{
+  height: 200px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #1E4B28;
+  text-align: center;
+  z-index: 1;
+  padding-top: 50px;
+}
+
+footer p{
+  margin-left: 30px;
+}
   </style>
 </head>
 <body>
@@ -119,8 +140,9 @@
     ?> 
   </div>
 
-  <footer>
+  <footer>   
     <p>Khulla Mann, Copyright &copy; 2019</p>
-  </footer>  
+  </footer>
+  
 </body> 
 </html>
