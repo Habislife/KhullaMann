@@ -1,90 +1,151 @@
-* {box-sizing:border-box}
-
-html{
-	position: relative;
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.header{
-	border : 2px solid black;
-	width: 100%;
-	height: 100px;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: #F2F3F4    ;
 }
 
-.logo{
-    color: white;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background-color: green;
-    margin: 10px 10px;
-    float: left;
+/* Header */ 
+header{
+  background:#f3f3f3;
+  color: black;
+  padding-top: 20px;
+  min-height: 60px;
+  border-bottom: #00b300 3px solid;
+  z-index: 1;
 }
 
-.head{
-	float: right;
-	margin: 10px 10px;
-	position: relative;
+.container{
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
 }
 
-.search{
-  position: relative;
-
+header #branding{
+  float: left;
 }
 
-input[type=text]{
-	color: black;
-	background-color: white; 
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border : 2px solid black;
-    border-radius: 1px;
-    box-sizing: border-box;
+header #branding h1{
+  margin:0;
 }
 
-#searchButton{
-  position: absolute;
-  top: 20%;
-  right: 10px;
+header .highlight,.navbar a.current{
+  color: #188224;
+  font-weight: bold;
 }
 
-.header a{
-  color: green;
-  padding: 15px 15px;
-  text-decoration: none;
-  font-size: 20px;
+.navbar
+{
+  display: flex;
+  justify-content: flex-end;
 }
 
-.header a:hover{
-    color: #00e600
-}
-
-nav{
-    background-color: green;
-}
-
-ul#nav li{
-	display: inline-block;
-	color: white; 
-  font-size: 20px;
-  padding: 10px 10px;
-}
-
-#nav li:hover{
-	color: green;
-	background-color: white;
-}
-
-#nav a{
-  display: block;
-  color: white;
+.navbar a
+{
+  color: black;
   text-align: center;
-  padding: 5px 5px;
   text-decoration: none;
-  font-size: 20px;
+  padding: 14px 28px;
 }
 
-#nav a:hover{
-    color:green;
+.navbar a:hover
+{
+  color: #cccccc;
+}
+
+#toggle
+{
+  display: none;
+}
+
+.togglearea
+{
+  background-color: #f3f3f3;
+  border-bottom: 2px solid white;
+  color: white;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.togglearea label
+{
+  background-color: #cccccc;
+  height: 45px;
+  width: 50px;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.togglearea label span
+{
+  background-color: black;
+  height: 4px;
+  width: 70%;
+  margin: 2px 0px;
+}
+
+.togglearea
+{
+  display: none;
+}
+
+@media(max-width: 768px){
+  header nav, header nav li{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px)
+{
+  .navbar
+  {
+    flex-direction: column;
+    display: none;
+  }
+
+  .navbar a:hover, .navbar a.current:hover
+  {
+    background-color: #cccccc;
+    color: black;
+  }
+
+  .navbar a.current{
+    color:white;
+    background-color: #188224;
+  }
+
+  header #branding{
+    font-size: 14px;
+  }
+
+  .togglearea label
+  {
+    height: 35px;
+    width: 40px;
+  }
+
+  #toggle:checked + .navbar
+  {
+    display: flex;
+  }
+
+  .togglearea
+  { 
+    display: flex;
+  }
 }

@@ -2,29 +2,37 @@
 <html>
   <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="src/css/index.css">
-    <link rel="stylesheet" type="text/css" href="src/css/Login.css">
+    <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+   <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
     <script type="text/javascript" src='src/js/LoginForm.js'></script>
   </head>
 <body>
 
  <header>
-    <div class="container">
+  <div class="container">
       <div id="branding">
-        <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><span class="highlight">Khulla</span> Mann</h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="Feedback.php">Contact Us</a></li>
-          <li><a href="RegisterForm.php">Become a donor</a></li>
-          <li><a href="DoneeRegForm.php">Sign Up</a></li>
-          <li class="current"><a href="LoginForm.php">Login</a></li>
-        </ul>
-      </nav>
+
+    <div class="togglearea">
+      <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
     </div>
-  </header>
+    
+    <input type="checkbox" id="toggle">
+    <div class="navbar">
+      <a href="index.php" class="current">Home</a>
+          <a href="about.php">About</a>
+          <a href="Feedback.php">Contact Us</a>
+          <a href="RegisterForm.php">Become a donor</a>
+          <a href="DoneeRegForm.php">Sign Up</a>
+          <a href="LoginForm.php">Login</a>
+    </div>
+  </div>
+</header>
 
     
     
@@ -32,13 +40,13 @@
   <h1>Login</h1>
   <br>
   <form method="POST" onsubmit="return loginFormValidate()" action="src/db/loginServer.php" enctype="multipart/form-data">
-    <div class="inputBox">
+    
       <input type="email" placeholder="Enter your Email" name="email" id="email" autocomplete="on"
          onkeyup='return loginFormValidate()' value="" class="input-field">
                 <span id="message"></span>
-    </div>
+    
     <br>
-    <div class="inputBox">
+    
       <div id="field">
             <input type="password" placeholder="Enter your Password" name="password" id="password" autocomplete="on" onkeyup='return loginFormValidate()' value="" class="input-field">
              
@@ -46,7 +54,7 @@
            </div>
           
             <span id="message1"></span>
-    </div>
+    
     <br>
         <label class="remember">
            <input type="checkbox"> Remember Me
