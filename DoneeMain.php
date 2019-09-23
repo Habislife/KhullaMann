@@ -16,18 +16,19 @@
     .container{
   height: 70px;
   width: 100%;
-  padding: 10px 30px 0px 50px;
+  padding: 10px 20px 0px 40px;
   border: 2px solid white;
 }
 
   .content{
  position: relative;
-  margin: 30px 5px;
-  width: 90%;
+  margin: 20px 30px 30px 30px;
+  width: 95%;
   height: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  border: 2px solid black;
 }
 .card {
   float: left;
@@ -127,20 +128,22 @@
 </header>
 
   <!-- <div class="container"> -->
-    <h3 align="center" style="padding-top: 80px; font-size: 20px; font-family: sans-serif;"><u>Previous Projects</u></h3>
+    <div class="content" align="center" style="margin-top: 80px;">
+    <h3 align="center" style="padding: 20px; font-size: 25px; font-family: sans-serif; "><u>Previous Projects</u></h3>
     <?php
    include'show.php';
-   session_start();
+   /*session_start();
    showMyproject($_SESSION['userid']); 
+*/  showAllData();
 
-?>
+?></div>
   <div class="post" align="center">
     <h1>NEED DONATION?</h1>
     <button class="button_1"><a href="./doneePage.php">Create New Post</a></button>
   </div>
 
   
-  </div>
+  
 
   <footer>
     <p>Khulla Mann, Copyright &copy; 2019</p>
