@@ -3,34 +3,32 @@
 <head>
 	<title>Admin Dashboard
 	</title>
+	<link rel="stylesheet" type="text/css" href="../src/css/NavBar.css">
 	<style type="text/css">
-		html { 
-	 margin: 0;
-  	padding: 0;
-  	background: url(../src//images/bg.png) no-repeat center center fixed; 
-  	-webkit-background-size: cover;
- 	-moz-background-size: cover;
- 	-o-background-size: cover;
- 	background-size: cover;
- 	font-family: sans-serif;
-}
+		body{
+		  font-family: Arial, Helvetica, sans-serif;
+		  font-size: 15px;
+		  line-height: 1.5;
+		  padding: 0;
+		  margin: 0;
+		  text-align: center;
+		}
 
 		.box{
 			border: 1px solid black;
-			width : 350px;
-			height: 350px;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			width : 450px;
+			height: 450px;
+			margin: 20px auto;
 			padding: 20px 50px; 
+			text-align: justify;
 		}
 
-		h1{
+		.box h1{
 			color: #1889B5;
 			text-decoration: underline;
 		}
-		a{
+
+		.box a{
 			text-decoration: none;
 			color: #07558F;
 		}
@@ -43,9 +41,37 @@
 </head>
 <body>
 
+	<header>
+  <div class="container">
+      <div id="branding">
+          <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+
+    <div class="togglearea">
+      <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <input type="checkbox" id="toggle">
+    <div class="navbar">
+      <a href="index.php">Home</a>
+          <a href="about.php" class="current">About</a>
+          <a href="Feedback.php">Contact Us</a>
+          <a href="RegisterForm.php">Become a donor</a>
+          <a href="DoneeRegForm.php">Sign Up</a>
+          <a href="LoginForm.php">Login</a>
+    </div>
+  </div>
+</header>
+
+
 	 <?php include "admin.php"; ?>
 
 	 <div class="box">
+
 	  	<h1 align="center">STATISTICS</h1>
 	  	<br><br>
 
@@ -73,5 +99,9 @@
 		</label>
 
 	</div>
+
+	<footer>
+		<p>Khulla Mann, Copyright &copy; 2019</p>
+	</footer>
 </body>
 </html>
