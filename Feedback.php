@@ -1,6 +1,6 @@
-< <?php
-session_start();
-if(isset($_SESSION['userid']))
+<?php
+//session_start();
+/*if(isset($_SESSION['userid']))
 {
   if($_SESSION['role']="donor")
  {
@@ -14,7 +14,7 @@ else
 {
   header("Location:AdminPanel.php"); 
 }
-}
+}*/
 include 'src/db/connection.php';
 include 'src/db/mail.php';
 if (isset($_POST['submit'])) {
