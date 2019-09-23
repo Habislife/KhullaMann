@@ -41,19 +41,15 @@ $query = "SELECT * FROM `donation_post`order by post_date asc, post_time asc LIM
     }
     echo"</div>";
 }
+echo "<div class='change'>";
+if($start != 0){    
+    echo "<a href=index.php?id=" . ($start - 3) . " id='previous'>Previous &laquo;</a>";
+}
+if($start < $TotalRec-3){
+    echo "<a href=index.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
     
-if($start == 0){
-    echo "Previous &laquo;";
-}else{
-    echo "<a href=index.php?id=" . ($start - 3) . ">Previous &laquo;</a>";
 }
-
-echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-if($start >= $TotalRec-3){
-    echo "Next &raquo;";
-}else{
-    echo "<a href=index.php?id=". ($start + 3) ." >Next &raquo;</a>";
-}
+echo"</div>";
 }
 function    showMyproject($userid){
 include'src/db/connection.php';
@@ -73,14 +69,28 @@ $query = "SELECT * FROM `donation_post` Where donee_id='$userid' order by post_d
     {
         die("QUERY FAILED".mysqli_error($conn));
     }
-    while($row = $result->fetch_assoc()){
-    echo "<div class='card'>
-       <a href='post.php?value_key=".$row["post_id"]."'><img src='".$row['file_path']."' style='width:100%'></a>
-        <h1>".$row['title']."</h1>
-        <p class='bio'>".$row['bio']."</p>
-        <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>
-        <a href='LoginForm.php'><button id='donatebtn'>Donate</button></a>
+    if ($TotalRec > 0) {
+    echo "<div class='content'>";
+    // output data of each row
+ while($row = $result->fetch_assoc()) {
+    echo "<div class='card'>";
+    echo "<div class='image'>
+      <a href='post.php?value_key=".$row["post_id"]."'><img src=".$row['file_path']." alt='Avatar' style='width:100%'></a>
     </div>";
+    echo"<div class='title'>
+      <h1>".$row['title']."</h1>
+    </div>";
+    echo "<div class='note'>
+      <p class='bio'>".$row['bio']."</p>
+    </div>";
+    echo "<div>
+       <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>
+        <a href='Donordata.php?donation".$row["post_id"]."'><button id='donatebtn'>Donate</button></a>
+    </div>";
+
+    echo"</div>";
+    }
+    echo"</div>";
 }
 if($start == 0){
     echo "Previous &laquo;";
@@ -131,7 +141,7 @@ $query = "SELECT * FROM `donation_post` Where post_id NOT IN(SELECT post_id FROM
     </div>";
     echo "<div>
        <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>
-        <a href='LoginForm.php'><button id='donatebtn'>Donate</button></a>
+        <a href='src/db/Donation.php?value_key=".$row["post_id"]."'><button id='donatebtn'>Donate</button></a>
     </div>";
 
     echo"</div>";

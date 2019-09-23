@@ -12,7 +12,84 @@
   <title>Donee Main Page</title>
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
   <link rel="stylesheet" type="text/css" href="src/css/doneeMain.css">
-  
+  <style type="text/css">
+      .content{
+ position: relative;
+  margin: 30px 5%;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.card {
+  float: left;
+  position: relative;
+  margin: 20px 1.5%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%;
+  text-align: center;
+  font-family: arial;
+  max-height: inherit;
+}
+
+.card:hover {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.image{
+  height: 40%;
+  overflow: hidden;
+}
+.title{
+  height: 8ch;
+  overflow: hidden;
+}
+.note{
+  height:19ch;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.link{
+  height: 10%;
+  margin-top: 4px;
+}
+.bio {
+  display: block; 
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 8.6em;
+  line-height: 1.8em;
+  color: grey;
+  font-size: 24px;
+}
+.card button {
+  margin: 0px 5%;
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #188224;
+  text-align: center;
+  cursor: pointer;
+  width: 40%;
+  font-size: 22px ;
+  border-radius: 25px;
+}
+
+.card button:hover {
+    background-color: 257543;
+}
+
+#viewbtn{
+  float: left;
+}
+
+#donatebtn{
+  float: left;
+}
+  </style>
 </head>
 <body>
 
@@ -44,17 +121,12 @@
 
   <!-- <div class="container"> -->
     <h3 align="center" style="padding-top: 80px; font-size: 20px; font-family: sans-serif;"><u>Previous Projects</u></h3>
-
-  <div class="content" align="center" style="margin-top: 30px; border: 2px solid black;">
     <?php
    include'show.php';
    session_start();
    showMyproject($_SESSION['userid']); 
 
 ?>
-  </div>
-
-
   <div class="post" align="center">
     <h1>NEED DONATION?</h1>
     <button type="submit" name="submit" class="create"><a href="./doneePage.php"> Create New Post</a></button>
