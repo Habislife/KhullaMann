@@ -1,20 +1,90 @@
-<!-- <?php
-//session_start();
-//if(!isset($_SESSION['userid']))
-{
-  //header("Location: index.php");
-}
-  ?> -->
 <!DOCTYPE html>
 <html>
 <head>
   <title>Donor Page</title>
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
   <link rel="stylesheet" type="text/css" href="src/css/donorPage.css">
+  <style type="text/css">
+      .content{
+ position: relative;
+  margin: 30px 5%;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.card {
+  float: left;
+  position: relative;
+  margin: 20px 1.5%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%;
+  text-align: center;
+  font-family: arial;
+  max-height: inherit;
+}
+
+.card:hover {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.image{
+  height: 40%;
+  overflow: hidden;
+}
+.title{
+  height: 8ch;
+  overflow: hidden;
+}
+.note{
+  height:19ch;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.link{
+  height: 10%;
+  margin-top: 4px;
+}
+.bio {
+  display: block; 
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 8.6em;
+  line-height: 1.8em;
+  color: grey;
+  font-size: 24px;
+}
+.card button {
+  margin: 0px 5%;
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #188224;
+  text-align: center;
+  cursor: pointer;
+  width: 40%;
+  font-size: 22px ;
+  border-radius: 25px;
+}
+
+.card button:hover {
+    background-color: 257543;
+}
+
+#viewbtn{
+  float: left;
+}
+
+#donatebtn{
+  float: left;
+}
+  </style>
 </head>
 <body>
-  
-  <header>
+<header>
   <div class="container">
       <div id="branding">
           <h1><span class="highlight">Khulla</span> Mann</h1>
@@ -42,17 +112,15 @@
 
   <div class="content" align="center" style="margin-top: 80px;">
     <h1>Recent donations</h1>
-    <?php
+     <?php
     include'show.php';
    showAllData();
 
-    ?>
+    ?> 
   </div>
 
   <footer>
     <p>Khulla Mann, Copyright &copy; 2019</p>
-  </footer>
-  
-  <script type="text/javascript" src="js/index.js"></script>
-</body>
+  </footer>  
+</body> 
 </html>
