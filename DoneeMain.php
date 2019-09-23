@@ -11,7 +11,7 @@
 <head>
   <title>Donee Main Page</title>
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-  <link rel="stylesheet" type="text/css" href="src/css/doneeMain.css">
+  <link rel="stylesheet" type="text/css" href="src/css/DoneeMain.css">
   <style type="text/css">
       .content{
  position: relative;
@@ -129,7 +129,7 @@
 ?>
   <div class="post" align="center">
     <h1>NEED DONATION?</h1>
-    <button type="submit" name="submit" class="create"><a href="./doneePage.php"> Create New Post</a></button>
+    <button class="button_1"><a href="./doneePage.php">Create New Post</a></button>
   </div>
 
   
