@@ -110,23 +110,9 @@ footer{
   background-color: #1E4B28;
   text-align: center;
   z-index: 1;
+  padding-top: 50px;
 }
-footer h3{
-  margin: 5px;
-  padding: 5px 5px 10px 10px;
-  float: left;
-  font-size: 20px;
-  font-family: sans-serif;
-}
-footer img{
-  float: left;
-  height: 30px;
-  width: 30px;
-  margin: 10px 5px 10px 10px;
-}
-footer button{
-  margin-right: 250px;
-}
+
 footer p{
   margin-left: 30px;
 }
