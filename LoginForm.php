@@ -24,12 +24,12 @@
     
     <input type="checkbox" id="toggle">
     <div class="navbar">
-      <a href="index.php" class="current">Home</a>
+      <a href="index.php">Home</a>
           <a href="about.php">About</a>
           <a href="Feedback.php">Contact Us</a>
           <a href="RegisterForm.php">Become a donor</a>
           <a href="DoneeRegForm.php">Sign Up</a>
-          <a href="LoginForm.php">Login</a>
+          <a href="LoginForm.php" class="current">Login</a>
     </div>
   </div>
 </header>
@@ -76,7 +76,9 @@
 </div>
 
     
-
+<footer>
+    <p>Khulla Mann, Copyright &copy; 2019</p>
+  </footer>
   </body>
 </html>
 

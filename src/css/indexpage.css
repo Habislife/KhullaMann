@@ -1,85 +1,25 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 1.5;
-  padding: 0;
-  margin: 0;
   background-color: #F2F3F4    ;
 }
 
 /* Global */
-.container{
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
-
-ul{
-  margin: 0;
-  padding: 0;
-}
-
 .button_1{
-  height: 38px;
+  height: 30px;
   background: #188224;
   border: 0;
   padding-left: 20px;
   padding-right: 20px;
   color: #ffffff; 
-}
-
-.dark{
-  padding:15px;
-  background-color: #35424a;
-  color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-/* Header */ 
-header{
-  background:#f3f3f3;
-  color: black;
-  padding-top: 30px;
-  min-height: 70px;
-  border-bottom: #00b300 3px solid;
-  z-index: 1;
-}
-
-header a{
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-
-header li{
-  float: left;
-  display: inline;
-  padding: 0 20px 0 20px;
-}
-
-header #branding{
-  float: left;
-}
-
-header #branding h1{
-  margin:0;
-}
-
-header nav{
-  float: right;
-  margin-top: 10px;
-}
-
-header .highlight, header .current a{
-  color: #188224;
-  font-weight: bold;
-}
-
-header a:hover{
-  color: #cccccc;
-  font-weight: bold;
 }
 
 /* Showcase */
@@ -104,6 +44,7 @@ header a:hover{
   height: 50px;
   background: #188224;
   border: 0;
+  margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
   color: #ffffff; 
@@ -135,53 +76,10 @@ header a:hover{
 
 #banner input[type="text"]{
   padding: 4px;
-  height: 25px;
+  height: 30px;
   width: 250px;
 }
  
-/* Boxes */
-#boxes{
-  margin-top: 20px;
-}
-
-#boxes .box{
-  float: left;
-  text-align: center;
-  width: 30%;
-  padding: 10px;
-}
-
-#boxes .box img{
-  width: 90px;
-}
-
-/* Sidebar */
-aside#sidebar{
-  float: right;
-  width: 30%;
-  margin-top: 10px;
-}
-
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-  width: 90%;
-  padding: 5px;
-}
-
-/* Main-col */
-article#main-col{
-  float: left;
-  width: 65%;
-}
-
-footer{
-  padding: 20px;
-  margin-top: 20px;
-  color: #ffffff;
-  background-color: #1E4B28;
-  text-align: center;
-  z-index: 1;
-}
-
 .post-container{
   position: relative;
   margin: 30px 5%;
@@ -214,16 +112,17 @@ footer{
 }
 
 .c2{
-  height: 13ch;
+  height: 15%;
   overflow: hidden;
 }
 
 .c3{
-  height:30ch;
+  height:35%;
   overflow: hidden;
 }
 
 .c4{
+  padding-top: 10px;
   height: 10%;
 }
 
@@ -265,8 +164,8 @@ footer{
 }
 
 .change{
-    margin:0px 40%;
-    width: 20%;
+    margin:0px 30%;
+    width: 40%;
     border: 2px solid blue;
     font-size: 24px;
     align-self :center;
@@ -286,20 +185,14 @@ footer{
 
 /* Media Queries */
 @media(max-width: 768px){
-  header #branding, header nav, header nav li,
-  #banner h1, #banner form, #boxes .box,
-  article#main-col, aside#sidebar{
+  #banner h1, #banner form{
     float: none;
     text-align: center;
     width: 100%;
   }
 
-  header{
-    padding-bottom: 20px;
-  }
-
   #showcase h1{
-    margin-top: 40px;
+    margin-top: 150px;
   }
 
   #banner form input[type="text"]{
@@ -308,15 +201,61 @@ footer{
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 1366px) {
   #showcase{
-    background: url('img3.jpeg') no-repeat;
+    min-height: 700px;
+    background-size: cover;
+  }
+  
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .bio {
+    font-size: 18px;
+  }
+  
+  .post-container{
+    margin:0 20%; 
+    width: 70%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .card { 
+    margin: 20px 10px;
+    display: block;
+    width: 80%;
+    flex: 1;
+    font-size: 14px;
+  }
+
+  .card button {
+    font-size: 14px ;
+  }
+
+  .change{
+    margin:0px 30%;
+    width: 40%;
+    font-size: 16px;
+  }
+
+}
+
+@media only screen and (max-width: 507px) {
+  .button_1{
+    width: 100%
+  }
+
+  #showcase{
+    min-height: 350px;
+    background: url('img3.jpeg') no-repeat 0 -300px;
   }
 
   #showcase h1{
-    margin-top: 150px;
-    font-size: 50px;
-    margin-bottom: 10px;
+    margin-top: 100px;
+    font-size: 32px;
   }
 
   #showcase p{
@@ -329,75 +268,26 @@ footer{
   }
 
   .button_2 a{
-    text-decoration: none;
-    color: white;
     font-size: 18px;
   }
 
   .post-container{
+    margin:0 15%; 
+    width: 80%;
     display: flex;
     flex-flow: column wrap;
   }
 
   .card { 
     display: block;
-    width: 90%;
     flex: 1;
   }
 
   .change{
-    margin:0px 30%;
-    width: 40%;
-    border: 2px solid blue;
-    font-size: 14px;
-    align-self :center;
+    margin:0px 20%;
+    width: 30%;
+    font-size: 12px;
 }
 
-}
-
-@media only screen and (max-width: 800px) {
-  .bio {
-    font-size: 18px;
-  }
-
-  .card button {
-    font-size: 16px ;
-  }
-
-}
-
-@media only screen and (max-height: 834px) {
-  #showcase{
-    min-height: 500px;
-    background: url('img3.jpeg') no-repeat 0 -300px;
-  }
-}
-
-@media only screen and (min-height: 834px) {
-  #showcase{
-    min-height: 700px;
-    background: url('img3.jpeg') no-repeat 0 -150px;
-  }
-
-  #showcase h1{
-    margin-top: 200px;
-    font-size: 75px;
-    margin-bottom: 10px;
-  }
-
-  #showcase p{
-    font-size: 32px;
-  }
-
-  .button_2{
-    height: 70px;
-    border-radius: 30px;
-  }
-
-  .button_2 a{
-    text-decoration: none;
-    color: white;
-    font-size: 32px;
-  }
 }
 

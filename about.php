@@ -4,26 +4,37 @@
 	<title>Khulla Mann | About </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="src/css/index.css">
+	<link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+  <link rel="stylesheet" type="text/css" href="src/css/About.css">
 </head>
 <body>
+	
 	<header>
-		<div class="container">
-			<div id="branding">
-				<h1><span class="highlight">Khulla</span>  Mann</h1>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li  class="current"><a href="about.php">About</a></li>
-					<li><a href="Feedback.php">Contact Us</a></li>
-					<li><a href="RegisterForm.php">Become a donor</a></li>
-					<li><a href="DoneeRegForm.php">Sign Up</a></li>
-					<li><a href="LoginForm.php">Login</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+  <div class="container">
+      <div id="branding">
+          <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+
+    <div class="togglearea">
+      <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <input type="checkbox" id="toggle">
+    <div class="navbar">
+      <a href="index.php">Home</a>
+          <a href="about.php" class="current">About</a>
+          <a href="Feedback.php">Contact Us</a>
+          <a href="RegisterForm.php">Become a donor</a>
+          <a href="DoneeRegForm.php">Sign Up</a>
+          <a href="LoginForm.php">Login</a>
+    </div>
+  </div>
+</header>
+
 
 	<section id="banner">
 		<div class="container">
@@ -39,18 +50,9 @@
 		<div class="container">
 			<article id="main-col">
 				<h1 class="page-title">About Us</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in </p>
-				<p>
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<div>
+					<img src="img3.jpeg" >
+				</div>
 			</article>
 
 			<aside id="sidebar">

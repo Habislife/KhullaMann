@@ -36,107 +36,51 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
   <title> LoggedIn Give feedback</title>
-  <style>
-    html { 
-   margin: 0;
-    padding: 0;
-    background: url(src/images/bg.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: sans-serif;
-}
-
-    * {box-sizing: border-box}
-
-.box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 25rem;
-  padding: 2.5rem;
-  box-sizing: border-box;
-  background: rgba(211, 249, 232, 0.3);
-  border-radius: 0.625rem;
-}
-
-.box h1 {
-  margin: 0 0 1.875rem;
-  padding: 0;
-  color:  #07558F;
-  text-align: center;
-}
-
-.box .inputBox {
-  position: relative;
-}
-
-.box .inputBox input ,textarea {
-  width: 100%;
-  padding: 0.625rem 0;
-  font-size: 1rem;
-  color:  #07558F;
-  letter-spacing: 0.062rem;
-  margin-bottom: 1.875rem;
-  border: none;
-  border-bottom: 0.065rem solid #07558F;
-  outline: none;
-  background: transparent;
-}
-
-.box .inputBox label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.625rem 0;
-  font-size: 1rem;
-  color: #07558F;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-
-
-::placeholder {
-  color:  #07558F;
-}
-
-.box input[type="submit"] {
-  border: none;
-  outline: none;
-  color: #fff;
-  background-color:   #1889B5;
-  padding: 0.625rem 1.25rem;
-  cursor: pointer;
-  border-radius: 0.312rem;
-  font-size: 1rem;
-}
-
-.box input[type="submit"]:hover {
-  background-color: #07558F;
-}
-  </style>
+  <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+   <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
   <script type="text/javascript" src="src/js/validateUserFeedback.js"></script>
 </head>
 <body>
 
-  <?php include 'indexNav.html' ?>
+ <header>
+  <div class="container">
+      <div id="branding">
+          <h1><span class="highlight">Khulla</span> Mann</h1>
+      </div>
+
+    <div class="togglearea">
+      <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <input type="checkbox" id="toggle">
+    <div class="navbar">
+      <a href="index.php" class="current">Home</a>
+          <a href="about.php">About</a>
+          <a href="Feedback.php">Contact Us</a>
+          <a href="RegisterForm.php">Become a donor</a>
+          <a href="DoneeRegForm.php">Sign Up</a>
+          <a href="LoginForm.php">Login</a>
+    </div>
+  </div>
+</header>
   
   <div class="box" align="center">
     <h1>User Feedback</h1>
 
         <form method="POST" onsubmit="return Validate()" align="center">
-          <div class="inputBox">
+          <
               <input type="text" name="subject" placeholder="Subject" id='subject' onkeyup='return Validate()'>
-          </div>
+          
           <span id='message1'></span>
           <br><br>
 
-          <div class="inputBox">
+          
             <textarea rows="5" id="text" name="givefeedback" placeholder="Give feedback..." onkeyup='return Validate()'></textarea>
-          </div>
+          
           <span id='message2'></span>
           <br><br>
 
@@ -144,6 +88,10 @@ if (isset($_POST['submit'])) {
         </form>
   </div>
   
+
+  <footer>
+    <p>Khulla Mann, Copyright &copy; 2019</p>
+  </footer>
 </body>
 
 </html>

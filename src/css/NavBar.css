@@ -102,6 +102,17 @@ header .highlight,.navbar a.current{
   display: none;
 }
 
+
+footer{
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #1E4B28;
+  text-align: center;
+  z-index: 1;
+}
+
+
 @media(max-width: 768px){
   header nav, header nav li{
     float: none;
