@@ -78,31 +78,31 @@
 </head>
 <body>
 
-  <header>
-   <div class="container">
+<header>
+  <div class="container">
       <div id="branding">
-          <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><a href="AdminPanel.php"><span class="highlight">Khulla</span> Mann </a></h1>
       </div>
 
-      <div class="togglearea">
-       <label for="toggle">
+    <div class="togglearea">
+      <label for="toggle">
         <span></span>
         <span></span>
         <span></span>
-       </label>
-      </div>
+      </label>
+    </div>
     
-      <input type="checkbox" id="toggle">
-      <div class="navbar">
-          <a href="index.php">Home</a>
-          <a href="about.php">About</a>
-          <a href="Feedback.php" class="current">Contact Us</a>
-          <a href="RegisterForm.php">Become a donor</a>
-          <a href="DoneeRegForm.php">Sign Up</a>
-          <a href="LoginForm.php">Login</a>
-      </div>
-     </div>
-  </header>
+    <input type="checkbox" id="toggle">
+    <div class="navbar">
+      <a href="AdminPanel.php" class="current">Admin Panel</a>
+        <a href="Donorinfo.php">Donor</a>
+        <a href="Doneeinfo.php">Donee</a>
+        <a href="DonationPost.php">Total Donation Post</a>
+        <a href="DoneeVerifying.php">To be Verify</a>
+        <a href="Feedback.php">Feedback</a>
+    </div>
+  </div>
+</header>
 	 
    <?php
 include '../src/db/connection.php';

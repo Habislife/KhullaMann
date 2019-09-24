@@ -3,7 +3,7 @@
 <head>
 	<title>Admin Dashboard
 	</title>
-	<link rel="stylesheet" type="text/css" href="../src/css/NavBar.css">
+	<link rel="stylesheet" type="text/css" href="../src/css/NavigationBar.css">
 	<style type="text/css">
 		body{
 		  font-family: Arial, Helvetica, sans-serif;
@@ -44,7 +44,7 @@
 	<header>
   <div class="container">
       <div id="branding">
-          <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><a href="AdminPanel.php"><span class="highlight">Khulla</span> Mann </a></h1>
       </div>
 
     <div class="togglearea">
@@ -57,6 +57,7 @@
     
     <input type="checkbox" id="toggle">
     <div class="navbar">
+    	<a href="AdminPanel.php" class="current">Admin Panel</a>
       	<a href="Donorinfo.php">Donor</a>
         <a href="Doneeinfo.php">Donee</a>
         <a href="DonationPost.php">Total Donation Post</a>
