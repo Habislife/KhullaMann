@@ -10,24 +10,187 @@
 <html>
 <head>
   <title>Donee Main Page</title>
-  <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+<!--   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css"> -->
   <link rel="stylesheet" type="text/css" href="src/css/doneePage.css">
   <style type="text/css">
-    .container{
+  header{
+  background:#f3f3f3;
+  color: black;
+  min-height: 20px;
+  border-bottom: #00b300 3px solid;
+  z-index: 1;
+}
+header #branding{
+  float: left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header .highlight,.navbar a.current{
+  color: #188224;
+  font-weight: bold;
+}
+
+.navbar
+{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar a
+{
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 28px;
+}
+
+.navbar a:hover
+{
+  color: #cccccc;
+}
+
+#toggle
+{
+  display: none;
+}
+
+.togglearea
+{
+  background-color: #f3f3f3;
+  border-bottom: 2px solid white;
+  color: white;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.togglearea label
+{
+  background-color: #cccccc;
+  height: 45px;
+  width: 50px;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.togglearea label span
+{
+  background-color: black;
+  height: 4px;
+  width: 70%;
+  margin: 2px 0px;
+}
+
+.togglearea
+{
+  display: none;
+}
+
+
+footer{
+  height: 200px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #1E4B28;
+  text-align: center;
+  z-index: 1;
+  padding-top: 50px;
+}
+
+footer p{
+  margin-left: 30px;
+}
+
+@media(max-width: 768px){
+  header nav, header nav li{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px)
+{
+  .navbar
+  {
+    flex-direction: column;
+    display: none;
+  }
+
+  .navbar a:hover, .navbar a.current:hover
+  {
+    background-color: #cccccc;
+    color: black;
+  }
+
+  .navbar a.current{
+    color:white;
+    background-color: #188224;
+  }
+
+  header #branding{
+    font-size: 14px;
+  }
+
+  .togglearea label
+  {
+    height: 35px;
+    width: 40px;
+  }
+
+  #toggle:checked + .navbar
+  {
+    display: flex;
+  }
+
+  .togglearea
+  { 
+    display: flex;
+  }
+}
+
+.button_2{
+  height: 50px;
+  background: #188224;
+  border: 0;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff; 
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.button_2 a{
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+
+  .container{
   height: 70px;
   width: 100%;
-  padding: 10px 20px 0px 40px;
+  padding: 0px 20px 0px 40px;
   border: 2px solid white;
 }
 
   .content{
- position: relative;
-  margin: 20px 30px 30px 30px;
+  position: relative;
+  margin: 50px 30px 30px 30px;
   width: 95%;
   height: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  border: 1px solid white;
 }
 .card {
   float: left;

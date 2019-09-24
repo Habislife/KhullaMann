@@ -131,7 +131,7 @@ footer p{
   </div>
 </header>
 
-  <div class="content" align="center" style="margin-top: 80px;">
+  <div class="content" align="center" style="margin-top: 80px; border: white;">
     <h1>Recent donations</h1>
      <?php
     include'show.php';
