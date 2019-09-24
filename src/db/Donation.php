@@ -28,6 +28,8 @@ include'mail.php';
  $doneephone=$row['contact_no'];
  $doneeusername=$row['username'];
  $doneeaccount=$row['account_no'];
+ $message1 = "This (username, email, address, contact_no) user wants to donate in your (xyz) donation post";
+ $message2 = "You are making your donation to (username,email, address, contact_no, account_no)";
 $donormail= new Mail($donoremail,"Donee information",$message1,$headers);
 $doneemail = new Mail($donoremail,"Donee information",$message2,$headers);
 header('Location:../../DonorPage.php');
