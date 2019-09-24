@@ -75,7 +75,7 @@ $query = "SELECT * FROM `donation_post` Where donee_id='$userid' order by post_d
  while($row = $result->fetch_assoc()) {
     echo "<div class='card'>";
     echo "<div class='image'>
-      <a href='post.php?value_key=".$row["post_id"]."'><img src=".$row['file_path']." alt='Avatar' style='width:100%'></a>
+      <a href='edit.php?edit=".$row["post_id"]."'><img src=".$row['file_path']." alt='Avatar' style='width:100%'></a>
     </div>";
     echo"<div class='title'>
       <h1>".$row['title']."</h1>
@@ -84,7 +84,7 @@ $query = "SELECT * FROM `donation_post` Where donee_id='$userid' order by post_d
       <p class='bio'>".$row['bio']."</p>
     </div>";
     echo "<div class='link'>
-       <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>
+       <a href='Delete.php?delete=".$row["post_id"]."'><button id='viewbtn'>Delete</button></a>
         <a href='Donordata.php?donation=".$row["post_id"]."'><button id='donatebtn'>Verify</button></a>
     </div>";
 
@@ -151,14 +151,14 @@ $query = "SELECT * FROM `donation_post` Where post_id NOT IN(SELECT post_id FROM
 if($start == 0){
     echo "Previous &laquo;";
 }else{
-    echo "<a href=index.php?id=" . ($start - 3) . ">Previous &laquo;</a>";
+    echo "<a href=Donordata.php?id=" . ($start - 3) . ">Previous &laquo;</a>";
 }
 
 echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 if($start >= $TotalRec-3){
     echo "Next &raquo;";
 }else{
-    echo "<a href=index.php?id=". ($start + 3) ." >Next &raquo;</a>";
+    echo "<a href=Donordata.php?id=". ($start + 3) ." >Next &raquo;</a>";
 }
 }
 ?>
