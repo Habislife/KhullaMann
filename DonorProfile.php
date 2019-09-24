@@ -9,7 +9,7 @@
 <html>
 <head>
 	<title>Donor Profile</title>
-	<link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+	<link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
    <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
   
 </head>
@@ -18,7 +18,7 @@
    <header>
   <div class="container">
       <div id="branding">
-          <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><a href="DonorPage.php"><span class="highlight">Khulla</span> Mann </a></h1>
       </div>
 
     <div class="togglearea">
@@ -33,7 +33,7 @@
     <div class="navbar">
         <a href="DonorPage.php">Home</a>
         <a href="about.php">About</a>
-        <a href="UserFeedback.php">Feedback</a>
+        <a href="DonorFeedback.php">Feedback</a>
         <a href="DonorProfile.php" class="current">Profile</a>
         <a href="logout.php">Log Out</a>
     </div>

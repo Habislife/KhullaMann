@@ -8,9 +8,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Donee Page</title>
-  <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-  <link rel="stylesheet" type="text/css" href="src/css/CreatePost.css">
+  <title>Create New Post</title>
+  <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
+  <link rel="stylesheet" type="text/css" href="src/css/createPost.css">
   
   <script type="text/javascript" src="src/js/doneePage.js"></script>
 </head>
@@ -19,7 +19,7 @@
   <header>
   <div class="container">
       <div id="branding">
-          <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><a href="DoneePage.php"><span class="highlight">Khulla</span> Mann </a></h1>
       </div>
 
     <div class="togglearea">
@@ -34,7 +34,7 @@
     <div class="navbar">
         <a href="DoneePage.php">Home</a>
         <a href="about.php">About</a>
-        <a href="UserFeedback.php">Feedback</a>
+        <a href="DoneeFeedback.php">Feedback</a>
         <a href="CreatePost.php" class="current">Create Post</a>
         <a href="DoneeProfile.php">Profile</a>
         <a href="logout.php">Log Out</a>

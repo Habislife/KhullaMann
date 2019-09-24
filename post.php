@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Post Page </title>
-  <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-  <link rel="stylesheet" type="text/css" href="src/css/postStyle.css">
+  <title>Donation Post Page </title>
+  <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
+  <link rel="stylesheet" type="text/css" href="src/css/PostStyle.css">
 
 </head>
 <body>
@@ -11,7 +11,7 @@
   <header>
   <div class="container">
       <div id="branding">
-          <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><a href="DonorPage.php"><span class="highlight">Khulla</span> Mann </a></h1>
       </div>
 
     <div class="togglearea">
@@ -24,12 +24,11 @@
     
     <input type="checkbox" id="toggle">
     <div class="navbar">
-      <a href="index.php" class="current">Home</a>
-          <a href="about.php">About</a>
-          <a href="Feedback.php">Feedback</a>
-          <a href="RegisterForm.php">Become a donor</a>
-          <a href="DoneeRegForm.php">Sign Up</a>
-          <a href="LoginForm.php">Login</a>
+        <a href="DonorPage.php">Home</a>
+        <a href="about.php">About</a>
+        <a href="DonorFeedback.php">Feedback</a>
+        <a href="DonorProfile.php">Profile</a>
+        <a href="logout.php">Log Out</a>
     </div>
   </div>
 </header>

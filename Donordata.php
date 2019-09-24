@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Donor Information</title>
+    <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
     <link rel="stylesheet" type="text/css" href="src/css/Cards.css">
     <style type="text/css">
         .content{
@@ -53,6 +54,34 @@
 </head>
 
 <body>
+
+  <header>
+  <div class="container">
+      <div id="branding">
+          <h1><a href="iDonorPage.php"><span class="highlight">Khulla</span> Mann </a></h1>
+      </div>
+
+    <div class="togglearea">
+      <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <input type="checkbox" id="toggle">
+    <div class="navbar">
+        <a href="DonorPage.php">Home</a>
+        <a href="about.php">About</a>
+        <a href="DonorFeedback.php">Feedback</a>
+        <a href="DonorProfile.php" class="current">Profile</a>
+        <a href="logout.php">Log Out</a>
+    </div>
+  </div>
+</header>
+  
+
+
     <?php
 echo"<br><br>";
 include 'src/db/connection.php';

@@ -94,5 +94,43 @@ a{
 }
 
 
+@media(max-width: 768px){
+  .box {
+    width: 30rem;
+    height: 45rem;
+  }
+
+  input[type=text], input[type=file]{
+    width: 60%;
+    height: 30px;
+    padding: 0.3rem 1.25rem;
+  }
+
+}
+
+@media(max-width: 556px){
+  .box {
+    width: 90%;
+    height: 60rem;
+  }
+
+  input[type=text], input[type=file],textarea{
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+  }
+
+  #upload{
+    width: 200px;
+    height: 200px;
+    float: none;
+  }
+
+  #bio{
+    width: 100%;
+  }
+
+]
+
+
 
 

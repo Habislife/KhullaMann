@@ -2,8 +2,8 @@
   <!DOCTYPE html>
   <html>
   <head>
-    <title>Reset Passwoord</title>
-    <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+    <title>Forgot Passwoord</title>
+    <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
    <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
   </head>
   <body>

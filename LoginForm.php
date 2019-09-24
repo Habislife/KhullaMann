@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
   <head>
-    <title>Login Form</title>
+    <title>Khulla Mann | Login Form</title>
     
  <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
   <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">

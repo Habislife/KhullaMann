@@ -40,19 +40,24 @@ body{
   font-size: 18px;
 }
 
+.donatebtn:hover{
+  background: #1E4B28;
+}
 
-/*
-<?php 
-include 'src/db/connection.php';
-$var = $_GET['value_key']; 
-$sql = "SELECT * FROM donation_post where post_id = '{$var}'";
- $result = mysqli_query($conn,$sql);
-$row = mysqli_fetch_array($result);
-echo "<div class="post-container" align="center">
-          <img src='".$row['file_path']."' class="post-image">
-          <h1 class="post-title">".$row['title']."</h1>
-          <p class="post-content" align='justify'>".$row['description']."</p>
-          <button class="donatebtn">Donate</button>
-      </div> ";  
-?> 
-*/
+@media(max-width: 1024px){
+   .post-image{
+    width: 300px;
+    margin: 20px 10%;
+  }
+}
+
+@media(max-width: 556px){
+  .post-image{
+  width: 80%;
+  margin: 20px 10%;
+}
+
+  .post-content{
+  font-size: 14px;
+}
+}

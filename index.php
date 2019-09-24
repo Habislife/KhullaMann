@@ -25,7 +25,7 @@ else
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+  <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
   <link rel="stylesheet" type="text/css" href="src/css/indexpages.css">
    
 </head>
@@ -33,7 +33,7 @@ else
   <header>
    <div class="container">
       <div id="branding">
-          <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><a href="index.php"><span class="highlight">Khulla</span> Mann </a></h1>
       </div>
 
       <div class="togglearea">

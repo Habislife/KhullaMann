@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
-  <link rel="stylesheet" type="text/css" href="src/css/indexpages.css">
+  <link rel="stylesheet" type="text/css" href="src/css/About.css">
    
 </head>
 <body>

@@ -35,9 +35,10 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Give feedback</title>
+	<title>Khulla Mann | Give feedback</title>
 	
 <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
+<link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
   <script type="text/javascript" src="src/js/validate.js"></script>
    
 </head>
@@ -72,21 +73,21 @@ if (isset($_POST['submit'])) {
 		<h1>Feedback</h1>
 
 		<form method="POST" onsubmit="return Validate()" align="center">
-			<div class="inputBox">
+			
 				<input type="text" name="email" placeholder="My email" id="email" onkeyup='return Validate()'>
-			</div>
+			
       <span id='message'></span>
 			<br><br>
 
-			<div class="inputBox">
+			
 				<input type="text" name="subject" placeholder="Subject" id="subject" onkeyup='return Validate()'>
-			</div>
+			
       <span id='message1'></span>
 			<br><br>
 
-			<div class="inputBox">
+		
 				<textarea rows="5" id="text" name="givefeedback" placeholder="Give feedback..." onkeyup='return Validate()'></textarea>
-			</div>
+			
       <span id='message2'></span>
 			<br><br>
 

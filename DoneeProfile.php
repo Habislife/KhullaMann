@@ -9,7 +9,7 @@
 <html>
 <head>
 	<title>Donee Profile</title>
-  <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+  <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
    <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
   <script type="text/javascript" src="src/js/doneeProfile.js"></script>
   
@@ -20,7 +20,7 @@
 <header>
   <div class="container">
       <div id="branding">
-          <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><a href="DoneePage.php"><span class="highlight">Khulla</span> Mann </a></h1>
       </div>
 
     <div class="togglearea">
@@ -33,10 +33,10 @@
     
     <input type="checkbox" id="toggle">
     <div class="navbar">
-        <a href="DoneeMain.php">Home</a>
+        <a href="DoneePage.php">Home</a>
         <a href="about.php">About</a>
-        <a href="UserFeedback.php">Feedback</a>
-        <a href="DoneePage.php">Create Post</a>
+        <a href="DoneeFeedback.php">Feedback</a>
+        <a href="CreatePost.php">Create Post</a>
         <a href="DoneeProfile.php" class="current">Profile</a>
         <a href="logout.php">Log Out</a>
     </div>
@@ -74,7 +74,7 @@
    				<span id='message3'></span><br>
     			
         
-   				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='return validateProfile()'>
+   				 <input type="password" placeholder="Re-Enter Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='return validateProfile()'>
         
    				<span id='message'></span><br>
 
@@ -94,7 +94,7 @@
           <span id='message6'></span><br>
 
    				 <div align="center">
-   					 <input type="submit" name="submit" class="register" value="save changes">
+   					 <input type="submit" name="submit" class="register" value="Save changes">
    					</div>
 			</form>
 		 </div>
