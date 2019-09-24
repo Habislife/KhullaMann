@@ -52,11 +52,13 @@ else
     else
       {
         echo"Email or Password Not Match";
+        header("Refresh:3; url=../../LoginForm.php");
       }
 
     }
     else{
       echo"Email or Password Not Match";
+      header("Refresh:3; url=../../LoginForm.php");
     }
 
 }

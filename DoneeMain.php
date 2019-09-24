@@ -28,7 +28,6 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  border: 2px solid black;
 }
 .card {
   float: left;
@@ -128,15 +127,14 @@
 </header>
 
   <!-- <div class="container"> -->
-    <div class="content" align="center" style="margin-top: 80px;">
     <h3 align="center" style="padding: 20px; font-size: 25px; font-family: sans-serif; "><u>Previous Projects</u></h3>
     <?php
    include'show.php';
-   /*session_start();
+   session_start();
    showMyproject($_SESSION['userid']); 
-*/  showAllData();
 
-?></div>
+
+?>
   <div class="post" align="center">
     <h1>NEED DONATION?</h1>
     <button class="button_1"><a href="./doneePage.php">Create New Post</a></button>
@@ -148,6 +146,5 @@
   <footer>
     <p>Khulla Mann, Copyright &copy; 2019</p>
   </footer>
-  <script type="text/javascript" src="../js/index.js"></script>
 </body>
 </html>

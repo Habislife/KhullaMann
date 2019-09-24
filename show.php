@@ -32,7 +32,7 @@ $query = "SELECT * FROM `donation_post`order by post_date asc, post_time asc LIM
     echo "<div class='note'>
       <p class='bio'>".$row['bio']."</p>
     </div>";
-    echo "<div>
+    echo "<div class='link'>
        <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>
         <a href='LoginForm.php'><button id='donatebtn'>Donate</button></a>
     </div>";
@@ -83,9 +83,9 @@ $query = "SELECT * FROM `donation_post` Where donee_id='$userid' order by post_d
     echo "<div class='note'>
       <p class='bio'>".$row['bio']."</p>
     </div>";
-    echo "<div>
+    echo "<div class='link'>
        <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>
-        <a href='Donordata.php?donation".$row["post_id"]."'><button id='donatebtn'>Donate</button></a>
+        <a href='Donordata.php?donation=".$row["post_id"]."'><button id='donatebtn'>Verify</button></a>
     </div>";
 
     echo"</div>";
@@ -139,7 +139,7 @@ $query = "SELECT * FROM `donation_post` Where post_id NOT IN(SELECT post_id FROM
     echo "<div class='note'>
       <p class='bio'>".$row['bio']."</p>
     </div>";
-    echo "<div>
+    echo "<div class='link'>
        <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>
         <a href='src/db/Donation.php?value_key=".$row["post_id"]."'><button id='donatebtn'>Donate</button></a>
     </div>";

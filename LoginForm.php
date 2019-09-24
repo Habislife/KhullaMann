@@ -57,7 +57,7 @@
     
     <br>
         <label class="remember">
-           <input type="checkbox"> Remember Me
+           <input type="checkbox" name="remember"> Remember Me
         </label>
 
         <a href="ForgotPassword.php" class="forgot">Forgot password?</a>

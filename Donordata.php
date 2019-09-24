@@ -2,14 +2,60 @@
 <html>
 <head>
     <title>Donor Information</title>
-    <link rel="stylesheet" type="text/css" href="../src/css/Cards.css">
+    <link rel="stylesheet" type="text/css" href="src/css/Cards.css">
+    <style type="text/css">
+        .content{
+ position: relative;
+  margin: 20px 30px 30px 30px;
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.card {
+  float: left;
+  position: relative;
+  margin: 20px 1.5%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 30%;
+  text-align: center;
+  font-family: arial;
+  max-height: inherit;
+}
+
+.card:hover {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.link button {
+  margin: 0px 5%;
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: #188224;
+  text-align: center;
+  cursor: pointer;
+  width: 40%;
+  font-size: 22px ;
+  border-radius: 25px;
+}
+
+.link button:hover {
+    background-color: 257543;
+}
+
+#viewbtn{
+  float: center;
+}
+    </style>
 </head>
 
 <body>
     <?php
-    include '../Nav.html';
 echo"<br><br>";
-include '../src/db/connection.php';
+include 'src/db/connection.php';
 $perpage = 6;
 
 if(isset($_GET['id'])){
@@ -24,9 +70,13 @@ $sql = "SELECT * FROM userprofile Where role='Donor'order by username LIMIT $sta
 $result = $conn->query($sql);
 
 if ($TotalRec > 0) {
+?>
+<div class='content'>
+ <?php
  while($row = $result->fetch_assoc()) {
-    ?>
-<div class="front-side" style="float: left; margin-left: 10px;">
+ ?>
+ <div class='card'>
+    <div class="front-side" style="float: left; margin-left: 10px;">
         <div class="color-grid">
             <div class="black"></div> 
             <div class="red1"></div>
@@ -94,11 +144,15 @@ if ($TotalRec > 0) {
 
         </div>
     </div>
-    
-
-    </div> 
-    <?php 
+<div class='link'>
+       <a href='Verify.php?value_key=".$row["post_id"]."'><button id='viewbtn'>Verify</button></a>
+    </div>"
+ </div>
+ <?php
     }
+    ?>
+</div>
+<?php
 } else {
     echo "0 results";
 }

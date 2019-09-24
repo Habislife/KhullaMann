@@ -86,7 +86,7 @@
 		<br><br>
 
 		<label>
-			<a href="DonationPostinfo.php" value="Donation Post">Total Donation Post : </a><?php echo $Donation ?>
+			<a href="DonationPost.php" value="Donation Post">Total Donation Post : </a><?php echo $Donation ?>
 		</label>
 		<br><br>
 
