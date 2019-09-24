@@ -63,6 +63,7 @@
         <a href="DonationPost.php">Total Donation Post</a>
         <a href="DoneeVerifying.php">To be Verify</a>
         <a href="Feedback.php">Feedback</a>
+        <a href="../index.php">Logout</a>
     </div>
   </div>
 </header>
