@@ -14,22 +14,18 @@ body{
 .box {
   position: relative;
   margin: 20px auto;
-  width: 45rem;
+  width: 40rem;
   height: 50rem;
   padding: 2.5rem;
   box-sizing: border-box;
-  border: 1px solid green;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
   transition: 0.3s;
-  background: rgba(211, 249, 232, 0.6);
-  /*background-color: #60A67F;*/
-  border-radius: 0.625rem;
+  background-color:  #E0E0E0;
 }
 
 .box h1 {
   margin: 0 0 1.875rem;
   padding: 0;
-  color: #07558F ;
+  color: #188224  ;
   text-align: center;
 }
 
@@ -39,18 +35,17 @@ input[type=text], input[type=file], textarea {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  border: 1px solid black;
   background: #f1f1f1;
   border-radius: 4px;
 }
 
 input[type=text]:focus, textarea:focus {
-  background-color: #ddd;
+  border: 1px solid black;
   outline: none;
 }
 
 ::placeholder {
-  color:  #07558F;
+  color: #188224 ;
 }
 
 .box input[type="submit"] {

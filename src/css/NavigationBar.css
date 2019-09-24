@@ -36,6 +36,11 @@ header #branding h1{
   margin:0;
 }
 
+header #branding a{
+  text-decoration: none;
+  color: black;
+}
+
 header .highlight,.navbar a.current{
   color: #188224;
   font-weight: bold;
@@ -52,7 +57,7 @@ header .highlight,.navbar a.current{
   color: black;
   text-align: center;
   text-decoration: none;
-  padding: 14px 28px;
+  padding: 24px 28px;
 }
 
 .navbar a:hover

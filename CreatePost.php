@@ -10,7 +10,7 @@
 <head>
   <title>Donee Page</title>
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-  <link rel="stylesheet" type="text/css" href="src/css/createPost.css">
+  <link rel="stylesheet" type="text/css" href="src/css/CreatePost.css">
   
   <script type="text/javascript" src="src/js/doneePage.js"></script>
 </head>

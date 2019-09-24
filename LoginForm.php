@@ -2,38 +2,39 @@
 <html>
   <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-   <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
-    <script type="text/javascript" src='src/js/LoginForm.js'></script>
-  </head>
-<body>
+    
+ <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
+  <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
 
- <header>
-  <div class="container">
+  <script type="text/javascript" src='src/js/LoginForm.js'></script>
+   
+</head>
+<body>
+  <header>
+   <div class="container">
       <div id="branding">
-          <h1><span class="highlight">Khulla</span> Mann</h1>
+          <h1><a href="index.php"><span class="highlight">Khulla</span> Mann </a></h1>
       </div>
 
-    <div class="togglearea">
-      <label for="toggle">
+      <div class="togglearea">
+       <label for="toggle">
         <span></span>
         <span></span>
         <span></span>
-      </label>
-    </div>
+       </label>
+      </div>
     
-    <input type="checkbox" id="toggle">
-    <div class="navbar">
-      <a href="index.php">Home</a>
+      <input type="checkbox" id="toggle">
+      <div class="navbar">
+          <a href="index.php">Home</a>
           <a href="about.php">About</a>
           <a href="Feedback.php">Feedback</a>
           <a href="RegisterForm.php">Become a donor</a>
           <a href="DoneeRegForm.php">Sign Up</a>
           <a href="LoginForm.php" class="current">Login</a>
-    </div>
-  </div>
-</header>
-
+      </div>
+     </div>
+  </header>
     
     
     <div class="box" align="center">
