@@ -28,6 +28,7 @@ header{
 }
 
 header #branding{
+  padding-top: 10px;
   float: left;
 }
 
@@ -67,9 +68,9 @@ header .highlight,.navbar a.current{
 .togglearea
 {
   background-color: #f3f3f3;
-  border-bottom: 2px solid white;
+  border-bottom: 1px;
   color: white;
-  padding-bottom: 10px;
+  padding: 10px 0px;
   display: flex;
   justify-content: flex-end;
 }
@@ -103,7 +104,7 @@ header .highlight,.navbar a.current{
 
 
 footer{
-  height: 200px;
+  height: 100px;
   margin-top: 20px;
   color: #ffffff;
   background-color: #1E4B28;
