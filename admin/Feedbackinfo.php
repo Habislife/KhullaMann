@@ -132,7 +132,7 @@ if ($TotalRec > 0) {
 		</div>
 		<br><br>
 		<div class="msgBox">
-			<?php echo "<h2>".$row["feedback_content"]."</h2>"."<br>"."<br>"."<button><a href='deletion.php?value_key=".$var."'>"."Delete</a></button>"; ?> 
+			<?php echo "<h2>".$row["feedback_content"]."</h2>"."<br>"."<br>"."<button><a href='deletion.php?value_key=".$row['feedback_id']."'>"."Delete</a></button>"; ?> 
 		</div>
 	</div>
 
