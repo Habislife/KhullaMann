@@ -89,9 +89,10 @@ $row = mysqli_fetch_array($result);
     
 
     </div>
+
      <footer>
-    <p>Khulla Mann, Copyright &copy; 2019</p>
-  </footer> 
+        <p>Khulla Mann, Copyright &copy; 2019</p>
+    </footer> 
 </body>
 
 </html>
