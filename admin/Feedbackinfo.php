@@ -174,11 +174,7 @@ if($start+$perpage>=$TotalRec){
 $conn->close();
 ?> 
  <footer>
-      <h3>Share this on </h3>
-   <a href="https://www.facebook.com/"><img src="facebook1.png"></a> <a href="https://www.instagram.com/"><img src="instagram6.png"></a> <a href="https://twitter.com/"><img src="twitter3.png"></a> <br><br>   
-   <button class="button_2"><a href="RegisterForm.php">Join Us</a></button>
-    <br><br>
-    <p>Khulla Mann, Copyright &copy; 2019</p>
+      <p>Khulla Mann, Copyright &copy; 2019</p>
   </footer>
 </body>
 </html>
