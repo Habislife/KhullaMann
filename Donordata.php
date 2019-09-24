@@ -56,6 +56,7 @@
     <?php
 echo"<br><br>";
 include 'src/db/connection.php';
+$postid=$_GET['Donation'];
 $perpage = 6;
 
 if(isset($_GET['id'])){
@@ -63,10 +64,10 @@ if(isset($_GET['id'])){
 }else{
     $start = 0;
 }
-$count= mysqli_query($conn,"SELECT COUNT(user_id) FROM userprofile Where role='Donor' AND flag='1'");
+$count= mysqli_query($conn,"SELECT COUNT(donor_id) FROM donation Where post_id=$postid AND Gotit='0'");
 $rows = mysqli_fetch_array($count);
 $TotalRec=$rows['COUNT(user_id)'];
-$sql = "SELECT * FROM userprofile Where role='Donor'order by username LIMIT $start, $perpage";
+$sql = "SELECT * FROM userprofile,donation Where user_id IN(Select donor_id FROM donation Where post_id=$postid AND Gotit='0') order by username LIMIT $start, $perpage";
 $result = $conn->query($sql);
 
 if ($TotalRec > 0) {
