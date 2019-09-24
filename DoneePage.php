@@ -2,32 +2,9 @@
 <html>
 <head>
     <title>Donee HomePage</title>
-     <link rel="stylesheet" type="text/css" href="src/css/doneePage.css">
-     <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
-     <style type="text/css">
-       .change{
-    margin:0px 35%;
-    width: 30%;
-    height: 50px;
-    border: 2px;
-    font-size: 24px;
-    align-self :center;
-}
-
-.change a{
-  color: black;
-  text-decoration: none;
-}
-
-.change #previous{
-  float: left;
-}
-
-.change #next{
-  float: right;
-}
-     </style>
-
+    <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
+     <link rel="stylesheet" type="text/css" href="src/css/DoneePage.css">
+     
 </head>
 <body>
 
@@ -65,15 +42,13 @@
    session_start();
    showMyproject($_SESSION['userid']); 
 
-
 ?>
+
   <div class="post" align="center">
     <h1>NEED DONATION?</h1>
     <button class="button_1"><a href="./doneePage.php">Create New Post</a></button>
   </div>
 
-  
-  
 
   <footer>
     <p>Khulla Mann, Copyright &copy; 2019</p>

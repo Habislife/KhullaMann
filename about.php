@@ -37,14 +37,14 @@
 
 
 	<section id="banner">
-		<div class="container">
-			<h1>Search to Donate</h1>
-			<form>
-				<input type="text" placeholder="Search...">
-				<button type="submit" class="button_1">Search</button>
-			</form>
-		</div>
-	</section>
+    <div class="container">
+      <h1>Search to Donate</h1>
+      <form>
+        <input type="text" placeholder="Search..." name="searchtext">
+        <button type="submit" class="button_1" name="search">Search</button>
+      </form>
+    </div>
+  </section>
 
 	<section id="main">
 		<div class="container">
