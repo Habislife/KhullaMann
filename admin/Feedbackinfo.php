@@ -136,21 +136,18 @@ if ($TotalRec > 0) {
 	</div>
 
 <?php
+echo "<div class='change'>";
+if($start != 0){    
+    echo "<a href=DonorPage.php?id=" . ($start - 3) . " id='previous'> &laquo Previous</a>";
+}
+if($start < $TotalRec-3){
+    echo "<a href=DonorPage.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
+    
+}
+echo"</div>";
     }
 } else {
     echo "0 results";
-}
-if($start == 0){
-	echo "&laquo Previous";
-}else{
-	echo "<a href=Feedbackinfo.php?id=" . ($start - $perpage) . ">&laquo Previous</a>";
-}
-
-echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-if($start+$perpage>=$TotalRec){
-	echo "Next &raquo";
-}else{
-	echo "<a href=Feedbackinfo.php?id=". ($start + $perpage) ." >Next &raquo</a>";
 }
 
 $conn->close();

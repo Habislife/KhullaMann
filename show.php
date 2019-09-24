@@ -43,7 +43,7 @@ $query = "SELECT * FROM `donation_post`order by post_date asc, post_time asc LIM
 }
 echo "<div class='change'>";
 if($start != 0){    
-    echo "<a href=index.php?id=" . ($start - 3) . " id='previous'>Previous &laquo;</a>";
+    echo "<a href=index.php?id=" . ($start - 3) . " id='previous'>  &laquo Previous ;</a>";
 }
 if($start < $TotalRec-3){
     echo "<a href=index.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
@@ -92,18 +92,15 @@ $query = "SELECT * FROM `donation_post` Where donee_id='$userid' order by post_d
     }
     echo"</div>";
 }
-if($start == 0){
-    echo "Previous &laquo;";
-}else{
-    echo "<a href=DoneeMain.php?id=" . ($start - 3) . ">Previous &laquo;</a>";
+//echo "<div class='change'>";
+if($start != 0){    
+    echo "<a href=DoneePage.php?id=" . ($start - 3) . " id='previous'> &laquo  Previous;</a>";
 }
-
-echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-if($start >= $TotalRec-3){
-    echo "Next &raquo;";
-}else{
-    echo "<a href=DoneeMain.php?id=". ($start + 3) ." >Next &raquo;</a>";
+if($start < $TotalRec-3){
+    echo "<a href=DoneePage.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
+    
 }
+//echo"</div>";
 }
 function showAllData(){
 include'src/db/connection.php';
@@ -148,17 +145,14 @@ $query = "SELECT * FROM `donation_post` Where post_id NOT IN(SELECT post_id FROM
     }
     echo"</div>";
 }
-if($start == 0){
-    echo "Previous &laquo;";
-}else{
-    echo "<a href=Donordata.php?id=" . ($start - 3) . ">Previous &laquo;</a>";
+echo "<div class='change'>";
+if($start != 0){    
+    echo "<a href=DonorPage.php?id=" . ($start - 3) . " id='previous'> &laquo Previous</a>";
 }
-
-echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-if($start >= $TotalRec-3){
-    echo "Next &raquo;";
-}else{
-    echo "<a href=Donordata.php?id=". ($start + 3) ." >Next &raquo;</a>";
+if($start < $TotalRec-3){
+    echo "<a href=DonorPage.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
+    
 }
+echo"</div>";
 }
 ?>

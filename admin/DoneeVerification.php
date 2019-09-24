@@ -87,6 +87,15 @@
 <body>
    <?php
 include '../src/db/connection.php';
+$perpage = 3;
+if(isset($_GET['id'])){
+    $start = $_GET['id'];
+}else{
+    $start = 0;
+}
+$count = mysqli_query($conn,"SELECT COUNT(user_id) FROM userprofile where flag='0'");
+$rows = mysqli_fetch_array($count);
+$TotalRec=$rows['COUNT(user_id)']; 
 $sql = "SELECT username,user_id FROM userprofile where flag='0'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -113,6 +122,15 @@ if ($result->num_rows > 0) {
     
   <?php
   }
+  echo "<div class='change'>";
+if($start != 0){    
+    echo "<a href=DonorPage.php?id=" . ($start - 3) . " id='previous'> &laquo Previous</a>";
+}
+if($start < $TotalRec-3){
+    echo "<a href=DonorPage.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
+    
+}
+echo"</div>";
 } 
   else {
     echo "0 results";

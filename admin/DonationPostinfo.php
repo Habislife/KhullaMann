@@ -32,16 +32,15 @@ if ($TotalRec > 0) {
     echo"</div>";
     }
     echo"</div>";
-    echo "<div class='change'>";
+echo "<div class='change'>";
 if($start != 0){    
-    echo "<a href=index.php?id=" . ($start - $perpage) . " id='previous'>Previous &laquo;</a>";
+    echo "<a href=DonationPost.php?id=" . ($start - 3) . " id='previous'> &laquo Previous</a>";
 }
 if($start < $TotalRec-3){
-    echo "<a href=index.php?id=". ($start + $perpage) ." id='next'>Next &raquo;</a>";
+    echo "<a href=DonationPost.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
     
 }
 echo"</div>";
-
 }
 else{
 	echo"0 result";

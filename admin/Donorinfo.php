@@ -4,6 +4,29 @@
     <title>Donor Information</title>
     <link rel="stylesheet" type="text/css" href="../src/css/NavigationBar.css">
     <link rel="stylesheet" type="text/css" href="../src/css/Cards.css">
+    <style type="text/css">
+        .change{
+    margin:0px 35%;
+    width: 30%;
+    height: 50px;
+    border: 2px;
+    font-size: 24px;
+    align-self :center;
+}
+
+.change a{
+  color: black;
+  text-decoration: none;
+}
+
+.change #previous{
+  float: left;
+}
+
+.change #next{
+  float: right;
+}
+    </style>
 </head>
 
 <body>
@@ -35,8 +58,6 @@
 </header>
 
     <?php
-    include '../Nav.html';
-echo"<br><br>";
 include '../src/db/connection.php';
 $perpage = 6;
 
@@ -63,7 +84,9 @@ if ($TotalRec > 0) {
         </div>
         <div class="info-grid">
             <div class="name">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <h2><?php echo $row['username']; ?></h2>
+                <br><br><br><br><br><br>
                 <h5><?php echo $row['role']; ?></h5>
             </div>
             <div class="addr">
@@ -130,18 +153,15 @@ if ($TotalRec > 0) {
 } else {
     echo "0 results";
 }
-// if($start == 0){
-//     echo "&laquo Previous";
-// }else{
-//     echo "<a href=hi.php?id=" . ($start - 6) . ">&laquo Previous</a>";
-// }
-
-// echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-// if($start+6>=$TotalRec){
-//     echo "Next &raquo";
-// }else{
-//     echo "<a href=hi.php?id=". ($start + 6) ." >Next &raquo</a>";
-// }
+echo "<div class='change'>";
+if($start != 0){    
+    echo "<a href=Donorinfo.php?id=" . ($start - 3) . " id='previous'> &laquo Previous</a>";
+}
+if($start < $TotalRec-3){
+    echo "<a href=Donorinfo.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
+    
+}
+echo"</div>";
 ?>
 </body>
 

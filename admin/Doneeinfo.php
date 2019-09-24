@@ -6,18 +6,20 @@
     <link rel="stylesheet" type="text/css" href="../src/css/Cards.css">
     <style type="text/css">
     .change{
-    margin:0px 30%;
-    width: 40%;
-    border: 2px solid blue;
-    font-size: 14px;
+    margin:0px 35%;
+    width: 30%;
+    height: 50px;
+    border: 2px;
+    font-size: 24px;
     align-self :center;
 }
 
 .change a{
+  color: black;
   text-decoration: none;
 }
 
-.change #prevoius{
+.change #previous{
   float: left;
 }
 
@@ -57,8 +59,6 @@
 </header>
 
     <?php 
-include '../Nav.html';
-echo"<br><br>";
 include '../src/db/connection.php';
 $perpage = 6;
 
@@ -81,7 +81,9 @@ while($row = $result->fetch_assoc()) {
         
         <div class="info-grid">
             <div class="name">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <h2><?php echo $row['username']; ?></h2>
+                <br><br><br><br><br><br>
                 <h5><?php echo $row['role']; ?></h5>
             </div>
             <div class="addr">
@@ -149,18 +151,15 @@ while($row = $result->fetch_assoc()) {
 } else {
     echo "0 results";
 }
-echo "<div class='change'>";
- if($start != 0){
-     echo "Previous";
- }else{
-     echo "<a href=Doneeinfo.php?id=" . ($start - 6) . "id='previous'> <<Previous </a>";
- }
- if($start+6<$TotalRec){
-     echo "Next";
- }else{
-     echo "<a href=Doneeinfo.php?id=". ($start + 6) ."id='next'> Next>> </a>";
- }
- echo "</div>";
+ echo "<div class='change'>";
+if($start != 0){    
+    echo "<a href=Doneeinfo.php?id=" . ($start - 3) . " id='previous'> &laquo Previous</a>";
+}
+if($start < $TotalRec-3){
+    echo "<a href=Doneeinfo.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
+    
+}
+echo"</div>";
 ?>
 </body>
 

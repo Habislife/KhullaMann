@@ -5,7 +5,27 @@
      <link rel="stylesheet" type="text/css" href="src/css/doneePage.css">
      <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
      <style type="text/css">
-       
+       .change{
+    margin:0px 35%;
+    width: 30%;
+    height: 50px;
+    border: 2px;
+    font-size: 24px;
+    align-self :center;
+}
+
+.change a{
+  color: black;
+  text-decoration: none;
+}
+
+.change #previous{
+  float: left;
+}
+
+.change #next{
+  float: right;
+}
      </style>
 
 </head>
