@@ -48,36 +48,36 @@ body {
 <body>
 
   <header>
-  <div class="container">
+    <div class="container">
       <div id="branding">
           <h1><span class="highlight">Khulla</span> Mann</h1>
       </div>
 
-    <div class="togglearea">
+     <div class="togglearea">
       <label for="toggle">
         <span></span>
         <span></span>
         <span></span>
       </label>
-    </div>
+     </div>
     
-    <input type="checkbox" id="toggle">
-    <div class="navbar">
-      <a href="index.php" class="current">Home</a>
+      <input type="checkbox" id="toggle">
+        <div class="navbar">
+          <a href="index.php" class="current">Home</a>
           <a href="about.php">About</a>
           <a href="Feedback.php">Contact Us</a>
           <a href="RegisterForm.php">Become a donor</a>
           <a href="DoneeRegForm.php">Sign Up</a>
           <a href="LoginForm.php">Login</a>
+        </div>
     </div>
-  </div>
-</header>
+  </header>
 
- <?php 
+<?php 
 include 'src/db/connection.php';
 $var = $_GET['value_key']; 
 $sql = "SELECT * FROM donation_post where post_id = '{$var}'";
- $result = mysqli_query($conn,$sql);
+$result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result);
 echo "<div class='split right'>
   <div class='centered' >
@@ -88,19 +88,19 @@ echo "<div class='split right'>
     <label>$100</label>
     <button>Donate</button>
     <div style='margin: 24px 0;'>
+   </div>
   </div>
-  </div>
-</div>
+ </div>
 
-<div class='split left'>
+ <div class='split left'>
 
   <div class='centered'>
     <img src='".$row['file_path']."'>
   </div>
-</div>";    
-?>
+ </div>";    
+ ?>
 
-<footer>
+  <footer>
     <p>Khulla Mann, Copyright &copy; 2019</p>
   </footer>
 </body>
