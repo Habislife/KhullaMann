@@ -85,7 +85,7 @@
     <?php
 echo"<br><br>";
 include 'src/db/connection.php';
-$postid=$_GET['Donation'];
+$postid=$_GET['donation'];
 $perpage = 6;
 
 if(isset($_GET['id'])){
@@ -95,8 +95,8 @@ if(isset($_GET['id'])){
 }
 $count= mysqli_query($conn,"SELECT COUNT(donor_id) FROM donation Where post_id=$postid AND Gotit='0'");
 $rows = mysqli_fetch_array($count);
-$TotalRec=$rows['COUNT(user_id)'];
-$sql = "SELECT * FROM userprofile,donation Where user_id IN(Select donor_id FROM donation Where post_id=$postid AND Gotit='0') order by username LIMIT $start, $perpage";
+$TotalRec=$rows['COUNT(donor_id)'];
+$sql = "SELECT * FROM userprofile Where user_id IN(Select donor_id FROM donation Where post_id=$postid AND Gotit='0') order by username LIMIT $start, $perpage";
 $result = $conn->query($sql);
 
 if ($TotalRec > 0) {
@@ -115,7 +115,9 @@ if ($TotalRec > 0) {
         </div>
         <div class="info-grid">
             <div class="name">
+              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <h2><?php echo $row['username']; ?></h2>
+                <br><br><br><br><br><br>
                 <h5><?php echo $row['role']; ?></h5>
             </div>
             <div class="addr">

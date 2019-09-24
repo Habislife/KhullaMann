@@ -29,35 +29,42 @@ else
     {
       if($cpassword == $row['password'])
     {
-      session_start();
-       $_SESSION['userid']=$row['user_id'];
-             $_SESSION['email']=$row['email'];
+      if ($row['flag']=1) {
+        session_start();
       if($row['role']=="donor")
         {
           $_SESSION['role']=$row['role'];
+          $_SESSION['userid']=$row['user_id'];
           header("Location: ../../DonorPage.php");
 
 
         }
         elseif($row['role']=="donee"){
           $_SESSION['role']=$row['role'];
+          $_SESSION['userid']=$row['user_id'];
           header("Location: ../../DoneePage.php");
         }
         else{
          $_SESSION['role']=$row['role'];
+         $_SESSION['userid']=$row['user_id'];
           header("Location: ../../admin/AdminPanel.php"); 
         }
-
+}
+else
+{
+  echo"Not Active";
+        header("Refresh:3; url=../../LoginForm.php");
+}
     }
     else
       {
-        echo"Email or Password Not Match";
+        echo"Password Not Match";
         header("Refresh:3; url=../../LoginForm.php");
       }
 
     }
     else{
-      echo"Email or Password Not Match";
+      echo"Email  Not Match";
       header("Refresh:3; url=../../LoginForm.php");
     }
 

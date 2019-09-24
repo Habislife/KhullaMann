@@ -49,6 +49,6 @@ if ($uploadOk == 0) {
 $doneeid=$_SESSION['userid'];
 $sql = "INSERT INTO `donation_post` (file_path, title, bio, description, post_date, post_time, donee_id, flag) VALUES ('$upload', '$title', '$bio', '$description', '$today', '$time','$doneeid', '1')";
  $result = mysqli_query($conn,$sql);
- // header("Location: ../../DoneeMain.php");
+  header("Location: ../../DoneePage.php");
 }
 ?>
