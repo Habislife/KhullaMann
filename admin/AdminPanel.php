@@ -15,7 +15,7 @@
 		}
 
 		.box{
-			border: 1px solid black;
+			background-color:#E0E0E0;
 			width : 450px;
 			height: 450px;
 			margin: 20px auto;
@@ -57,12 +57,11 @@
     
     <input type="checkbox" id="toggle">
     <div class="navbar">
-      <a href="index.php">Home</a>
-          <a href="about.php" class="current">About</a>
-          <a href="Feedback.php">Contact Us</a>
-          <a href="RegisterForm.php">Become a donor</a>
-          <a href="DoneeRegForm.php">Sign Up</a>
-          <a href="LoginForm.php">Login</a>
+      	<a href="Donorinfo.php">Donor</a>
+        <a href="Doneeinfo.php">Donee</a>
+        <a href="DonationPost.php">Total Donation Post</a>
+        <a href="DoneeVerifying.php">To be Verify</a>
+        <a href="Feedback.php">Feedback</a>
     </div>
   </div>
 </header>

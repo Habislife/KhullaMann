@@ -1,0 +1,103 @@
+* {box-sizing: border-box}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+   /*background: url(img3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;*/
+}
+
+.box {
+  position: relative;
+  margin: 20px auto;
+  width: 45rem;
+  height: 50rem;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  border: 1px solid green;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  transition: 0.3s;
+  background: rgba(211, 249, 232, 0.6);
+  /*background-color: #60A67F;*/
+  border-radius: 0.625rem;
+}
+
+.box h1 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color: #07558F ;
+  text-align: center;
+}
+
+input[type=text], input[type=file], textarea {
+  width: 60%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  border: 1px solid black;
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+input[type=text]:focus, textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+::placeholder {
+  color:  #07558F;
+}
+
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #188224 ;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+ 
+.box input[type="submit"]:hover {
+  background-color:#1E4B28 ;
+}
+
+a{
+  text-decoration: none;
+  color: #07558F;
+}
+
+#upload{
+  position: relative;
+  border: 1px solid white;
+  width: 35%;
+  height: 35%;
+  float: right;
+  background-color: #f1f1f1;
+}
+
+#image2{
+  width: 95%;
+  height: 95%;
+  position: relative;
+  margin: 5px;
+}
+
+#bio{
+  width: 60%;
+}
+
+#full{
+  width: 100%
+}
+
+
+
+

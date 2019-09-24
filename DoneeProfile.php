@@ -10,14 +10,14 @@
 <head>
 	<title>Donee Profile</title>
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-   <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
+   <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
   <script type="text/javascript" src="src/js/doneeProfile.js"></script>
   
 
 </head>
 <body>
    
-  <header>
+<header>
   <div class="container">
       <div id="branding">
           <h1><span class="highlight">Khulla</span> Mann</h1>
@@ -33,15 +33,16 @@
     
     <input type="checkbox" id="toggle">
     <div class="navbar">
-      <a href="index.php" class="current">Home</a>
-          <a href="about.php">About</a>
-          <a href="Feedback.php">Contact Us</a>
-          <a href="RegisterForm.php">Become a donor</a>
-          <a href="DoneeRegForm.php">Sign Up</a>
-          <a href="LoginForm.php">Login</a>
+        <a href="DoneeMain.php">Home</a>
+        <a href="about.php">About</a>
+        <a href="UserFeedback.php">Feedback</a>
+        <a href="DoneePage.php">Create Post</a>
+        <a href="DoneeProfile.php" class="current">Profile</a>
+        <a href="logout.php">Log Out</a>
     </div>
   </div>
 </header>
+
     <div class="box">
 			<form method="POST" onsubmit="return validateProfile()" action="" >
 			

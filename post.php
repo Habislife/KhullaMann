@@ -3,81 +3,60 @@
 <head>
   <title>Post Page </title>
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+  <link rel="stylesheet" type="text/css" href="src/css/postStyle.css">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial;
-  color: white;
-}
-
-.split {
-  height: 90%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  margin-top: 50px;
-}
-
-.left {
-	left: 0;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  
-}
-
-.right {
-  right: 0;
-  
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: black;
-}
-
-
-</style>
 </head>
 <body>
 
   <header>
-    <div class="container">
+  <div class="container">
       <div id="branding">
           <h1><span class="highlight">Khulla</span> Mann</h1>
       </div>
 
-     <div class="togglearea">
+    <div class="togglearea">
       <label for="toggle">
         <span></span>
         <span></span>
         <span></span>
       </label>
-     </div>
+    </div>
     
-      <input type="checkbox" id="toggle">
-        <div class="navbar">
-          <a href="index.php" class="current">Home</a>
+    <input type="checkbox" id="toggle">
+    <div class="navbar">
+      <a href="index.php" class="current">Home</a>
           <a href="about.php">About</a>
-          <a href="Feedback.php">Contact Us</a>
+          <a href="Feedback.php">Feedback</a>
           <a href="RegisterForm.php">Become a donor</a>
           <a href="DoneeRegForm.php">Sign Up</a>
           <a href="LoginForm.php">Login</a>
-        </div>
     </div>
-  </header>
+  </div>
+</header>
 
-<?php 
+
+ <div class="post-container" align="center">
+  <img src="src/css/img3.jpeg" class="post-image">
+  <h1 class="post-title">Title</h1>
+  <p class="post-content" align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <button class="donatebtn">Donate</button>
+</div> 
+
+
+
+
+
+
+<!--  <?php 
 include 'src/db/connection.php';
 $var = $_GET['value_key']; 
 $sql = "SELECT * FROM donation_post where post_id = '{$var}'";
-$result = mysqli_query($conn,$sql);
+ $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result);
 echo "<div class='split right'>
   <div class='centered' >
@@ -88,19 +67,20 @@ echo "<div class='split right'>
     <label>$100</label>
     <button>Donate</button>
     <div style='margin: 24px 0;'>
-   </div>
   </div>
- </div>
+  </div>
+</div>
 
- <div class='split left'>
+<div class='split left'>
 
   <div class='centered'>
     <img src='".$row['file_path']."'>
   </div>
- </div>";    
- ?>
+</div>";    
+?>  -->
 
-  <footer>
+
+<footer>
     <p>Khulla Mann, Copyright &copy; 2019</p>
   </footer>
 </body>

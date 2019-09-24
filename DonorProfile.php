@@ -10,7 +10,7 @@
 <head>
 	<title>Donor Profile</title>
 	<link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-   <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
+   <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
   
 </head>
 <body>
@@ -31,12 +31,11 @@
     
     <input type="checkbox" id="toggle">
     <div class="navbar">
-      <a href="index.php" class="current">Home</a>
-          <a href="about.php">About</a>
-          <a href="Feedback.php">Contact Us</a>
-          <a href="RegisterForm.php">Become a donor</a>
-          <a href="DoneeRegForm.php">Sign Up</a>
-          <a href="LoginForm.php">Login</a>
+        <a href="DonorPage.php">Home</a>
+        <a href="about.php">About</a>
+        <a href="UserFeedback.php">Feedback</a>
+        <a href="DonorProfile.php" class="current">Profile</a>
+        <a href="logout.php">Log Out</a>
     </div>
   </div>
 </header>

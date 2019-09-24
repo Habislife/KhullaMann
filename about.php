@@ -27,7 +27,7 @@
     <div class="navbar">
       <a href="index.php">Home</a>
           <a href="about.php" class="current">About</a>
-          <a href="Feedback.php">Contact Us</a>
+          <a href="Feedback.php">Feedback</a>
           <a href="RegisterForm.php">Become a donor</a>
           <a href="DoneeRegForm.php">Sign Up</a>
           <a href="LoginForm.php">Login</a>

@@ -1,0 +1,58 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: #F2F3F4    ;
+}
+
+.post-container{
+  position: relative;
+  /*border: 1px solid black;*/
+  width: 80%;
+  height: auto;
+  margin: 20px 10%;
+  background-color: #E0E0E0;
+}
+
+.post-image{
+  width: 50%;
+  margin: 20px 25%;
+}
+
+.post-title{
+  margin: 10px 0px;
+  font-size: 36px;
+}
+
+.post-content{
+  margin: 0px 10%;
+  font-size: 18px;
+}
+
+.donatebtn{
+  height: 50px;
+  background: #188224;
+  border: 0;
+  margin: 20px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff; 
+  font-size: 18px;
+}
+
+
+/*
+<?php 
+include 'src/db/connection.php';
+$var = $_GET['value_key']; 
+$sql = "SELECT * FROM donation_post where post_id = '{$var}'";
+ $result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_array($result);
+echo "<div class="post-container" align="center">
+          <img src='".$row['file_path']."' class="post-image">
+          <h1 class="post-title">".$row['title']."</h1>
+          <p class="post-content" align='justify'>".$row['description']."</p>
+          <button class="donatebtn">Donate</button>
+      </div> ";  
+?> 
+*/

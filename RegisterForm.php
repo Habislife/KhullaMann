@@ -23,7 +23,7 @@
   <head>
     <title>Register Form</title>
     <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-    <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
+    <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
     
      <script type="text/javascript" src="src/js/Register.js"></script>
   </head>
@@ -48,7 +48,7 @@
     <div class="navbar">
       <a href="index.php">Home</a>
           <a href="about.php">About</a>
-          <a href="Feedback.php">Contact Us</a>
+          <a href="Feedback.php">Feedback</a>
           <a href="RegisterForm.php" class="current">Become a donor</a>
           <a href="DoneeRegForm.php">Sign Up</a>
           <a href="LoginForm.php">Login</a>

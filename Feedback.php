@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
 <head>
 	<title>Give feedback</title>
 	<link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-   <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
+   <link rel="stylesheet" type="text/css" href="src/css/FormsStyle.css">
 
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
   <script type="text/javascript" src="src/js/validate.js"></script>
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
     <div class="navbar">
       <a href="index.php">Home</a>
           <a href="about.php">About</a>
-          <a href="Feedback.php" class="current">Contact Us</a>
+          <a href="Feedback.php" class="current">Feedback</a>
           <a href="RegisterForm.php">Become a donor</a>
           <a href="DoneeRegForm.php">Sign Up</a>
           <a href="LoginForm.php">Login</a>
