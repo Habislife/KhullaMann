@@ -11,7 +11,7 @@
           font-size: 20px;
           font-family: sans-serif;
           padding-left: 20px;
-          padding-top: 50px;
+          padding-top: 30px;
           margin: 100px 5px 5px 250px; 
           background:rgba(211, 249, 232, 0.6); 
         }
@@ -26,33 +26,31 @@
         }
         .content h1{
 			margin: 0px;
-			padding-top: 1px ;
-			padding-left: 10px;
+			padding: 10px ;
 			font-family: sans-serif;;
 			font-size: 20px;
-			padding-bottom: 20px;
 			float: left;
 		}
-		.content h3{
-			margin: 0px 80px 30px 10px;
+		 .content h3{
+			margin: 0px 20px 30px 5px;
 			padding-top: 1px;
-
 			font-family: sans-serif;;
 			font-size: 20px;
 			padding-bottom: 20px;
 			padding-left: 5px;
 			float: left;
 		}
-        .msgBox{
-          width: 500px;
-          height: 200px;
-          border: 1px solid black;
-          margin: 10px 20px 40px 30px;
-          float: left;
-          background-color: white;
-        }
-        .msgBox h2{
-        	margin: 0px; 
+      .msgBox{
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 10px 20px 40px 30px;
+        float: left;
+        background-color: white;
+        
+     }
+      .msgBox h2{
+      margin: 0px ; 
 			padding-top: 1px;
 			padding: 10px;
 			font-family: sans-serif;;
@@ -105,24 +103,8 @@
       </div>
      </div>
   </header>
-	 <!-- <header>
-    <div class="container">
-      <div id="branding">
-        <h1><span class="highlight">Khulla</span> Mann</h1>
-      </div>
-      <nav>
-        <ul>
-          <li class="current"><a href="index.php">Home</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="Feedback.php">Contact Us</a></li>
-          <li><a href="RegisterForm.php">Become a donor</a></li>
-          <li><a href="DoneeRegForm.php">Sign Up</a></li>
-          <li><a href="LoginForm.php">Login</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header> -->
-	<?php
+	 
+   <?php
 include '../src/db/connection.php';
 $perpage = 10;
 
@@ -143,9 +125,9 @@ if ($TotalRec > 0) {
  while($row = $result->fetch_assoc()) {
         //echo "<tr>"."<td>".$row["feedback_email"]."</td>"."<td>".$row["subject"]."</td>" ."<td>".$row["feedback_content"]."</td><td><a href='deletion.php'>Delete</a></td>" ."</tr>";
 ?>
-    <div class="box" align="center">
+    <div class="box">
 		<div class="content">
-			<?php echo "<br>"."<h1>".'Email: '.$row["feedback_email"]."</h1>"."<h3>".'Subject: '.$row["subject"]."</h3>"."<br>"; ?>
+			<?php echo "<h1>".'Email: '.$row["feedback_email"]."</h1>"."<h3>".'Subject: '.$row["subject"]."</h3>"."<br>"; ?>
 		</div>
 		<br><br>
 		<div class="msgBox">
