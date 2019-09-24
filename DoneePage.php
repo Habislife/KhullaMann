@@ -10,7 +10,7 @@
 <head>
   <title>Donee Page</title>
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
-  <link rel="stylesheet" type="text/css" href="src/css/DoneePage.css">
+  <link rel="stylesheet" type="text/css" href="src/css/doneePage.css">
   
   <script type="text/javascript" src="src/js/doneePage.js"></script>
 </head>
@@ -80,7 +80,7 @@
               <span id='msg3'></span>
 
               <input type="submit" name="submit" class="register" value="Post">
-          
+          </div>
         </form>
       </div>
 

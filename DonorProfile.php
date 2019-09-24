@@ -46,43 +46,43 @@
 			
 				<h1 align="center">Profile</h1>
 
-			 <div class="inputBox">
+			 
 				<div class="image_container">
 			        <div id="upload">
-			            <img id="image">
+			            <img id="image" align="center" style="max-width: 50%;">
 			        </div>
 			        <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
        			 </div>
-       </div>
+       
 
-       <div class="inputBox">
+       
 			   <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='fieldCheck();'>		
-			 </div>
+			
          <span id='message1'></span>
 			
-        <div class="inputBox">      
+            
    				<input type="email" placeholder="Enter Email" name="email" id="email" onkeyup='fieldCheck();'>
-        </div>
+        
    			 <span id='message2'></span>
 
-        <div class="inputBox">
+        
    				<input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='fieldCheck();'>
-   			</div>
+   			
          <span id='message3'></span>
     			
-        <div class="inputBox">
+        
    			  <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='fieldCheck();'>
-        </div>
+        
    				<span id='message'></span>
 
-   			<div class="inputBox">
+   			
    				 <input type="text" placeholder="Enter Address" name="address" id="address" onkeyup='fieldCheck();'>
-        </div>
+        
    				<span id='message4'></span>
 
-        <div class="inputBox"> 
+        
    				 <input type="tel" placeholder="Enter Contact No." name="contact" id="contact" onkeyup='fieldCheck();'>
-        </div>
+        
    				<span id='message5'></span>
 
    				 <div align="center">

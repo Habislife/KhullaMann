@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
     <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
     
-    <script type="text/javascript" src="src/js/DoneeReg.js"></script>
+    <script type="text/javascript" src="src/js/DoneeRegister.js"></script>
   </head>
 
 
@@ -64,7 +64,7 @@
       
         <div class="image_container">
           <div id="upload">
-            <img id="profilepic">
+            <img id="profilepic" align="center" style="max-width: 50%;">
           </div>
             <input type="file" name="image" accept="image/*" id="profilepic" onchange="loadImage(event)">
         </div>
@@ -106,7 +106,7 @@
       
         <div class="image_container">
           <div id="upload">
-            <img id="document">
+            <img id="document" align="center" style="max-width: 50%;">
           </div>
           <input type="file" name="document" accept="image/*" id="document" onchange="loadFile(event)">
           

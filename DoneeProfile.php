@@ -47,49 +47,49 @@
 			
 				<h1 align="center">Profile</h1>
 			
-      <div class="inputBox">
+      
 				<div class="image_container">
 			        <div id="upload">
-			            <img id="image">
+			            <img id="image" align="center" style="max-width: 50%;">
 			        </div>
 			        <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
        			 </div>
-       </div>
+       
 
-       <div class="inputBox">
+       
 			    <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='return validateProfile()'>	
-       </div>
+       
 
 				<span id='message1'></span><br>
 
-			  <div class="inputBox">
+			  
    				<input type="email" placeholder="Enter Email" name="email" id="email" onkeyup='return validateProfile()'>
-        </div>
+        
    				<span id='message2'></span><br>
 
-    		<div class="inputBox">
+    		
    				<input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='return validateProfile()'>
-        </div>
+        
    				<span id='message3'></span><br>
     			
-        <div class="inputBox">
+        
    				 <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='return validateProfile()'>
-        </div>
+        
    				<span id='message'></span><br>
 
-   			<div class="inputBox">
+   			
    				 <input type="text" placeholder="Enter Address" name="address" id="address" onkeyup='return validateProfile()'>
-        </div>
+        
    				<span id='message4'></span><br>
    				 
-        <div class="inputBox">
+        
    				 <input type="tel" placeholder="Enter Contact No." name="contact" id="contact" onkeyup='return validateProfile()'>
-        </div>
+       
    				<span id='message5'></span><br>
 
-        <div class="inputBox">
+        
             <input type="tel" placeholder="Enter Account No." name="account" id="account" onkeyup='return validateProfile()'>
-        </div>
+      
           <span id='message6'></span><br>
 
    				 <div align="center">

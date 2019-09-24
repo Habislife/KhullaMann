@@ -72,8 +72,7 @@ if (isset($_POST['submit'])) {
     <h1>User Feedback</h1>
 
         <form method="POST" onsubmit="return Validate()" align="center">
-          <
-              <input type="text" name="subject" placeholder="Subject" id='subject' onkeyup='return Validate()'>
+           <input type="text" name="subject" placeholder="Subject" id='subject' onkeyup='return Validate()'>
           
           <span id='message1'></span>
           <br><br>

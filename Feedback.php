@@ -36,88 +36,8 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
 	<title>Give feedback</title>
-	<style type="text/css">
-	html { 
-   margin: 0;
-    padding: 0; 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: sans-serif;
-}
-
-    * {box-sizing: border-box}
-
-.box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  width: 25rem;
-  padding: 2.5rem;
-  box-sizing: border-box;
-  background: rgba(211, 249, 232, 0.3);
-  border-radius: 0.625rem;
-}
-
-.box h1 {
-  margin: 0 0 1.875rem;
-  padding: 0;
-  color:  #07558F;
-  text-align: center;
-}
-
-.box .inputBox {
-  position: relative;
-}
-
-.box .inputBox input ,textarea {
-  width: 100%;
-  padding: 0.625rem 0;
-  font-size: 1rem;
-  color:  #07558F;
-  letter-spacing: 0.062rem;
-  margin-bottom: 1.875rem;
-  border: none;
-  border-bottom: 0.065rem solid #07558F;
-  outline: none;
-  background: transparent;
-}
-
-.box .inputBox label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.625rem 0;
-  font-size: 1rem;
-  color: #07558F;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-
-
-::placeholder {
-  color:  #07558F;
-}
-
-.box input[type="submit"] {
-  border: none;
-  outline: none;
-  color: #fff;
-  background-color:   #1889B5;
-  padding: 0.625rem 1.25rem;
-  cursor: pointer;
-  border-radius: 0.312rem;
-  font-size: 1rem;
-}
-
-.box input[type="submit"]:hover {
-  background-color: #07558F;
-}
-
-	</style>
+	<link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+   <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
 
   <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
   <script type="text/javascript" src="src/js/validate.js"></script>
@@ -148,7 +68,7 @@ if (isset($_POST['submit'])) {
           <a href="LoginForm.php">Login</a>
     </div>
   </div>
-</header>	
+</header>
 
 	<div class="box" align="center">
 		<h1>Feedback</h1>

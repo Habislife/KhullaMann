@@ -1,93 +1,77 @@
-html { 
-   margin: 0;
-    padding: 0;
-    /*background: url(../images/bg.png) no-repeat center center fixed;*/ 
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: sans-serif;
+* {box-sizing: border-box}
 
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+   /*background: url(img3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;*/
 }
 
 .box {
   position: relative;
-  height: 1140px;
-  margin-bottom: 20px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -0%);
-  width: 50rem;
+  margin: 20px auto;
+  width: 45rem;
+  height: 50rem;
   padding: 2.5rem;
   box-sizing: border-box;
-  background: rgba(211, 249, 232, 0.3);
-  border-radius: 0.625rem;
   border: 1px solid green;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
   transition: 0.3s;
+  background: rgba(211, 249, 232, 0.6);
+  /*background-color: #60A67F;*/
+  border-radius: 0.625rem;
 }
 
 .box h1 {
   margin: 0 0 1.875rem;
   padding: 0;
-  color:  #07558F;
+  color: #07558F ;
   text-align: center;
 }
 
-.box .inputBox {
-  position: relative;
-}
-
-.box .inputBox input, textarea {
-  width: 100%;
-  padding: 0.625rem 0;
-  font-size: 1rem;
-  color: #07558F;
-  letter-spacing: 0.062rem;
-  margin-bottom: 1.875rem;
+input[type=text], input[type=file], textarea {
+  width: 60%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
   border: none;
-  border-bottom: 0.065rem solid  #1889B5;
+  border: 1px solid black;
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+input[type=text]:focus, textarea:focus {
+  background-color: #ddd;
   outline: none;
-  background: transparent;
-}
-
-.box .inputBox label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.625rem 0;
-  font-size: 1rem;
-  color: #07558F;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label,
-.box .inputBox input:not([value=""]) ~ label {
-  top: -1.125rem;
-  left: 0;
-  color: #07558F;
-  font-size: 0.75rem;
 }
 
 ::placeholder {
-  color: #07558F;
+  color:  #07558F;
 }
 
 .box input[type="submit"] {
   border: none;
   outline: none;
   color: #fff;
-  background-color:   #1889B5;
+  background-color: #188224 ;
   padding: 0.625rem 1.25rem;
   cursor: pointer;
   border-radius: 0.312rem;
   font-size: 1rem;
+  margin-bottom: 20px;
+}
+ 
+.box input[type="submit"]:hover {
+  background-color:#1E4B28 ;
 }
 
-.box input[type="submit"]:hover {
-  background-color: #07558F;
+a{
+  text-decoration: none;
+  color: #07558F;
 }
 
 #upload{
@@ -96,16 +80,14 @@ html {
   width: 35%;
   height: 35%;
   float: right;
+  background-color: #f1f1f1;
 }
 
 #image2{
-  width: 90%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   position: relative;
-  margin: 10px 10px;
-}
-#title{
-  width: 60%;
+  margin: 5px;
 }
 
 #bio{
@@ -115,9 +97,6 @@ html {
 #full{
   width: 100%
 }
-
-
-
 
 
 

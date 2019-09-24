@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
     <link rel="stylesheet" type="text/css" href="src/css/FormStyle.css">
     
-     <script type="text/javascript" src="src/js/RegisterForm.js"></script>
+     <script type="text/javascript" src="src/js/Register.js"></script>
   </head>
 
   <body>
@@ -64,10 +64,10 @@
       
          <div class="image_container">
           <div id="upload">
-            <img id="image">
+            <img id="profilepic" align="center" style="max-width: 50%;">
           </div>
-          <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
-         </div> 
+            <input type="file" name="image" accept="image/*" id="profilepic" onchange="loadImage(event)">
+        </div>
      
         
          <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='return validateForm()'>   
