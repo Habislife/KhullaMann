@@ -41,7 +41,7 @@ else
         }
         elseif($row['role']=="donee"){
           $_SESSION['role']=$row['role'];
-          header("Location: ../../DoneeMain.php");
+          header("Location: ../../DoneePage.php");
         }
         else{
          $_SESSION['role']=$row['role'];
