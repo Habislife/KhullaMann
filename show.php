@@ -43,7 +43,7 @@ $query = "SELECT * FROM `donation_post`order by post_date asc, post_time asc LIM
 }
 echo "<div class='change'>";
 if($start != 0){    
-    echo "<a href=index.php?id=" . ($start - 3) . " id='previous'>  &laquo Previous ;</a>";
+    echo "<a href=index.php?id=" . ($start - 3) . " id='previous'>  &laquo Previous</a>";
 }
 if($start < $TotalRec-3){
     echo "<a href=index.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
@@ -92,15 +92,15 @@ $query = "SELECT * FROM `donation_post` Where donee_id='$userid' order by post_d
     }
     echo"</div>";
 }
-//echo "<div class='change'>";
+echo "<div class='change'>";
 if($start != 0){    
-    echo "<a href=DoneePage.php?id=" . ($start - 3) . " id='previous'> &laquo  Previous;</a>";
+    echo "<a href=DoneePage.php?id=" . ($start - 3) . " id='previous'> &laquo  Previous</a>";
 }
 if($start < $TotalRec-3){
     echo "<a href=DoneePage.php?id=". ($start + 3) ." id='next'>Next &raquo;</a>";
     
 }
-//echo"</div>";
+echo"</div>";
 }
 function showAllData(){
 include'src/db/connection.php';

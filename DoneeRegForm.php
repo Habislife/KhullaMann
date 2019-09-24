@@ -1,22 +1,21 @@
-<!-- <?php
-//session_start();
-//if(isset($_SESSION['userid']))
+ <?php
+session_start();
+if(isset($_SESSION['userid']))
 {
-  //if($_SESSION['role']="donor")
+ if($_SESSION['role']=='donor')
  {
-   //header("Location:DonorPage.php");
+    header("Location:DonorPage.php");
  }
- //elseif ($_SESSION['role']="donee")
+ elseif ($_SESSION['role']=='donee')
   {
-  //header("Location:DoneeMain.php"); 
+   header("Location:DoneePage.php"); 
  }
-//else
+else
 {
-  //header("Location:AdminPanel.php"); 
+  header("Location:admin/adminpanel.php"); 
+ }
 }
-
-}
-?> -->
+?>
  
 <!DOCTYPE html>
 <html>
