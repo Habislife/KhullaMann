@@ -27,16 +27,16 @@ header{
   overflow: hidden;
 }
 
-header #branding{
+ #branding{
   padding-top: 10px;
   float: left;
 }
 
-header #branding h1{
+ #branding h1{
   margin:0;
 }
 
-header #branding a{
+ #branding a{
   text-decoration: none;
   color: black;
 }

@@ -51,7 +51,7 @@
 			<article id="main-col">
 				<h1>About Us</h1>
 				<div class="member">
-					<img src="src/images/img3.jpeg" class="pic">
+					<img src="src/images/pic.png" class="pic">
 					<h1>Bishal Devkota</h1>
 					<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -59,7 +59,7 @@
 				</div>
 
 				<div class="member">
-					<img src="src/images/img3.jpeg" class="pic">
+					<img src="src/images/pic.png" class="pic">
 					<h1>Ena Gurung</h1>
 					<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -67,7 +67,7 @@
 				</div>
 
 				<div class="member">
-					<img src="src/images/img3.jpeg" class="pic">
+					<img src="src/images/pic.png" class="pic">
 					<h1>Pabita Pun</h1>
 					<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

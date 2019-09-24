@@ -208,7 +208,7 @@ body{
 /* Media Queries */
 @media only screen and (min-width: 1366px) {
   #showcase{
-    min-height: 700px;
+    min-height: 900px;
     background-size: cover;
   }
   #showcase h1{
