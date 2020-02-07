@@ -1,21 +1,20 @@
- <?php
-session_start();
-if(isset($_SESSION['userid']))
+<?php
+//session_start();
+/*if(isset($_SESSION['userid']))
 {
- if($_SESSION['role']=='donor')
+  if($_SESSION['role']="donor")
  {
-    header("Location:DonorPage.php");
+   header("Location:DonorPage.php");
  }
- elseif ($_SESSION['role']=='donee')
+ elseif ($_SESSION['role']="donee")
   {
-   header("Location:DoneePage.php"); 
+  header("Location:DoneeMain.php"); 
  }
 else
 {
-  header("Location:admin/adminpanel.php"); 
- }
+  header("Location:AdminPanel.php"); 
 }
-?>
+}*/
 include 'src/db/connection.php';
 include 'src/db/mail.php';
 if (isset($_POST['submit'])) {
