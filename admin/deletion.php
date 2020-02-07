@@ -5,7 +5,7 @@ if(isset($_GET['value_key'])){
 $sql="Delete FROM feedback where feedback_id='$var'";
 $result = mysqli_query($conn,$sql);
 echo"Feedback Deleted";
- header("Refresh:3; url=Feedbackinfo.php");
+ header("Refresh:3; url=Feedback.php");
 
 }
 ?>

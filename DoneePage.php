@@ -46,7 +46,7 @@
 
   <div class="post" align="center">
     <h1>NEED DONATION?</h1>
-    <button class="button_1"><a href="./doneePage.php">Create New Post</a></button>
+    <button class="button_1"><a href="CreatePost.php">Create New Post</a></button>
   </div>
 
 

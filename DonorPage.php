@@ -35,7 +35,7 @@
   <section id="banner">
     <div class="container">
       <h1>Search to Donate</h1>
-      <form>
+      <form action="searchsystem.php" method="POST">
         <input type="text" placeholder="Search..." name="searchtext">
         <button type="submit" class="button_1" name="search">Search</button>
       </form>
