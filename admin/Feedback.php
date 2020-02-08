@@ -12,6 +12,7 @@
     border: 2px;
     font-size: 24px;
     align-self :center;
+    padding-top: 30px;
 }
 
 .change a{

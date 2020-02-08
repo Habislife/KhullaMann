@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>feedback info</title>
-	<link rel="stylesheet" type="text/css" href="../src/css/NavBar.css">
+	<link rel="stylesheet" type="text/css" href="../src/css/NavigationBar.css">
 	  <style>
         .box {
           width: 600px;
@@ -32,13 +32,13 @@
 			float: left;
 		}
 		 .content h3{
-			margin: 0px 20px 30px 5px;
+			margin: 50px 20px 30px 5px;
 			padding-top: 1px;
 			font-family: sans-serif;;
 			font-size: 20px;
 			padding-bottom: 20px;
 			padding-left: 5px;
-			float: left;
+			
 		}
       .msgBox{
         width: 500px;
