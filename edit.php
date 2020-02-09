@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Donee Page</title>
-  <link rel="stylesheet" type="text/css" href="src/css/NavBar.css">
+  <link rel="stylesheet" type="text/css" href="src/css/NavigationBar.css">
   <link rel="stylesheet" type="text/css" href="src/css/createPost.css">
   
   <script type="text/javascript" src="src/js/doneePage.js"></script>
