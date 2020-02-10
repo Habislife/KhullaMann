@@ -13,6 +13,7 @@
 </body>
 </html>
 <?php
+session_start();
 include'src/db/connection.php';
 if(isset($_POST['search'])){
     $search = $_POST['searchtext'];
@@ -41,9 +42,16 @@ $result = mysqli_query($conn,$sql);
       <p class='bio'>".$row['bio']."</p>
     </div>";
     echo "<div class='link'>
-       <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>
-        <a href='src/db/Donation.php?value_key=".$row["post_id"]."'><button id='donatebtn'>Donate</button></a>
-    </div>";
+       <a href='post.php?value_key=".$row["post_id"]."'><button id='viewbtn'>View</button></a>";
+        if(isset($_SESSION['userid']))
+        {
+        echo"<a href='src/db/Donation.php?value_key=".$row["post_id"]."'><button id='donatebtn'>Donate</button></a>";
+      }
+      else
+      {
+       echo "<a href='LoginForm.php'><button id='donatebtn'>Donate</button></a>"; 
+      }
+    echo"</div>";
 
     echo"</div>";
             }

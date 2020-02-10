@@ -1,26 +1,26 @@
  <?php
-// session_start();
-// if(isset($_SESSION['userid']))
-// {
-//   if($_SESSION['role']="donor")
-//  {
-//    header("Location:DonorPage.php");
-//  }
-//  elseif ($_SESSION['role']="donee")
-//   {
-//   header("Location:DoneeMain.php"); 
-//  }
-// else
-// {
-//   header("Location:AdminPanel.php"); 
-// }
-// }
+session_start();
+if(isset($_SESSION['userid']))
+{
+  if($_SESSION['role']!="donor")
+ {
+
+ if ($_SESSION['role']=="donee")
+  {
+  header("Location:DoneeMain.php"); 
+ }
+else
+{
+  header("Location:AdminPanel.php"); 
+}
+}
+}
 include 'src/db/connection.php';
 if (isset($_POST['submit'])) {
   $to_email="khullamann5660@gmail.com";
   session_start();
   $header = $_SESSION['email'];
-  $user_id = $_SESSION['user_id'];
+  $user_id = $_SESSION['userid'];
   $subject = $_POST['subject'];
   $message = $_POST['givefeedback']; 
   $today = date("Y/m/d");

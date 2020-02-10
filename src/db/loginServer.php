@@ -29,12 +29,13 @@ else
     {
       if($cpassword == $row['password'])
     {
-      if ($row['flag']=1) {
+      if ($row['flag']==1) {
         session_start();
       if($row['role']=="donor")
         {
           $_SESSION['role']=$row['role'];
           $_SESSION['userid']=$row['user_id'];
+          $_SESSION['email']=$row['email'];
           header("Location: ../../DonorPage.php");
 
 
@@ -42,11 +43,13 @@ else
         elseif($row['role']=="donee"){
           $_SESSION['role']=$row['role'];
           $_SESSION['userid']=$row['user_id'];
+          $_SESSION['email']=$row['email'];
           header("Location: ../../DoneePage.php");
         }
         else{
          $_SESSION['role']=$row['role'];
          $_SESSION['userid']=$row['user_id'];
+         $_SESSION['email']=$row['email'];
           header("Location: ../../admin/AdminPanel.php"); 
         }
 }
