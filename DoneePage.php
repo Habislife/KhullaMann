@@ -1,21 +1,3 @@
- <?php
-session_start();
-if(isset($_SESSION['userid']))
-{
- if($_SESSION['role']=='donor')
- {
-    header("Location:DonorPage.php");
- }
- elseif ($_SESSION['role']=='donee')
-  {
-   header("Location:DoneePage.php"); 
- }
-else
-{
-  header("Location:admin/adminpanel.php"); 
- }
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,6 +39,7 @@ else
 
 <?php
    include'show.php';
+   session_start();
    showMyproject($_SESSION['userid']); 
 
 ?>
