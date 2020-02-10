@@ -44,43 +44,49 @@
 			<form method="POST" action="" >
 			
 				<h1 align="center">Profile</h1>
-
-			 
-				<div class="image_container">
-			        <div id="upload">
-			            <img id="image" align="center" style="max-width: 50%;">
-			        </div>
-			        <input type="file" name="image" accept="image/*" id="file" onchange="loadFile(event)">
-       			 </div>
-       
-
-       
-			   <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='fieldCheck();'>		
+       <?php 
+include'src/db/connection.php';
+       session_start();
+       $id=$_SESSION['userid'];
+       $record = mysqli_query($conn, "SELECT COUNT(user_id) FROM userprofile WHERE user_id=$id");
+    $rows = mysqli_fetch_array($record);
+   $TotalRec=$rows['COUNT(user_id)'];
+$sql="SELECT * FROM userprofile WHERE user_id=$id";
+    $result = $conn->query($sql);
+    if ($TotalRec == 1 ) {
+      $n = mysqli_fetch_array($result);
+      $username = $n['username'];
+      $email = $n['email'];
+      $password=$n['password'];
+      $address=$n['address'];
+      $contact_no=$n['contact_no'];
+    ?>
+			   <input type="text" placeholder="Enter Username" name="username" id="username" onkeyup='fieldCheck();'value="<?php echo $username;?>">		
 			
          <span id='message1'></span>
 			
             
-   				<input type="email" placeholder="Enter Email" name="email" id="email" onkeyup='fieldCheck();'>
+   				<input type="email" placeholder="Enter Email" name="email" id="email" onkeyup='fieldCheck();'value="<?php echo $email;?>">
         
    			 <span id='message2'></span>
 
         
-   				<input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='fieldCheck();'>
+   				<input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='fieldCheck();'value="<?php echo $password;?>">
    			
          <span id='message3'></span>
     			
         
-   			  <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='fieldCheck();'>
+   			  <input type="password" placeholder="Enter Re-Password" name="repassword" id="repassword" onkeyup='check();' onkeyup='fieldCheck();'value="<?php echo $password;?>">
         
    				<span id='message'></span>
 
    			
-   				 <input type="text" placeholder="Enter Address" name="address" id="address" onkeyup='fieldCheck();'>
+   				 <input type="text" placeholder="Enter Address" name="address" id="address" onkeyup='fieldCheck();'value="<?php echo $address;?>">
         
    				<span id='message4'></span>
 
         
-   				 <input type="tel" placeholder="Enter Contact No." name="contact" id="contact" onkeyup='fieldCheck();'>
+   				 <input type="tel" placeholder="Enter Contact No." name="contact" id="contact" onkeyup='fieldCheck();'value="<?php echo $contact_no;?>">
         
    				<span id='message5'></span>
 
@@ -89,6 +95,8 @@
    					</div>
 
 			</form>
+      <?php
+}  ?>
 		 </div>
 
      <footer>
