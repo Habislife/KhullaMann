@@ -177,8 +177,8 @@ if ($TotalRec > 0) {
         </div>
     </div>
 <div class='link'>
-       <a href='Verify.php?value_key=".$row["post_id"]."'><button id='viewbtn'>Verify</button></a>
-    </div>"
+       <?php echo"<a href='Verify.php?post=".$postid."&value_key=".$row['user_id']."'><button id='viewbtn'>Verify</button></a>";?>
+    </div>
  </div>
  <?php
     }

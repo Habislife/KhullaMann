@@ -5,5 +5,5 @@ if(isset($_GET['value_key'])){
 $sql = "Update userprofile set flag = '1' where user_id = '{$var}'";
 $result = mysqli_query($conn,$sql);
 }
-header("Location:../admin/DoneeVerification.php");
+header("Location:../admin/adminpanel.php");
 ?>

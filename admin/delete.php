@@ -6,5 +6,6 @@ $sql="Delete FROM doneeinfo where donee_id='$var'";
 $result = mysqli_query($conn,$sql);
 $sql="Delete FROM userprofile where user_id='$var'";
 $result = mysqli_query($conn,$sql);
+header("Location:../admin/Adminpanel.php");
 }
 ?>
