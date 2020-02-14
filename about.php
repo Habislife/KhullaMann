@@ -54,32 +54,30 @@
 					<img src="src/images/pic.png" class="pic">
 					<h1>Bishal Devkota</h1>
 					<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+					The leader of the project. You can contact me if there is any problem. User's better experience is the first priority for us. </p>
 				</div>
 
 				<div class="member">
 					<img src="src/images/pic.png" class="pic">
 					<h1>Ena Gurung</h1>
 					<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+					The member of the project. If there is any query regarding Khulla Mann, You can contact me. </p>
 				</div>
 
 				<div class="member">
 					<img src="src/images/pic.png" class="pic">
 					<h1>Pabita Pun</h1>
 					<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+					The member of the project. If there is any query regarding Khulla Mann, You can contact me. </p>
 				</div>
 			</article>
 
 			<aside id="sidebar">
 				<div class="dark">
-					<h3>What We Do</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+					<h3>What We Do ?</h3>
+					<p>
+						 “Khulla Mann” is a web application designed to solve the problem of interested donors and donee by providing a platform to donee where they can request for donation and donors can choose their own donees. Our project gives the systematic way of interaction of donors and donees which helps in digitalization of donation. 
+					</p>
 				</div>
 			</aside>
 		</div>
