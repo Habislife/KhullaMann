@@ -8,7 +8,7 @@ $doneeid=$_SESSION['userid'];
 $title = $_POST['title']; 
     $bio = $_POST['bio'];
     $description = $_POST['description'];
-$sql = "UPDATE `donation_post` SET `title`='$title',`bio`='$bio',`description`='$description' WHERE `donee_id`='$doneeid';";
+$sql = "UPDATE `donation_post` SET `title`='$title',`bio`='$bio',`description`='$description' WHERE `donee_id`='$doneeid'";
  $result = mysqli_query($conn,$sql);
   header("Location: ../../DoneePage.php");
 }
